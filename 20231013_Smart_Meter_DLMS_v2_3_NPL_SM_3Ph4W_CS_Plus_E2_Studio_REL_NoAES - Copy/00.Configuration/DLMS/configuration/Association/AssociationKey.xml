@@ -1,0 +1,107 @@
+<?xml version="1.0"?>
+<ArrayOfKeyString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <KeyString>
+    <IsInvocationCounter>false</IsInvocationCounter>
+    <IsUsing>true</IsUsing>
+    <Name>g_assc_shared_master_key</Name>
+    <Value>RES_MasterKeyAll</Value>
+    <note>RES_MasterKeyAll</note>
+    <UseCount>4</UseCount>
+  </KeyString>
+  <KeyString>
+    <IsInvocationCounter>true</IsInvocationCounter>
+    <IsUsing>true</IsUsing>
+    <Name>g_assc_shared_global_unicast_key</Name>
+    <Value>RES_UnicastAssc0</Value>
+    <note>RES_UnicastAssc0</note>
+    <UseCount>8</UseCount>
+  </KeyString>
+  <KeyString>
+    <IsInvocationCounter>true</IsInvocationCounter>
+    <IsUsing>true</IsUsing>
+    <Name>g_assc_shared_global_broadcast_key</Name>
+    <Value>RES_BroadcastKey</Value>
+    <note />
+    <UseCount>4</UseCount>
+  </KeyString>
+  <KeyString>
+    <IsInvocationCounter>false</IsInvocationCounter>
+    <IsUsing>false</IsUsing>
+    <Name>g_assc_shared_authentication_key</Name>
+    <Value>RES_AuthenKey000</Value>
+    <note />
+    <UseCount>0</UseCount>
+  </KeyString>
+  <KeyString>
+    <IsInvocationCounter>false</IsInvocationCounter>
+    <IsUsing>false</IsUsing>
+    <Name>g_assc_shared_dedicated_key</Name>
+    <Value>RES_Dedicated_0000</Value>
+    <note />
+    <UseCount>0</UseCount>
+  </KeyString>
+  <KeyString>
+    <IsInvocationCounter>false</IsInvocationCounter>
+    <IsUsing>true</IsUsing>
+    <Name>g_server_system_title</Name>
+    <Value>REI00045</Value>
+    <note>This is server system title for g_assc1_security_context </note>
+    <UseCount>4</UseCount>
+  </KeyString>
+  <KeyString>
+    <IsInvocationCounter>false</IsInvocationCounter>
+    <IsUsing>true</IsUsing>
+    <Name>g_assc1_secret</Name>
+    <Value>ABCDEFGH</Value>
+    <note>This secret key of meter reader association.</note>
+    <UseCount>1</UseCount>
+  </KeyString>
+  <KeyString>
+    <IsInvocationCounter>false</IsInvocationCounter>
+    <IsUsing>true</IsUsing>
+    <Name>g_assc2_secret</Name>
+    <Value>RENESAS_P6wRJ21F</Value>
+    <note>This secret key of association utility setting.</note>
+    <UseCount>1</UseCount>
+  </KeyString>
+  <KeyString>
+    <IsInvocationCounter>false</IsInvocationCounter>
+    <IsUsing>true</IsUsing>
+    <Name>g_Challeng_Ass2</Name>
+    <Value>1ENESAS_P6wRJ21F</Value>
+    <note>This Challenge of association utility setting.</note>
+    <UseCount>2</UseCount>
+  </KeyString>
+  <KeyString>
+    <IsInvocationCounter>false</IsInvocationCounter>
+    <IsUsing>true</IsUsing>
+    <Name>g_assc3_secret</Name>
+    <Value>ABCDEFGH</Value>
+    <note>This secret key of meter reader association.</note>
+    <UseCount>1</UseCount>
+  </KeyString>
+  <KeyString>
+    <IsInvocationCounter>false</IsInvocationCounter>
+    <IsUsing>true</IsUsing>
+    <Name>g_assc4_secret</Name>
+    <Value>RENESAS_ABCDEFGH</Value>
+    <note>This secret key of association utility setting.</note>
+    <UseCount>1</UseCount>
+  </KeyString>
+  <KeyString>
+    <IsInvocationCounter>false</IsInvocationCounter>
+    <IsUsing>false</IsUsing>
+    <Name>g_assc5_secret</Name>
+    <Value>ABCDEFGH</Value>
+    <note>This secret key of meter reader association.</note>
+    <UseCount>0</UseCount>
+  </KeyString>
+  <KeyString>
+    <IsInvocationCounter>false</IsInvocationCounter>
+    <IsUsing>true</IsUsing>
+    <Name>g_assc4_client_system_title</Name>
+    <Value>1RENESAS</Value>
+    <note>This secret key of association utility setting.</note>
+    <UseCount>1</UseCount>
+  </KeyString>
+</ArrayOfKeyString>
