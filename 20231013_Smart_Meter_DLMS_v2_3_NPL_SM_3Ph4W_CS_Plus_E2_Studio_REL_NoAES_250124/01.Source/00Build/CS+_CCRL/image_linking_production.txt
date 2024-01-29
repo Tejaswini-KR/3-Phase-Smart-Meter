@@ -1,0 +1,5 @@
+-input=Release\Image\rl78i1c_user_app.mot
+-input=..\..\shared\Bootloader\CCRL\bootloader.mot
+-input=..\..\shared\metrology\metrologyapp\CCRL\em_middleware.mot
+-form=stype
+-output=Release\Image\rl78i1c_production.mot

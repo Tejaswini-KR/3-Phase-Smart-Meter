@@ -1,0 +1,1665 @@
+Renesas Optimizing Linker (V3.04.00 )             25-Jan-2024 17:43:02
+
+*** Options ***
+
+-MAKEUD=Release\bootloader SST25VF016B 16MBit.lk.ud
+-subcommand=Release\bootloader SST25VF016B 16MBit.clnk
+-Input=Release\bl_main.obj
+-Input=Release\bl_cstart.obj
+-Input=Release\bl_image_decompress.obj
+-Input=Release\bl_stkinit.obj
+-Input=Release\bl_string.obj
+-Input=Release\bl_flash.obj
+-Input=Release\bl_hashing.obj
+-Input=Release\bl_image.obj
+-Input=Release\bl_operation.obj
+-Input=Release\bl_recovery.obj
+-Input=Release\bl_display.obj
+-Input=Release\bl_r_drv_lcd_ext.obj
+-Input=Release\bl_r_lcd_config.obj
+-Input=Release\bl_r_lcd_display.obj
+-Input=Release\bl_interrupt.obj
+-Input=Release\bl_interrupt_handler.obj
+-Input=Release\bl_r_cg_cgc.obj
+-Input=Release\bl_r_cg_crc.obj
+-Input=Release\bl_r_cg_lcd.obj
+-Input=Release\bl_r_cg_lvd.obj
+-Input=Release\bl_r_cg_port.obj
+-Input=Release\bl_r_cg_sau.obj
+-Input=Release\bl_r_cg_sau_user.obj
+-Input=Release\bl_r_cg_tau.obj
+-Input=Release\bl_r_cg_tau_user.obj
+-Input=Release\bl_r_systeminit.obj
+-Input=Release\bl_serialflash.obj
+-Input=Release\bl_startup.obj
+-Input=Release\bl_wrp_mcu.obj
+-Input=Release\bl_wrp_user_spi.obj
+-LIBrary=..\..\shared\Flash\fsl\CCRL\librl78\fsl.lib
+-SECURITY_ID=00000000000000000000
+-DEVICE=C:\Program Files (x86)\Renesas Electronics\CS+\CC\Device\RL78\Devicefile\DR5F10NPL.DVF
+-DEBug
+-NOCOmpress
+-OUtput=Release\bootloader.abs
+-LIBrary=C:\Program Files (x86)\Renesas Electronics\CS+\CC\CC-RL\V1.11.00\lib\rl78em4s.lib
+-LIBrary=C:\Program Files (x86)\Renesas Electronics\CS+\CC\CC-RL\V1.11.00\lib\malloc_n.lib
+-LIBrary=C:\Program Files (x86)\Renesas Electronics\CS+\CC\CC-RL\V1.11.00\lib\rl78em4r.lib
+-OCDBG=84
+-DEBUG_MONITOR=7FE00-7FFFF
+-USER_OPT_BYTE=7E7FE0
+-ENTry=_bl_start
+-LISt=Release\bootloader SST25VF016B 16MBit.map
+-SHow=ALL
+-STARt=BStaTx_n,ISRTx_n,SFLTx_n,BLShareTx_n,.text,.textf,.RLIB,.SLIB,.constf,.data,BLData_n,FSL_FCD,FSL_BCD,FSL_RCD/000D8,BLNoInit_n,BLBss_n,BLDataR_n/F8300,RAMVect_n,.dataR,.bss/F8400,.stack_bss/FEE00
+-FSymbol=SFLTx_n
+-FSymbol=BStaTx_n
+-FSymbol=BLShareTx_n
+-ROm=.data=.dataR
+-ROm=BLData_n=BLDataR_n
+-CPu=ROM=00000-01fff
+-CPu=ROM=7fe00-7ffff
+-CPu=RAM=f7f00-ffe20
+-NOMessage
+-STACk
+-Total_size
+-NOLOgo
+-end
+
+*** Error information ***
+
+*** Mapping List ***
+
+SECTION                            START      END         SIZE   ALIGN
+.vect
+                                  00000000  0000007f        80   0
+.option_byte
+                                  000000c0  000000c3         4   1
+.security_id
+                                  000000c4  000000cd         a   1
+.monitor1
+                                  000000ce  000000d7         a   1
+BStaTx_n
+                                  000000d8  0000012e        57   1
+ISRTx_n
+                                  0000012f  0000082a       6fc   1
+SFLTx_n
+                                  0000082b  00000d0e       4e4   1
+BLShareTx_n
+                                  00000d0f  00000ea9       19b   1
+.text
+                                  00000eaa  000017e1       938   1
+.textf
+                                  000017e2  0000182a        49   1
+.RLIB
+                                  0000182b  0000183f        15   1
+.SLIB
+                                  00001840  00001840         0   1
+.constf
+                                  00001840  00001844         5   2
+.data
+                                  00001846  00001847         2   2
+BLData_n
+                                  00001848  00001849         2   2
+FSL_FCD
+                                  0000184a  000018e6        9d   2
+FSL_BCD
+                                  000018e8  000019e7       100   2
+FSL_RCD
+                                  000019e8  00001a2f        48   2
+.monitor2
+                                  0007fe00  0007ffff       200   1
+BLNoInit_n
+                                  000f8300  000f8313        14   2
+BLBss_n
+                                  000f8314  000f8321         e   2
+BLDataR_n
+                                  000f8322  000f8323         2   2
+RAMVect_n
+                                  000f8400  000f84ff       100   2
+.dataR
+                                  000f8500  000f8501         2   2
+.bss
+                                  000f8502  000f8d2a       829   2
+.stack_bss
+                                  000fee00  000ffc5f       e60   2
+
+*** Total Section Size ***
+
+RAMDATA SECTION:  000017af Byte(s)
+ROMDATA SECTION:  000002a1 Byte(s)
+PROGRAM SECTION:  0000194d Byte(s)
+
+*** Symbol List ***
+
+SECTION=
+FILE=                               START        END    SIZE
+  SYMBOL                            ADDR        SIZE    INFO      COUNTS  OPT
+
+SECTION=.vect
+FILE=rlink_generates_04
+                                  00000000  0000007f        80
+
+SECTION=.option_byte
+FILE=rlink_generates_01
+                                  000000c0  000000c3         4
+
+SECTION=.security_id
+FILE=rlink_generates_03
+                                  000000c4  000000cd         a
+
+SECTION=.monitor1
+FILE=rlink_generates_02
+                                  000000ce  000000d7         a
+
+SECTION=BStaTx_n
+FILE=Release\bl_cstart.obj
+                                  000000d8  0000012e        57
+  _bl_start
+                                  000000d8         0   entry,g         0
+  _bl_stack_init
+                                  000000dc         0   none ,l         0
+  _bl__section_init
+                                  000000e5         0   none ,l         0
+  _exit
+                                  0000012d         0   none ,l         1
+
+SECTION=ISRTx_n
+FILE=Release\bl_interrupt_handler.obj
+                                  0000012f  0000082a       6fc
+  _INTWDTI_Interrupt@1
+                                  0000012f        1e   func ,l         0
+  _INTLVI_Interrupt@1
+                                  0000014d        1e   func ,l         0
+  _INTP0_Interrupt@1
+                                  0000016b        1e   func ,l         0
+  _INTP1_Interrupt@1
+                                  00000189        1e   func ,l         0
+  _INTP2_Interrupt@1
+                                  000001a7        1e   func ,l         0
+  _INTP3_Interrupt@1
+                                  000001c5        1e   func ,l         0
+  _INTP4_Interrupt@1
+                                  000001e3        1e   func ,l         0
+  _INTP5_Interrupt@1
+                                  00000201        1e   func ,l         0
+  _INTST2_Interrupt@1
+                                  0000021f        1e   func ,l         0
+  _INTSR2_Interrupt@1
+                                  0000023d        1e   func ,l         0
+  _INTSRE2_Interrupt@1
+                                  0000025b        1e   func ,l         0
+  _INTCR_Interrupt@1
+                                  00000279        1e   func ,l         0
+  _INTCSI00_Interrupt@1
+                                  00000297        1e   func ,l         0
+  _INTIICA0_Interrupt@1
+                                  000002b5        1e   func ,l         0
+  _INTSR0_Interrupt@1
+                                  000002d3        1e   func ,l         0
+  _INTSRE0_Interrupt@1
+                                  000002f1        1e   func ,l         0
+  _INTCSI10_Interrupt@1
+                                  0000030f        1e   func ,l         0
+  _INTSR1_Interrupt@1
+                                  0000032d        1e   func ,l         0
+  _INTSRE1_Interrupt@1
+                                  0000034b        1e   func ,l         0
+  _INTTM00_Interrupt@1
+                                  00000369        1e   func ,l         0
+  _INTRTCALM0_Interrupt@1
+                                  00000387        1e   func ,l         0
+  _INTFM_Interrupt@1
+                                  000003a5        1e   func ,l         0
+  _INTTM01_Interrupt@1
+                                  000003c3        1e   func ,l         0
+  _INTTM02_Interrupt@1
+                                  000003e1        18   func ,l         0
+  _INTTM03_Interrupt@1
+                                  000003f9        1e   func ,l         0
+  _INTAD_Interrupt@1
+                                  00000417        1e   func ,l         0
+  _INTRTCPRD_Interrupt@1
+                                  00000435        1e   func ,l         0
+  _INTIT_Interrupt@1
+                                  00000453        1e   func ,l         0
+  _INTRTCALM1_Interrupt@1
+                                  00000471        1e   func ,l         0
+  _INTCSI30_Interrupt@1
+                                  0000048f        1e   func ,l         0
+  _INTSR3_Interrupt@1
+                                  000004ad        1e   func ,l         0
+  _INTDSAD_Interrupt@1
+                                  000004cb        18   func ,l         0
+  _INTTM04_Interrupt@1
+                                  000004e3        1e   func ,l         0
+  _INTTM05_Interrupt@1
+                                  00000501        1e   func ,l         0
+  _INTP6_Interrupt@1
+                                  0000051f        1e   func ,l         0
+  _INTP7_Interrupt@1
+                                  0000053d        1e   func ,l         0
+  _INTRTCIC0_Interrupt@1
+                                  0000055b        1e   func ,l         0
+  _INTRTCIC1_Interrupt@1
+                                  00000579        1e   func ,l         0
+  _INTRTCIC2_Interrupt@1
+                                  00000597        1e   func ,l         0
+  _INTTM06_Interrupt@1
+                                  000005b5        1e   func ,l         0
+  _INTTM07_Interrupt@1
+                                  000005d3        1e   func ,l         0
+  _INTIT00_Interrupt@1
+                                  000005f1        1e   func ,l         0
+  _INTIT01_Interrupt@1
+                                  0000060f        1e   func ,l         0
+  _INTSRE3_Interrupt@1
+                                  0000062d        1e   func ,l         0
+  _INTMACLOF_Interrupt@1
+                                  0000064b        1e   func ,l         0
+  _INTOSDC_Interrupt@1
+                                  00000669        1e   func ,l         0
+  _INTFL_Interrupt@1
+                                  00000687        1e   func ,l         0
+  _INTP8_Interrupt@1
+                                  000006a5        1e   func ,l         0
+  _INTP9_Interrupt@1
+                                  000006c3        1e   func ,l         0
+  _INTIT10_Interrupt@1
+                                  000006e1        1e   func ,l         0
+  _INTIT11_Interrupt@1
+                                  000006ff        1e   func ,l         0
+  _INTLVDVDD_Interrupt@1
+                                  0000071d        1e   func ,l         0
+  _INTLVDVBAT_Interrupt@1
+                                  0000073b        1e   func ,l         0
+  _INTLVDVRTC_Interrupt@1
+                                  00000759        1e   func ,l         0
+  _INTLVDEXLVD_Interrupt@1
+                                  00000777        1e   func ,l         0
+  _INTST4_Interrupt@1
+                                  00000795        1e   func ,l         0
+  _INTSR4_Interrupt@1
+                                  000007b3        1e   func ,l         0
+  _INTSRE4_Interrupt@1
+                                  000007d1        1e   func ,l         0
+  _INTDSADDEC_Interrupt@1
+                                  000007ef        1e   func ,l         0
+  _INTTRJ1_Interrupt@1
+                                  0000080d        1e   func ,l         0
+
+SECTION=SFLTx_n
+FILE=Release\bl_serialflash.obj
+                                  0000082b  00000d0e       4e4
+  _SFL_ClearFlagWaitBus@1
+                                  0000082b         7   func ,l         e
+  _SFL_WaitForBus@1
+                                  00000832        3a   func ,l         e
+  _SFL_WaitForWrite@1
+                                  0000086c        56   func ,l         5
+  _SFL_DeviceWriteEnable@1
+                                  000008c2        22   func ,l         6
+  _SFL_DeviceWriteDisable@1
+                                  000008e4        22   func ,l         2
+  _SFL_DevicePinBusyStatusDisable@1
+                                  00000906        22   func ,l         2
+  _SFL_DeviceReadStatusRegister@1
+                                  00000928        2f   func ,l         3
+  _SFL_DeviceWriteStatusRegister@1
+                                  00000957        4c   func ,l         3
+  _SFL_DeviceByteProgramming@1
+                                  000009a3        4b   func ,l         2
+  _BL_SFL_Init
+                                  000009ee        53   func ,g         1
+  _BL_SFL_Stop
+                                  00000a41         5   func ,g         0
+  _BL_SFL_DeviceErase4KB
+                                  00000a46        4f   func ,g         1
+  _BL_SFL_DeviceErase64KB
+                                  00000a95        4f   func ,g         1
+  _BL_SFL_DeviceEraseAll
+                                  00000ae4        30   func ,g         0
+  _BL_SFL_DeviceWriteProtectAll
+                                  00000b14         5   func ,g         0
+  _BL_SFL_DeviceWriteUnProtectAll
+                                  00000b19         4   func ,g         0
+  _BL_SFL_DeviceRead
+                                  00000b1d        74   func ,g         8
+  _BL_SFL_DeviceWrite
+                                  00000b91       17e   func ,g         3
+
+SECTION=BLShareTx_n
+FILE=Release\bl_hashing.obj
+                                  00000d0f  00000d10         2
+  _BL_HASHING_DigestUserAppBackupSFL
+                                  00000d0f         1   func ,g         0
+  _BL_HASHING_DigestUserAppROM
+                                  00000d10         1   func ,g         0
+FILE=Release\bl_image.obj
+                                  00000d11  00000e18       108
+  _BL_IMAGE_EraseImageData
+                                  00000d11         6   func ,g         0
+  _BL_IMAGE_Erase
+                                  00000d17        18   func ,g         0
+  _BL_IMAGE_Write
+                                  00000d2f        3e   func ,g         0
+  _BL_IMAGE_BackupUserApp
+                                  00000d6d        ac   func ,g         0
+FILE=Release\bl_operation.obj
+                                  00000e19  00000ea9        91
+  _BL_OPERATION_GetStartupStatus
+                                  00000e19        12   func ,g         0
+  _BL_OPERATION_GetProperties
+                                  00000e2b        3f   func ,g         1
+  _BL_OPERATION_RequestRecoveryMode
+                                  00000e6a         4   func ,g         0
+  _BL_OPERATION_RequestUserReset
+                                  00000e6e         5   func ,g         0
+  _BL_OPERATION_RequestImageActivation
+                                  00000e73         e   func ,g         0
+  _BL_OPERATION_RequestImageBackup
+                                  00000e81         5   func ,g         0
+  _BL_OPERATION_InformStartupOK
+                                  00000e86        1c   func ,g         0
+  _BL_OPERATION_AcknowledgeImageUpdateStatus
+                                  00000ea2         5   func ,g         0
+  _BL_OPERATION_UpdateOperatingClock
+                                  00000ea7         3   func ,g         0
+
+SECTION=.text
+FILE=Release\bl_main.obj
+                                  00000eaa  00000f08        5f
+  _bl_main
+                                  00000eaa        5f   func ,g         1
+FILE=Release\bl_image_decompress.obj
+                                  00000f09  0000119b       293
+  _BL_IMAGE_TransferUserAppToROM
+                                  00000f09         0   none ,g         2
+FILE=Release\bl_string.obj
+                                  0000119c  000011de        43
+  _BL_memcmp_nn
+                                  0000119c         0   none ,g         1
+  LOOP_CMP_NN
+                                  000011a0         0   none ,l         1
+  LOOP_END_CMP_NN
+                                  000011ab         0   none ,l         1
+  _BL_memcpy_nn
+                                  000011af         0   none ,g         2
+  LOOP_NN
+                                  000011b6         0   none ,l         1
+  LOOP_END_NN
+                                  000011c1         0   none ,l         1
+  _BL_memcpy_nf
+                                  000011c4         0   none ,g         2
+  LOOP_NF
+                                  000011cf         0   none ,l         1
+  LOOP_END_NF
+                                  000011db         0   none ,l         1
+FILE=Release\bl_flash.obj
+                                  000011df  0000127d        9f
+  _BL_FLASH_EraseBlock
+                                  000011df        28   func ,g         2  ch
+  _BL_FLASH_WriteBlock
+                                  00001207        77   func ,g         1  ch
+FILE=Release\bl_hashing.obj
+                                  0000127e  000012a0        23
+  _BL_HASHING_Init
+                                  0000127e         5   func ,g         1
+  _BL_HASHING_Calculate
+                                  00001283         3   func ,g         2
+  _BL_HASHING_GetResult
+                                  00001286        1b   func ,g         1
+FILE=Release\bl_image.obj
+                                  000012a1  00001308        68
+  _BL_IMAGE_EraseImageInSerialFlash
+                                  000012a1        27   func ,g         2
+  _BL_IMAGE_EraseUserAppInROM
+                                  000012c8        41   func ,g         1
+FILE=Release\bl_operation.obj
+                                  00001309  00001337        2f
+  _BL_OPERATION_ReadConfirmCode
+                                  00001309        19   func ,g         2
+  _BL_OPERATION_ClearConfirmCode
+                                  00001322         a   func ,g         8
+  _BL_OPERATION_SetConfirmCode
+                                  0000132c         c   func ,g         8
+FILE=Release\bl_recovery.obj
+                                  00001338  000013f4        bd
+  _BL_RECOVERY_Init
+                                  00001338         a   func ,g         1
+  _BL_RECOVERY_UartSendEndCallBack
+                                  00001342         4   func ,g         1
+  _BL_RECOVERY_UartReceivedEndCallBack
+                                  00001346        81   func ,g         1
+  _BL_RECOVERY_TimerEndCallBack
+                                  000013c7        2e   func ,g         1
+FILE=Release\bl_r_cg_cgc.obj
+                                  000013f5  0000142f        3b
+  _R_CGC_Create
+                                  000013f5        32   func ,g         1
+  _BL_R_CGC_UpdateCPUClock
+                                  00001427         9   func ,g         1
+FILE=Release\bl_r_cg_crc.obj
+                                  00001430  00001447        18
+  _R_CRC_Set
+                                  00001430         4   func ,g         1
+  _R_CRC_GetResult
+                                  00001434         4   func ,g         1
+  _R_CRC_Calculate
+                                  00001438        10   func ,g         1
+FILE=Release\bl_r_cg_lvd.obj
+                                  00001448  00001450         9
+  _r_lvd_vddinterrupt
+                                  00001448         9   func ,g         1
+FILE=Release\bl_r_cg_port.obj
+                                  00001451  000014be        6e
+  _R_PORT_Create
+                                  00001451        54   func ,g         1
+  _R_PORT_StopCreate
+                                  000014a5        1a   func ,g         1
+FILE=Release\bl_r_cg_sau.obj
+                                  000014bf  00001620       162
+  _R_SAU1_Create
+                                  000014bf        11   func ,g         1
+  _R_CSI30_Create
+                                  000014d0        3f   func ,g         1
+  _R_CSI30_Start
+                                  0000150f        26   func ,g         1
+  _R_CSI30_Stop
+                                  00001535        18   func ,g         1
+  _R_CSI30_Send_Receive
+                                  0000154d        2b   func ,g         1
+  _R_UART2_Create
+                                  00001578        65   func ,g         1
+  _R_UART2_Start
+                                  000015dd        26   func ,g         1
+  _R_UART2_Stop
+                                  00001603        1e   func ,g         1
+FILE=Release\bl_r_cg_sau_user.obj
+                                  00001621  0000168d        6d
+  _R_CSI30_Interrupt
+                                  00001621        41   func ,g         1
+  _r_uart2_interrupt_send
+                                  00001662        1a   func ,g         1
+  _r_uart2_interrupt_receive
+                                  0000167c        12   func ,g         1
+FILE=Release\bl_r_cg_tau.obj
+                                  0000168e  000016e3        56
+  _R_TAU0_Create
+                                  0000168e        36   func ,g         1
+  _R_TAU0_Channel0_Start
+                                  000016c4        10   func ,g         1
+  _R_TAU0_Channel0_Stop
+                                  000016d4        10   func ,g         1
+FILE=Release\bl_r_cg_tau_user.obj
+                                  000016e4  000016e9         6
+  _r_tau0_channel0_interrupt
+                                  000016e4         6   func ,g         1
+FILE=Release\bl_r_systeminit.obj
+                                  000016ea  00001742        59
+  _R_Systeminit
+                                  000016ea        1a   func ,g         1
+  _R_DefaultInterrupHandler
+                                  00001704         1   func ,g         1
+  _R_RAM_InterruptVectorInit
+                                  00001705        31   func ,g         1
+  _bl_hdwinit
+                                  00001736         d   func ,g         1
+FILE=Release\bl_serialflash.obj
+                                  00001743  0000174a         8
+  _SFL_SendEndCallback
+                                  00001743         4   func ,g         1
+  _SFL_ReceiveEndCallback
+                                  00001747         4   func ,g         1
+FILE=Release\bl_startup.obj
+                                  0000174b  0000178c        42
+  _BL_Startup
+                                  0000174b        3c   func ,g         1  ch
+  _BL_StopPeripherals
+                                  00001787         6   func ,g         2
+FILE=Release\bl_wrp_mcu.obj
+                                  0000178d  000017ca        3e
+  _MCU_Delay
+                                  0000178d        3e   func ,g         4
+FILE=Release\bl_wrp_user_spi.obj
+                                  000017cb  000017e1        17
+  _WRP_SPI_Init
+                                  000017cb         1   func ,g         1
+  _WRP_SPI_Start
+                                  000017cc         3   func ,g         1
+  _WRP_SPI_Stop
+                                  000017cf         3   func ,g         1
+  _WRP_SPI_SendReceive
+                                  000017d2         a   func ,g         e
+  _WRP_SPI_SendEndCallback
+                                  000017dc         3   func ,g         1
+  _WRP_SPI_ReceiveEndCallback
+                                  000017df         3   func ,g         1
+
+SECTION=.textf
+FILE=Release\bl_stkinit.obj
+                                  000017e2  0000182a        49
+  _bl_stkinit
+                                  000017e2         0   none ,g         1
+  LSTINIT1
+                                  000017ef         0   none ,l         1
+  LSTINIT2
+                                  0000181d         0   none ,l         2
+  LSTINIT3
+                                  0000182a         0   none ,l         2
+
+SECTION=.RLIB
+FILE=_COM_memset_f
+                                  0000182b  0000183f        15
+  __COM_memset_f
+                                  0000182b         0   none ,g         1
+
+SECTION=.constf
+FILE=Release\bl_flash.obj
+                                  00001840  00001842         3
+  _g_fsl_descriptor
+                                  00001840         3   data ,g         4
+FILE=Release\bl_r_lcd_config.obj
+                                  00001844  00001844         1
+  _g_DecInfo1
+                                  00001844         1   data ,g         0
+
+SECTION=.data
+FILE=Release\bl_recovery.obj
+                                  00001846  00001847         2
+
+SECTION=BLData_n
+FILE=Release\bl_serialflash.obj
+                                  00001848  00001849         2
+
+SECTION=FSL_FCD
+FILE=fsl_f_open
+                                  0000184a  0000184e         5
+  _FSL_Open
+                                  0000184a         0   none ,g         2
+FILE=fsl_f_close
+                                  00001850  00001854         5
+  _FSL_Close
+                                  00001850         0   none ,g         2
+FILE=fsl_f_pfunc
+                                  00001856  0000187e        29
+  _FSL_PrepareFunctions
+                                  00001856         0   none ,g         2
+  _FSL_Prepare_common
+                                  0000186c         0   none ,g         1
+FILE=fsl_f_init
+                                  00001880  000018e6        67
+  _FSL_Init
+                                  00001880         0   none ,g         2
+  _FSL_Init_Clear_Info_loop
+                                  0000188b         0   none ,l         1
+  _FSL_Init_param_err
+                                  000018dc         0   none ,l         3
+  _FSL_Init_exit
+                                  000018de         0   none ,l         1
+
+SECTION=FSL_BCD
+FILE=fsl_b_common
+                                  000018e8  000019e7       100
+  _ASM_BCD_Start
+                                  000018e8         0   none ,g         7
+  _ASM_BCD_Entry
+                                  000018e8         0   none ,l         0
+  _ASM_BCD_StatusCheck
+                                  000018f9         0   none ,l         1
+  _ASM_BCD_Erase
+                                  00001919         0   none ,l         1
+  _ASM_BCD_IVerify
+                                  0000191d         0   none ,l         1
+  _ASM_BCD_BlankCheck
+                                  00001921         0   none ,l         1
+  _ASM_BCD_block_cmd
+                                  00001923         0   none ,l         2
+  _ASM_BCD_Param_Error
+                                  00001947         0   none ,l         7
+  _ASM_BCD_Common_Exit
+                                  00001949         0   none ,l         4
+  _ASM_BCD_Write
+                                  00001955         0   none ,l         1
+  _ASM_BCD_Write_cmd
+                                  00001958         0   none ,l         0
+  _ASM_BCD_Execute
+                                  000019ac         0   none ,l         1
+  _ASM_BCD_Execute_check
+                                  000019b1         0   none ,l         1
+  _ASM_BCD_Execute_retry
+                                  000019cc         0   none ,l         1
+  _ASM_BCD_Alignment_Start
+                                  000019d2         0   none ,l         0
+  _ASM_BCD_Table_Start
+                                  000019dc         0   none ,l         0
+  _ASM_BCD_End
+                                  000019e8         0   none ,g         1
+
+SECTION=FSL_RCD
+FILE=fsl_r_std_cmd
+                                  000019e8  00001a06        1f
+  _FSL_BlankCheck
+                                  000019e8         0   none ,g         1
+  _FSL_Erase
+                                  000019ed         0   none ,g         1
+  _FSL_IVerify
+                                  000019f2         0   none ,g         1
+  _FSL_Write
+                                  000019f7         0   none ,g         1
+  _FSL_std_common
+                                  000019fa         0   none ,l         3
+  _FSL_std_common_flow_err
+                                  00001a03         0   none ,l         0
+FILE=fsl_r_check_flow
+                                  00001a08  00001a2f        28
+  _ASM_RCD_Check_Ext_Flow
+                                  00001a08         0   none ,g         0
+  _ASM_RCD_Check_Status_Flow
+                                  00001a0f         0   none ,g         0
+  _ASM_RCD_Check_StandBy_Flow
+                                  00001a16         0   none ,g         0
+  _ASM_RCD_Check_WakeUp_Flow
+                                  00001a1d         0   none ,g         0
+  _ASM_RCD_Check_Flow
+                                  00001a24         0   none ,g         1
+  _ASM_RCD_Check_Flow_common
+                                  00001a29         0   none ,l         4
+
+SECTION=.monitor2
+FILE=rlink_generates_02
+                                  0007fe00  0007ffff       200
+
+SECTION=BLNoInit_n
+FILE=Release\bl_operation.obj
+                                  000f8300  000f8313        14
+  _g_bl_info
+                                  000f8300        14   data ,g         6
+
+SECTION=BLBss_n
+FILE=Release\bl_operation.obj
+                                  000f8314  000f8317         4
+  _g_bl_startup_status
+                                  000f8314         4   data ,g         5
+FILE=Release\bl_r_cg_sau.obj
+                                  000f8318  000f8321         a
+  _gp_Csi30RxAddress
+                                  000f8318         2   data ,g         4
+  _gp_Csi30TxAddress
+                                  000f831a         2   data ,g         5
+  _g_Csi30TxCnt
+                                  000f831c         2   data ,g         5
+  _gp_uart2_tx_address
+                                  000f831e         2   data ,g         2
+  _g_uart2_tx_count
+                                  000f8320         2   data ,g         2
+
+SECTION=BLDataR_n
+FILE=Release\bl_serialflash.obj
+                                  000f8322  000f8323         2
+  _g_is_send_end@1
+                                  000f8322         1   data ,l         3
+  _g_is_receive_end@2
+                                  000f8323         1   data ,l         3
+
+SECTION=RAMVect_n
+FILE=Release\bl_interrupt.obj
+                                  000f8400  000f84ff       100
+  _RAM_ISR_Table
+                                  000f8400       100   data ,g        42
+
+SECTION=.dataR
+FILE=Release\bl_recovery.obj
+                                  000f8500  000f8501         2
+  _g_bl_recovery_timeout_counter
+                                  000f8500         2   data ,g         4
+
+SECTION=.bss
+FILE=Release\bl_image.obj
+                                  000f8502  000f8901       400
+  _g_bl_image_read_ROM_buffer
+                                  000f8502       400   data ,g         6
+FILE=Release\bl_recovery.obj
+                                  000f8902  000f8d2a       429
+  _g_bl_recovery_data_buffer
+                                  000f8902       420   data ,g         4
+  _g_bl_recovery_frame_length
+                                  000f8d22         2   data ,g         4
+  _g_bl_recovery_receive_count
+                                  000f8d24         2   data ,g         8
+  _g_bl_recovery_is_mode_timeout
+                                  000f8d26         1   data ,g         1
+  _g_bl_recovery_is_mode_finish
+                                  000f8d27         1   data ,g         0
+  _g_bl_recovery_is_processing
+                                  000f8d28         1   data ,g         1
+  _g_bl_recovery_is_sent
+                                  000f8d29         1   data ,g         1
+  _g_bl_recovery_opr_state
+                                  000f8d2a         1   data ,g         9
+
+SECTION=.stack_bss
+FILE=Release\bl_cstart.obj
+                                  000fee00  000ffc5f       e60
+  _stackend
+                                  000fee00         0   none ,l         0
+  _stacktop
+                                  000ffc60         0   none ,l         0
+
+Absolute value symbols
+FILE=rlink_generates_05
+  __s.text
+                                  00000eaa         0   none ,g         0
+  __e.text
+                                  000017e2         0   none ,g         0
+  __s.textf
+                                  000017e2         0   none ,g         0
+  __e.textf
+                                  0000182b         0   none ,g         0
+  __s.constf
+                                  00001840         0   none ,g         0
+  __e.constf
+                                  00001845         0   none ,g         0
+  __s.data
+                                  00001846         0   none ,g         0
+  __e.data
+                                  00001848         0   none ,g         0
+  __s.bss
+                                  000f8502         0   none ,g         0
+  __e.bss
+                                  000f8d2b         0   none ,g         0
+  __s.dataR
+                                  000f8500         0   none ,g         0
+  __e.dataR
+                                  000f8502         0   none ,g         0
+  __s.stack_bss
+                                  000fee00         0   none ,g         0
+  __e.stack_bss
+                                  000ffc60         0   none ,g         0
+  __sBStaTx_n
+                                  000000d8         0   none ,g         0
+  __eBStaTx_n
+                                  0000012f         0   none ,g         0
+  __sBLBss_n
+                                  000f8314         0   none ,g         0
+  __eBLBss_n
+                                  000f8322         0   none ,g         0
+  __sBLData_n
+                                  00001848         0   none ,g         0
+  __eBLData_n
+                                  0000184a         0   none ,g         0
+  __sBLDataR_n
+                                  000f8322         0   none ,g         0
+  __eBLDataR_n
+                                  000f8324         0   none ,g         0
+  __s.RLIB
+                                  0000182b         0   none ,g         0
+  __e.RLIB
+                                  00001840         0   none ,g         0
+  __s.SLIB
+                                  00001840         0   none ,g         0
+  __e.SLIB
+                                  00001840         0   none ,g         0
+  __sBLShareTx_n
+                                  00000d0f         0   none ,g         0
+  __eBLShareTx_n
+                                  00000eaa         0   none ,g         0
+  __sBLNoInit_n
+                                  000f8300         0   none ,g         0
+  __eBLNoInit_n
+                                  000f8314         0   none ,g         0
+  __sRAMVect_n
+                                  000f8400         0   none ,g         0
+  __eRAMVect_n
+                                  000f8500         0   none ,g         0
+  __sISRTx_n
+                                  0000012f         0   none ,g         0
+  __eISRTx_n
+                                  0000082b         0   none ,g         0
+  __sSFLTx_n
+                                  0000082b         0   none ,g         0
+  __eSFLTx_n
+                                  00000d0f         0   none ,g         0
+  __sFSL_FCD
+                                  0000184a         0   none ,g         0
+  __eFSL_FCD
+                                  000018e7         0   none ,g         0
+  __sFSL_RCD
+                                  000019e8         0   none ,g         0
+  __eFSL_RCD
+                                  00001a30         0   none ,g         0
+  __sFSL_BCD
+                                  000018e8         0   none ,g         0
+  __eFSL_BCD
+                                  000019e8         0   none ,g         0
+  __s.option_byte
+                                  000000c0         0   none ,g         0
+  __e.option_byte
+                                  000000c4         0   none ,g         0
+  __s.monitor1
+                                  000000ce         0   none ,g         0
+  __e.monitor1
+                                  000000d8         0   none ,g         0
+  __s.monitor2
+                                  0007fe00         0   none ,g         0
+  __e.monitor2
+                                  00080000         0   none ,g         0
+  __s.security_id
+                                  000000c4         0   none ,g         0
+  __e.security_id
+                                  000000ce         0   none ,g         0
+  __s.vect
+                                  00000000         0   none ,g         0
+  __e.vect
+                                  00000080         0   none ,g         0
+  __RAM_ADDR_START
+                                  000f7f00         0   none ,g         0
+  __RAM_ADDR_END
+                                  000ffe22         0   none ,g         0
+  __STACK_ADDR_START
+                                  000fee00         0   none ,g         0
+  __STACK_ADDR_END
+                                  000f8d2e         0   none ,g         0
+
+*** Unfilled Areas ***
+
+AREA                                START    END
+
+*** Delete Symbols ***
+
+SYMBOL                                SIZE    INFO
+
+_BL_IMAGE_Processing
+                                       1ad    func ,g
+_BL_RECOVERY_SendFrameAck
+                                        3b    func ,g
+_BL_RECOVERY_PollingProcessing
+                                        b5    func ,g
+_BL_RECOVERY_Processing
+                                        3c    func ,g
+_g_bl_recovery_response_error_code
+                                         1    data ,g
+_g_bl_recovery_is_key_press
+                                         1    data ,g
+_BL_LCD_DisplayBackingUp
+                                        21    func ,g
+_BL_LCD_DisplayRestoring
+                                        2d    func ,g
+_BL_LCD_DisplayUpdating
+                                        27    func ,g
+_BL_LCD_DisplayRecoveryMode
+                                        2d    func ,g
+_LCD_GetRamSize
+                                         4    func ,g
+_LCD_RamClearAll
+                                        11    func ,g
+_LCD_RamSetAll
+                                        11    func ,g
+_LCD_GetNumInfo
+                                        50    func ,g
+_LCD_WriteRAMDigitInfo
+                                        17    func ,g
+_LCD_ClearRAMDigitInfo
+                                        17    func ,g
+_g_LCD_NumMap
+                                        38    data ,g
+_g_LCD_NumType
+                                         b    data ,g
+_g_DecInfo
+                                         2    data ,g
+_LCD_DisplayAll
+                                         3    func ,g
+_LCD_ClearAll
+                                         3    func ,g
+_LCD_DisplayDigit
+                                        36    func ,g
+_BL_R_CGC_OperateAtClock24M
+                                         5    func ,g
+_BL_R_CGC_OperateAtClock12M
+                                         5    func ,g
+_BL_R_CGC_OperateAtClock6M
+                                         4    func ,g
+_R_LCD_Create
+                                         1    func ,g
+_R_LCD_Start
+                                         4    func ,g
+_R_LCD_Stop
+                                         4    func ,g
+_R_LCD_Set_VoltageOn
+                                        30    func ,g
+_R_LCD_Set_VoltageOff
+                                         f    func ,g
+_R_LCD_PowerOff
+                                         5    func ,g
+_R_LCD_PowerOn
+                                         5    func ,g
+_R_LVD_Create
+                                        32    func ,g
+_R_LVD_Start_VDD
+                                         9    func ,g
+_R_LVD_Stop_VDD
+                                         c    func ,g
+_R_UART2_Send
+                                        27    func ,g
+_g_Csi30RxLen
+                                         2    data ,g
+_g_Csi30RxCnt
+                                         2    data ,g
+_g_Csi30TxLen
+                                         2    data ,g
+_R_CSI30_Callback_ReceiveEnd
+                                         3    func ,g
+_R_CSI30_Callback_SendEnd
+                                         3    func ,g
+
+*** Variable Vector Table List ***
+
+ADDRESS  SYMBOL/ADDRESS
+00       _bl_start
+02       ffff
+04       _INTWDTI_Interrupt@1
+06       _INTLVI_Interrupt@1
+08       _INTP0_Interrupt@1
+0a       _INTP1_Interrupt@1
+0c       _INTP2_Interrupt@1
+0e       _INTP3_Interrupt@1
+10       _INTP4_Interrupt@1
+12       _INTP5_Interrupt@1
+14       _INTST2_Interrupt@1
+16       _INTSR2_Interrupt@1
+18       _INTSRE2_Interrupt@1
+1a       _INTCR_Interrupt@1
+1c       
+1e       _INTCSI00_Interrupt@1
+20       _INTIICA0_Interrupt@1
+22       _INTSR0_Interrupt@1
+24       _INTSRE0_Interrupt@1
+26       _INTCSI10_Interrupt@1
+28       _INTSR1_Interrupt@1
+2a       _INTSRE1_Interrupt@1
+2c       _INTTM00_Interrupt@1
+2e       _INTRTCALM0_Interrupt@1
+30       _INTFM_Interrupt@1
+32       _INTTM01_Interrupt@1
+34       _INTTM02_Interrupt@1
+36       _INTTM03_Interrupt@1
+38       _INTAD_Interrupt@1
+3a       _INTRTCPRD_Interrupt@1
+3c       _INTIT_Interrupt@1
+3e       _INTRTCALM1_Interrupt@1
+40       _INTCSI30_Interrupt@1
+42       _INTSR3_Interrupt@1
+44       _INTDSAD_Interrupt@1
+46       _INTTM04_Interrupt@1
+48       _INTTM05_Interrupt@1
+4a       _INTP6_Interrupt@1
+4c       _INTP7_Interrupt@1
+4e       _INTRTCIC2_Interrupt@1
+50       _INTRTCIC1_Interrupt@1
+52       _INTRTCIC0_Interrupt@1
+54       _INTTM06_Interrupt@1
+56       _INTTM07_Interrupt@1
+58       _INTIT00_Interrupt@1
+5a       _INTIT01_Interrupt@1
+5c       _INTSRE3_Interrupt@1
+5e       _INTMACLOF_Interrupt@1
+60       _INTOSDC_Interrupt@1
+62       _INTFL_Interrupt@1
+64       _INTP8_Interrupt@1
+66       _INTP9_Interrupt@1
+68       _INTIT10_Interrupt@1
+6a       _INTIT11_Interrupt@1
+6c       _INTLVDVDD_Interrupt@1
+6e       _INTLVDVBAT_Interrupt@1
+70       _INTLVDVRTC_Interrupt@1
+72       _INTLVDEXLVD_Interrupt@1
+74       _INTST4_Interrupt@1
+76       _INTSR4_Interrupt@1
+78       _INTSRE4_Interrupt@1
+7a       _INTDSADDEC_Interrupt@1
+7c       _INTTRJ1_Interrupt@1
+7e       
+
+*** Cross Reference List ***
+
+No   Unit Name   Global.Symbol   Location External Infomation
+---- ----------- --------------- -------- ---------------------
+0001 bl_main
+     SECTION=.text
+                 _bl_main
+                                 00000eaa 0002(0000012a:BStaTx_n)
+0002 bl_cstart
+     SECTION=BStaTx_n
+                 _bl_start
+                                 000000d8
+     SECTION=.textf
+     SECTION=.constf
+     SECTION=.data
+     SECTION=.bss
+     SECTION=.dataR
+     SECTION=.stack_bss
+     SECTION=BLBss_n
+     SECTION=BLData_n
+     SECTION=BLDataR_n
+     SECTION=.RLIB
+     SECTION=.SLIB
+     SECTION=.dataR
+     SECTION=BLDataR_n
+0003 bl_image_decompress
+     SECTION=.text
+                 _BL_IMAGE_TransferUserAppToROM
+                                 00000f09
+0004 bl_stkinit
+     SECTION=.textf
+                 _bl_stkinit
+                                 000017e2 0002(000000e0:BStaTx_n)
+0005 bl_string
+     SECTION=.text
+                 _BL_memcmp_nn
+                                 0000119c 0003(0000118e:.text)
+                 _BL_memcpy_nn
+                                 000011af 0007(0000129c:.text)
+                                          0008(00000d8c:BLShareTx_n)
+                 _BL_memcpy_nf
+                                 000011c4 0003(0000111d:.text)
+                                          0008(00000dd8:BLShareTx_n)
+0006 bl_flash
+     SECTION=.text
+                 _BL_FLASH_EraseBlock
+                                 000011df 0008(000012d4:.text)
+                                          0008(000012ec:.text)
+                 _BL_FLASH_WriteBlock
+                                 00001207 0003(0000110a:.text)
+     SECTION=.constf
+                 _g_fsl_descriptor
+                                 00001840 0006(000011e4:.text)
+                                          0006(000011e7:.text)
+                                          0006(00001210:.text)
+                                          0006(00001213:.text)
+0007 bl_hashing
+     SECTION=BLShareTx_n
+                 _BL_HASHING_DigestUserAppBackupSFL
+                                 00000d0f
+                 _BL_HASHING_DigestUserAppROM
+                                 00000d10
+     SECTION=.text
+                 _BL_HASHING_Init
+                                 0000127e 0003(00000f5d:.text)
+                 _BL_HASHING_Calculate
+                                 00001283 0003(00000f7c:.text)
+                                          0003(00001127:.text)
+                 _BL_HASHING_GetResult
+                                 00001286 0003(00001176:.text)
+0008 bl_image
+     SECTION=BLShareTx_n
+                 _BL_IMAGE_EraseImageData
+                                 00000d11
+                 _BL_IMAGE_Erase
+                                 00000d17
+                 _BL_IMAGE_Write
+                                 00000d2f
+                 _BL_IMAGE_BackupUserApp
+                                 00000d6d
+     SECTION=.text
+                 _BL_IMAGE_EraseImageInSerialFlash
+                                 000012a1 0008(00000d13:BLShareTx_n)
+                                          0008(00000d74:BLShareTx_n)
+                 _BL_IMAGE_EraseUserAppInROM
+                                 000012c8 0003(00000f33:.text)
+     SECTION=.bss
+                 _g_bl_image_read_ROM_buffer
+                                 000f8502 0003(00000f6f:.text)
+                                          0003(00000f79:.text)
+                                          0003(000010f5:.text)
+                                          0003(00001107:.text)
+                                          0003(0000111a:.text)
+                                          0003(00001124:.text)
+0009 bl_operation
+     SECTION=BLShareTx_n
+                 _BL_OPERATION_GetStartupStatus
+                                 00000e19
+                 _BL_OPERATION_GetProperties
+                                 00000e2b 0003(00000f12:.text)
+                 _BL_OPERATION_RequestRecoveryMode
+                                 00000e6a
+                 _BL_OPERATION_RequestUserReset
+                                 00000e6e
+                 _BL_OPERATION_RequestImageActivation
+                                 00000e73
+                 _BL_OPERATION_RequestImageBackup
+                                 00000e81
+                 _BL_OPERATION_InformStartupOK
+                                 00000e86
+                 _BL_OPERATION_AcknowledgeImageUpdateStatus
+                                 00000ea2
+                 _BL_OPERATION_UpdateOperatingClock
+                                 00000ea7
+     SECTION=.text
+                 _BL_OPERATION_ReadConfirmCode
+                                 00001309 0001(00000eb7:.text)
+                                          0001(00000ebf:.text)
+                 _BL_OPERATION_ClearConfirmCode
+                                 00001322 0003(00000f3e:.text)
+                                          0003(0000117b:.text)
+                                          0008(00001301:.text)
+                                          0009(00000e8c:BLShareTx_n)
+                                          0009(00000e91:BLShareTx_n)
+                                          0009(00000e96:BLShareTx_n)
+                                          0009(00000e9b:BLShareTx_n)
+                                          0009(00000ea0:BLShareTx_n)
+                 _BL_OPERATION_SetConfirmCode
+                                 0000132c 0003(00000f17:.text)
+                                          0008(000012cc:.text)
+                                          0009(00000e6c:BLShareTx_n)
+                                          0009(00000e71:BLShareTx_n)
+                                          0009(00000e76:BLShareTx_n)
+                                          0009(00000e7b:BLShareTx_n)
+                                          0009(00000e84:BLShareTx_n)
+                                          0020(0000144b:.text)
+     SECTION=BLNoInit_n
+                 _g_bl_info
+                                 000f8300 0001(00000ec5:.text)
+                                          0009(00001314:.text)
+                                          0009(00001329:.text)
+                                          0009(00001335:.text)
+                                          0009(00000e88:BLShareTx_n)
+                                          0028(0000175c:.text)
+     SECTION=BLBss_n
+                 _g_bl_startup_status
+                                 000f8314 0009(00000e23:BLShareTx_n)
+                                          0009(00000e27:BLShareTx_n)
+                                          0009(00000ea4:BLShareTx_n)
+                                          0028(00001751:.text)
+                                          0028(0000176b:.text)
+0010 bl_recovery
+     SECTION=.text
+                 _BL_RECOVERY_Init
+                                 00001338 0028(00001781:.text)
+                 _BL_RECOVERY_UartSendEndCallBack
+                                 00001342 0023(0000166d:.text)
+                 _BL_RECOVERY_UartReceivedEndCallBack
+                                 00001346 0023(0000168c:.text)
+                 _BL_RECOVERY_TimerEndCallBack
+                                 000013c7 0025(000016e8:.text)
+     SECTION=.dataR
+                 _g_bl_recovery_timeout_counter
+                                 000f8500 0010(00001364:.text)
+                                          0010(000013ce:.text)
+                                          0010(000013d1:.text)
+                                          0010(000013e2:.text)
+     SECTION=.bss
+                 _g_bl_recovery_data_buffer
+                                 000f8902 0010(0000137d:.text)
+                                          0010(0000138a:.text)
+                                          0010(00001390:.text)
+                                          0010(000013aa:.text)
+                 _g_bl_recovery_frame_length
+                                 000f8d22 0010(0000138d:.text)
+                                          0010(00001393:.text)
+                                          0010(000013a0:.text)
+                                          0010(000013ec:.text)
+                 _g_bl_recovery_receive_count
+                                 000f8d24 0010(00001370:.text)
+                                          0010(00001378:.text)
+                                          0010(00001382:.text)
+                                          0010(00001397:.text)
+                                          0010(000013a3:.text)
+                                          0010(000013b3:.text)
+                                          0010(000013be:.text)
+                                          0010(000013ef:.text)
+                 _g_bl_recovery_is_mode_timeout
+                                 000f8d26 0010(000013de:.text)
+                 _g_bl_recovery_is_mode_finish
+                                 000f8d27
+                 _g_bl_recovery_is_processing
+                                 000f8d28 0010(000013c8:.text)
+                 _g_bl_recovery_is_sent
+                                 000f8d29 0010(00001343:.text)
+                 _g_bl_recovery_opr_state
+                                 000f8d2a 0010(0000133f:.text)
+                                          0010(0000134a:.text)
+                                          0010(0000135f:.text)
+                                          0010(00001373:.text)
+                                          0010(0000139a:.text)
+                                          0010(000013b9:.text)
+                                          0010(000013c3:.text)
+                                          0010(000013d4:.text)
+                                          0010(000013f2:.text)
+     SECTION=.data
+0011 bl_display
+     SECTION=.text
+0012 bl_r_drv_lcd_ext
+     SECTION=.text
+0013 bl_r_lcd_config
+     SECTION=.constf
+                 _g_DecInfo1
+                                 00001844
+0014 bl_r_lcd_display
+     SECTION=.text
+0015 bl_interrupt
+     SECTION=RAMVect_n
+                 _RAM_ISR_Table
+                                 000f8400 0016(0000013d:ISRTx_n)
+                                          0016(0000015b:ISRTx_n)
+                                          0016(00000179:ISRTx_n)
+                                          0016(00000197:ISRTx_n)
+                                          0016(000001b5:ISRTx_n)
+                                          0016(000001d3:ISRTx_n)
+                                          0016(000001f1:ISRTx_n)
+                                          0016(0000020f:ISRTx_n)
+                                          0016(0000022d:ISRTx_n)
+                                          0016(0000024b:ISRTx_n)
+                                          0016(00000269:ISRTx_n)
+                                          0016(00000287:ISRTx_n)
+                                          0016(000002a5:ISRTx_n)
+                                          0016(000002c3:ISRTx_n)
+                                          0016(000002e1:ISRTx_n)
+                                          0016(000002ff:ISRTx_n)
+                                          0016(0000031d:ISRTx_n)
+                                          0016(0000033b:ISRTx_n)
+                                          0016(00000359:ISRTx_n)
+                                          0016(00000377:ISRTx_n)
+                                          0016(00000395:ISRTx_n)
+                                          0016(000003b3:ISRTx_n)
+                                          0016(000003d1:ISRTx_n)
+                                          0016(000003ed:ISRTx_n)
+                                          0016(00000407:ISRTx_n)
+                                          0016(00000425:ISRTx_n)
+                                          0016(00000443:ISRTx_n)
+                                          0016(00000461:ISRTx_n)
+                                          0016(0000047f:ISRTx_n)
+                                          0016(0000049d:ISRTx_n)
+                                          0016(000004bb:ISRTx_n)
+                                          0016(000004d7:ISRTx_n)
+                                          0016(000004f1:ISRTx_n)
+                                          0016(0000050f:ISRTx_n)
+                                          0016(0000052d:ISRTx_n)
+                                          0016(0000054b:ISRTx_n)
+                                          0016(00000569:ISRTx_n)
+                                          0016(00000587:ISRTx_n)
+                                          0016(000005a5:ISRTx_n)
+                                          0016(000005c3:ISRTx_n)
+                                          0016(000005e1:ISRTx_n)
+                                          0016(000005ff:ISRTx_n)
+                                          0016(0000061d:ISRTx_n)
+                                          0016(0000063b:ISRTx_n)
+                                          0016(00000659:ISRTx_n)
+                                          0016(00000677:ISRTx_n)
+                                          0016(00000695:ISRTx_n)
+                                          0016(000006b3:ISRTx_n)
+                                          0016(000006d1:ISRTx_n)
+                                          0016(000006ef:ISRTx_n)
+                                          0016(0000070d:ISRTx_n)
+                                          0016(0000072b:ISRTx_n)
+                                          0016(00000749:ISRTx_n)
+                                          0016(00000767:ISRTx_n)
+                                          0016(00000785:ISRTx_n)
+                                          0016(000007a3:ISRTx_n)
+                                          0016(000007c1:ISRTx_n)
+                                          0016(000007df:ISRTx_n)
+                                          0016(000007fd:ISRTx_n)
+                                          0016(0000081b:ISRTx_n)
+                                          0026(0000170f:.text)
+                                          0026(0000171b:.text)
+                                          0026(00001721:.text)
+                                          0026(00001727:.text)
+                                          0026(0000172d:.text)
+                                          0026(00001733:.text)
+0016 bl_interrupt_handler
+     SECTION=ISRTx_n
+0017 bl_r_cg_cgc
+     SECTION=.text
+                 _R_CGC_Create
+                                 000013f5 0026(000016f4:.text)
+                 _BL_R_CGC_UpdateCPUClock
+                                 00001427 0009(00000ea8:BLShareTx_n)
+0018 bl_r_cg_crc
+     SECTION=.text
+                 _R_CRC_Set
+                                 00001430 0007(00001281:.text)
+                 _R_CRC_GetResult
+                                 00001434 0007(00001289:.text)
+                 _R_CRC_Calculate
+                                 00001438 0007(00001284:.text)
+0019 bl_r_cg_lcd
+     SECTION=.text
+0020 bl_r_cg_lvd
+     SECTION=.text
+                 _r_lvd_vddinterrupt
+                                 00001448 0026(00001730:.text)
+0021 bl_r_cg_port
+     SECTION=.text
+                 _R_PORT_Create
+                                 00001451 0028(00001776:.text)
+                 _R_PORT_StopCreate
+                                 000014a5 0026(000016f7:.text)
+0022 bl_r_cg_sau
+     SECTION=.text
+                 _R_SAU1_Create
+                                 000014bf 0026(000016fa:.text)
+                 _R_CSI30_Create
+                                 000014d0
+                 _R_CSI30_Start
+                                 0000150f 0030(000017cd:.text)
+                 _R_CSI30_Stop
+                                 00001535 0030(000017d0:.text)
+                 _R_CSI30_Send_Receive
+                                 0000154d 0030(000017d3:.text)
+                 _R_UART2_Create
+                                 00001578 0022(000014ce:.text)
+                 _R_UART2_Start
+                                 000015dd 0010(00001339:.text)
+                 _R_UART2_Stop
+                                 00001603 0028(00001788:.text)
+     SECTION=BLBss_n
+                 _gp_Csi30RxAddress
+                                 000f8318 0022(00001564:.text)
+                                          0023(00001641:.text)
+                                          0023(0000164d:.text)
+                                          0023(00001656:.text)
+                 _gp_Csi30TxAddress
+                                 000f831a 0022(0000155d:.text)
+                                          0022(00001569:.text)
+                                          0022(0000156f:.text)
+                                          0023(00001653:.text)
+                                          0023(0000165c:.text)
+                 _g_Csi30TxCnt
+                                 000f831c 0022(00001559:.text)
+                                          0022(00001572:.text)
+                                          0023(00001634:.text)
+                                          0023(0000163b:.text)
+                                          0023(0000165f:.text)
+                 _gp_uart2_tx_address
+                                 000f831e 0023(00001670:.text)
+                                          0023(00001676:.text)
+                 _g_uart2_tx_count
+                                 000f8320 0023(00001666:.text)
+                                          0023(00001679:.text)
+0023 bl_r_cg_sau_user
+     SECTION=.text
+                 _R_CSI30_Interrupt
+                                 00001621 0026(00001718:.text)
+                 _r_uart2_interrupt_send
+                                 00001662 0026(0000171e:.text)
+                 _r_uart2_interrupt_receive
+                                 0000167c 0026(00001724:.text)
+0024 bl_r_cg_tau
+     SECTION=.text
+                 _R_TAU0_Create
+                                 0000168e 0026(000016fd:.text)
+                 _R_TAU0_Channel0_Start
+                                 000016c4 0010(0000133c:.text)
+                 _R_TAU0_Channel0_Stop
+                                 000016d4 0028(0000178b:.text)
+0025 bl_r_cg_tau_user
+     SECTION=.text
+                 _r_tau0_channel0_interrupt
+                                 000016e4 0026(0000172a:.text)
+0026 bl_r_systeminit
+     SECTION=.text
+                 _R_Systeminit
+                                 000016ea 0026(0000173a:.text)
+                 _R_DefaultInterrupHandler
+                                 00001704 0026(0000170c:.text)
+                 _R_RAM_InterruptVectorInit
+                                 00001705 0026(0000173d:.text)
+                 _bl_hdwinit
+                                 00001736 0002(000000e3:BStaTx_n)
+0027 bl_serialflash
+     SECTION=SFLTx_n
+                 _BL_SFL_Init
+                                 000009ee 0028(00001779:.text)
+                 _BL_SFL_Stop
+                                 00000a41
+                 _BL_SFL_DeviceErase4KB
+                                 00000a46 0008(00000d26:BLShareTx_n)
+                 _BL_SFL_DeviceErase64KB
+                                 00000a95 0008(000012b3:.text)
+                 _BL_SFL_DeviceEraseAll
+                                 00000ae4
+                 _BL_SFL_DeviceWriteProtectAll
+                                 00000b14
+                 _BL_SFL_DeviceWriteUnProtectAll
+                                 00000b19
+                 _BL_SFL_DeviceRead
+                                 00000b1d 0003(00000f55:.text)
+                                          0003(00000f72:.text)
+                                          0003(00000fb0:.text)
+                                          0003(00000fcf:.text)
+                                          0003(000010a3:.text)
+                                          0003(000010c2:.text)
+                                          0003(000010f8:.text)
+                                          0003(0000116d:.text)
+                 _BL_SFL_DeviceWrite
+                                 00000b91 0008(00000d5e:BLShareTx_n)
+                                          0008(00000d9c:BLShareTx_n)
+                                          0008(00000de8:BLShareTx_n)
+     SECTION=.text
+                 _SFL_SendEndCallback
+                                 00001743 0030(000017dd:.text)
+                 _SFL_ReceiveEndCallback
+                                 00001747 0030(000017e0:.text)
+     SECTION=BLData_n
+     SECTION=BLDataR_n
+0028 bl_startup
+     SECTION=.text
+                 _BL_Startup
+                                 0000174b 0001(00000eac:.text)
+                 _BL_StopPeripherals
+                                 00001787 0001(00000edc:.text)
+                                          0001(00000eea:.text)
+0029 bl_wrp_mcu
+     SECTION=.text
+                 _MCU_Delay
+                                 0000178d 0026(000016f1:.text)
+                                          0027(0000084a:SFLTx_n)
+                                          0027(00000891:SFLTx_n)
+                                          0027(00000c91:SFLTx_n)
+0030 bl_wrp_user_spi
+     SECTION=.text
+                 _WRP_SPI_Init
+                                 000017cb 0027(000009f1:SFLTx_n)
+                 _WRP_SPI_Start
+                                 000017cc 0027(000009f4:SFLTx_n)
+                 _WRP_SPI_Stop
+                                 000017cf 0027(00000a42:SFLTx_n)
+                 _WRP_SPI_SendReceive
+                                 000017d2 0027(000008d1:SFLTx_n)
+                                          0027(000008f3:SFLTx_n)
+                                          0027(00000915:SFLTx_n)
+                                          0027(0000093c:SFLTx_n)
+                                          0027(00000967:SFLTx_n)
+                                          0027(00000986:SFLTx_n)
+                                          0027(000009d0:SFLTx_n)
+                                          0027(00000a77:SFLTx_n)
+                                          0027(00000ac6:SFLTx_n)
+                                          0027(00000af9:SFLTx_n)
+                                          0027(00000b65:SFLTx_n)
+                                          0027(00000b80:SFLTx_n)
+                                          0027(00000c03:SFLTx_n)
+                                          0027(00000c70:SFLTx_n)
+                 _WRP_SPI_SendEndCallback
+                                 000017dc 0023(0000164a:.text)
+                 _WRP_SPI_ReceiveEndCallback
+                                 000017df 0023(00001647:.text)
+0031 fsl_f_open
+     SECTION=FSL_FCD
+                 _FSL_Open
+                                 0000184a 0006(000011ec:.text)
+                                          0006(00001218:.text)
+0032 fsl_f_close
+     SECTION=FSL_FCD
+                 _FSL_Close
+                                 00001850 0006(000011fe:.text)
+                                          0006(00001274:.text)
+0033 fsl_f_pfunc
+     SECTION=FSL_FCD
+                 _FSL_PrepareFunctions
+                                 00001856 0006(000011ef:.text)
+                                          0006(0000121b:.text)
+                 _FSL_Prepare_common
+                                 0000186c 0033(00001876:FSL_FCD)
+0034 fsl_f_init
+     SECTION=FSL_FCD
+                 _FSL_Init
+                                 00001880 0006(000011e9:.text)
+                                          0006(00001215:.text)
+0035 fsl_r_std_cmd
+     SECTION=FSL_RCD
+                 _FSL_BlankCheck
+                                 000019e8 0006(0000122a:.text)
+                 _FSL_Erase
+                                 000019ed 0006(000011f4:.text)
+                 _FSL_IVerify
+                                 000019f2 0006(0000126b:.text)
+                 _FSL_Write
+                                 000019f7 0006(0000124b:.text)
+0036 _COM_memset_f
+     SECTION=.RLIB
+                 __COM_memset_f
+                                 0000182b 0028(00001762:.text)
+0037 fsl_b_common
+     SECTION=FSL_BCD
+                 _ASM_BCD_Start
+                                 000018e8 0033(00001862:FSL_FCD)
+                                          0033(00001864:FSL_FCD)
+                                          0037(000019dc:FSL_BCD)
+                                          0037(000019de:FSL_BCD)
+                                          0037(000019e0:FSL_BCD)
+                                          0037(000019e2:FSL_BCD)
+                                          0037(000019e4:FSL_BCD)
+                 _ASM_BCD_End
+                                 000019e8 0033(00001867:FSL_FCD)
+0038 fsl_r_check_flow
+     SECTION=FSL_RCD
+                 _ASM_RCD_Check_Ext_Flow
+                                 00001a08
+                 _ASM_RCD_Check_Status_Flow
+                                 00001a0f
+                 _ASM_RCD_Check_StandBy_Flow
+                                 00001a16
+                 _ASM_RCD_Check_WakeUp_Flow
+                                 00001a1d
+                 _ASM_RCD_Check_Flow
+                                 00001a24 0035(000019fb:FSL_RCD)
+0039 rlink_generates_01
+     SECTION=.option_byte
+0040 rlink_generates_02
+     SECTION=.monitor1
+     SECTION=.monitor2
+0041 rlink_generates_03
+     SECTION=.security_id
+0042 rlink_generates_04
+     SECTION=.vect
+0043 rlink_generates_05
+     SECTION=
+                 __s.vect
+                                 00000000
+                 __e.vect
+                                 00000080
+                 __s.option_byte
+                                 000000c0
+                 __e.option_byte
+                                 000000c4
+                 __s.security_id
+                                 000000c4
+                 __s.monitor1
+                                 000000ce
+                 __e.security_id
+                                 000000ce
+                 __sBStaTx_n
+                                 000000d8
+                 __e.monitor1
+                                 000000d8
+                 __eBStaTx_n
+                                 0000012f
+                 __sISRTx_n
+                                 0000012f
+                 __eISRTx_n
+                                 0000082b
+                 __sSFLTx_n
+                                 0000082b
+                 __sBLShareTx_n
+                                 00000d0f
+                 __eSFLTx_n
+                                 00000d0f
+                 __s.text
+                                 00000eaa
+                 __eBLShareTx_n
+                                 00000eaa
+                 __e.text
+                                 000017e2
+                 __s.textf
+                                 000017e2
+                 __e.textf
+                                 0000182b
+                 __s.RLIB
+                                 0000182b
+                 __s.constf
+                                 00001840
+                 __e.RLIB
+                                 00001840
+                 __s.SLIB
+                                 00001840
+                 __e.SLIB
+                                 00001840
+                 __e.constf
+                                 00001845
+                 __s.data
+                                 00001846
+                 __e.data
+                                 00001848
+                 __sBLData_n
+                                 00001848
+                 __eBLData_n
+                                 0000184a
+                 __sFSL_FCD
+                                 0000184a
+                 __eFSL_FCD
+                                 000018e7
+                 __sFSL_BCD
+                                 000018e8
+                 __sFSL_RCD
+                                 000019e8
+                 __eFSL_BCD
+                                 000019e8
+                 __eFSL_RCD
+                                 00001a30
+                 __s.monitor2
+                                 0007fe00
+                 __e.monitor2
+                                 00080000
+                 __RAM_ADDR_START
+                                 000f7f00
+                 __sBLNoInit_n
+                                 000f8300
+                 __sBLBss_n
+                                 000f8314
+                 __eBLNoInit_n
+                                 000f8314
+                 __eBLBss_n
+                                 000f8322
+                 __sBLDataR_n
+                                 000f8322
+                 __eBLDataR_n
+                                 000f8324
+                 __sRAMVect_n
+                                 000f8400
+                 __s.dataR
+                                 000f8500
+                 __eRAMVect_n
+                                 000f8500
+                 __s.bss
+                                 000f8502
+                 __e.dataR
+                                 000f8502
+                 __e.bss
+                                 000f8d2b
+                 __STACK_ADDR_END
+                                 000f8d2e
+                 __s.stack_bss
+                                 000fee00
+                 __STACK_ADDR_START
+                                 000fee00
+                 __e.stack_bss
+                                 000ffc60
+                 __RAM_ADDR_END
+                                 000ffe22

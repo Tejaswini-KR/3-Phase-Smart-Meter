@@ -1,0 +1,72 @@
+Logged on: Jul 22 2023 - 16:29:48
+
+ Class 1v0: Invocation counter 3 (0.0.43.1.3.255.)
+, , 1. Logical name (R): 0.0.43.1.3.255.
+, , 2. Value (R): 1939222477 (DOUBLE_LONG_UNSIGNED)
+ Class 1v0: COSEM Logical device name (0.0.42.0.0.255.)
+, , 1. Logical name (R): 0.0.42.0.0.255.
+, , 2. Value (R): REI00045 (OCTET_STRING)
+ Class 1v0: Device ID 1 manufacturing number (0.0.96.1.0.255.)
+, , 1. Logical name (R): 0.0.96.1.0.255.
+, , 2. Value (R): 0000000000000045 (OCTET_STRING)
+ Class 1v0: Invocation counter 5 (0.0.43.1.5.255.)
+, , 1. Logical name (R): 0.0.43.1.5.255.
+, , 2. Value (R): 1939222477 (DOUBLE_LONG_UNSIGNED)
+ Class 1v0: Invocation counter 4 (0.0.43.1.4.255.)
+, , 1. Logical name (R): 0.0.43.1.4.255.
+, , 2. Value (R): 1939222477 (DOUBLE_LONG_UNSIGNED)
+ Class 1v0: Invocation counter 2 (0.0.43.1.2.255.)
+, , 1. Logical name (R): 0.0.43.1.2.255.
+, , 2. Value (R): 1939222477 (DOUBLE_LONG_UNSIGNED)
+ Class 8v0: Clock object (0.0.1.0.0.255.) (with Action) 
+, , 1. Logical name (R): 0.0.1.0.0.255.
+, , 2. Time (R): 
+, , , Date: Saturday, 22/7/2023
+, , , Time: 16:28:21 (Deviation: 630)
+, , , Clock Status: 0
+, , 3. Time zone (R): 630 (LONG)
+, , 4. Status (R): 0 (UNSIGNED)
+, , 5. Daylight savings begin (R): (hh:mm:ss) NS:NS:NS- (DoW,dd/mm/yy) NS.NS/NS/NS-Deviation:NS-Clock status:255 (OCTET_STRING)
+, , 6. Daylight savings end (R): (hh:mm:ss) NS:NS:NS- (DoW,dd/mm/yy) NS.NS/NS/NS-Deviation:NS-Clock status:255 (OCTET_STRING)
+, , 7. Daylight savings deviation (R): 60 (INTEGER)
+, , 8. Daylight savings enabled (R): false (BOOLEAN)
+, , 9. Clock base (R): 1 (ENUM)
+ Class 15v1: Current association (0.0.40.0.0.255.) (with Action) 
+, , 1. Logical name (R): 0.0.40.0.0.255.
+, , 2. Object list (R): 
+, , , View Data.
+, , 3. Associated partners ID (R): 
+, , , Client_SAP: 16
+, , , Server_SAP: 1
+, , 4. Application context name (R): 60857405080101 (OCTET_STRING)
+, , 5. xDLMS context info (R): 
+, , , Conformance: 000010
+, , , Max receive PDU size: 832
+, , , Max send PDU size: 768
+, , , DLMS version number: 6
+, , , Quality of service: 0
+, , , Cyphering info: 
+, , 6. Authentication mechanism name (R): 60857405080200 (OCTET_STRING)
+, , 7. Secret (NO_ACCESS):  ()
+, , 8. Association status (R): 2 (ENUM)
+, , 9. Security setup reference (R): 0 (NULL_DATA)
+ Class 15v1: Association 1 (0.0.40.0.1.255.) (with Action) 
+, , 1. Logical name (R): 0.0.40.0.1.255.
+, , 2. Object list (R): 
+, , , View Data.
+, , 3. Associated partners ID (R): 
+, , , Client_SAP: 16
+, , , Server_SAP: 1
+, , 4. Application context name (R): 60857405080101 (OCTET_STRING)
+, , 5. xDLMS context info (R): 
+, , , Conformance: 000010
+, , , Max receive PDU size: 832
+, , , Max send PDU size: 768
+, , , DLMS version number: 6
+, , , Quality of service: 0
+, , , Cyphering info: 
+, , 6. Authentication mechanism name (R): 60857405080200 (OCTET_STRING)
+, , 7. Secret (NO_ACCESS):  ()
+, , 8. Association status (R): 2 (ENUM)
+, , 9. Security setup reference (R): 0 (NULL_DATA)
+

@@ -1,0 +1,252 @@
+<?xml version="1.0"?>
+<ArrayOfClass70 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Class70>
+    <NumberAttribute>4</NumberAttribute>
+    <NumberMethod>2</NumberMethod>
+    <indexAccessRightGroup>21</indexAccessRightGroup>
+    <LogicalName>0.0.96.3.10.255</LogicalName>
+    <IndexObject>0</IndexObject>
+    <ObjectName>Load Limit Function Status</ObjectName>
+    <ClassID>70</ClassID>
+    <Version>0</Version>
+    <ClassName>Disconnect control</ClassName>
+    <ByApplication>Instantaneous, Programmable</ByApplication>
+    <output_state>
+      <GetDataMode>UserFunction</GetDataMode>
+      <EnableGetUserGenerate>false</EnableGetUserGenerate>
+      <EnableSetUserGenerate>false</EnableSetUserGenerate>
+      <AttributeIndex>2</AttributeIndex>
+      <TagType>Boolean</TagType>
+      <AttributeName>output_state</AttributeName>
+      <Ctype>uint8_t</Ctype>
+      <Attribute_Size>1</Attribute_Size>
+      <Attribute_Type>boolean</Attribute_Type>
+      <Version>0</Version>
+      <AttributeTypeInfo>
+        <AttributeType>uint8_t</AttributeType>
+        <AttributeSize>1</AttributeSize>
+        <AttributeCName>uint8</AttributeCName>
+        <TagType>Boolean</TagType>
+      </AttributeTypeInfo>
+      <AssociationAccessRight>
+        <AccessRightAttribute>
+          <DontKnow>false</DontKnow>
+          <AssociationName>
+            <Name>Public Client</Name>
+          </AssociationName>
+        </AccessRightAttribute>
+        <AccessRightAttribute>
+          <DontKnow>false</DontKnow>
+          <AssociationName>
+            <Name>Meter Reader</Name>
+          </AssociationName>
+          <read_access>true</read_access>
+        </AccessRightAttribute>
+        <AccessRightAttribute>
+          <DontKnow>false</DontKnow>
+          <AssociationName>
+            <Name>Utility Setting</Name>
+          </AssociationName>
+          <read_access>true</read_access>
+        </AccessRightAttribute>
+        <AccessRightAttribute>
+          <DontKnow>false</DontKnow>
+          <AssociationName>
+            <Name>Push</Name>
+          </AssociationName>
+        </AccessRightAttribute>
+        <AccessRightAttribute>
+          <DontKnow>false</DontKnow>
+          <AssociationName>
+            <Name>Firmware upgrade </Name>
+          </AssociationName>
+        </AccessRightAttribute>
+      </AssociationAccessRight>
+    </output_state>
+    <control_state>
+      <GetDataMode>UserFunction</GetDataMode>
+      <EnableGetUserGenerate>false</EnableGetUserGenerate>
+      <EnableSetUserGenerate>false</EnableSetUserGenerate>
+      <AttributeIndex>3</AttributeIndex>
+      <TagType>Enum</TagType>
+      <AttributeName>control_state</AttributeName>
+      <Ctype>class70_control_state_t</Ctype>
+      <Attribute_Size>1</Attribute_Size>
+      <Attribute_Type>control_state</Attribute_Type>
+      <Version>0</Version>
+      <AttributeTypeInfo>
+        <AttributeSize>1</AttributeSize>
+        <TagType>Enum</TagType>
+      </AttributeTypeInfo>
+      <AssociationAccessRight>
+        <AccessRightAttribute>
+          <DontKnow>false</DontKnow>
+          <AssociationName>
+            <Name>Public Client</Name>
+          </AssociationName>
+        </AccessRightAttribute>
+        <AccessRightAttribute>
+          <DontKnow>false</DontKnow>
+          <AssociationName>
+            <Name>Meter Reader</Name>
+          </AssociationName>
+          <read_access>true</read_access>
+        </AccessRightAttribute>
+        <AccessRightAttribute>
+          <DontKnow>false</DontKnow>
+          <AssociationName>
+            <Name>Utility Setting</Name>
+          </AssociationName>
+          <read_access>true</read_access>
+        </AccessRightAttribute>
+        <AccessRightAttribute>
+          <DontKnow>false</DontKnow>
+          <AssociationName>
+            <Name>Push</Name>
+          </AssociationName>
+        </AccessRightAttribute>
+        <AccessRightAttribute>
+          <DontKnow>false</DontKnow>
+          <AssociationName>
+            <Name>Firmware upgrade </Name>
+          </AssociationName>
+        </AccessRightAttribute>
+      </AssociationAccessRight>
+    </control_state>
+    <control_mode>
+      <GetDataMode>UserFunction</GetDataMode>
+      <EnableGetUserGenerate>false</EnableGetUserGenerate>
+      <EnableSetUserGenerate>false</EnableSetUserGenerate>
+      <AttributeIndex>4</AttributeIndex>
+      <TagType>Enum</TagType>
+      <AttributeName>control_mode</AttributeName>
+      <Ctype>class70_control_mode_t</Ctype>
+      <Attribute_Size>1</Attribute_Size>
+      <Attribute_Type>control_mode</Attribute_Type>
+      <Version>0</Version>
+      <AttributeTypeInfo>
+        <AttributeSize>1</AttributeSize>
+        <TagType>Enum</TagType>
+      </AttributeTypeInfo>
+      <AssociationAccessRight>
+        <AccessRightAttribute>
+          <DontKnow>false</DontKnow>
+          <AssociationName>
+            <Name>Public Client</Name>
+          </AssociationName>
+        </AccessRightAttribute>
+        <AccessRightAttribute>
+          <DontKnow>false</DontKnow>
+          <AssociationName>
+            <Name>Meter Reader</Name>
+          </AssociationName>
+          <read_access>true</read_access>
+        </AccessRightAttribute>
+        <AccessRightAttribute>
+          <DontKnow>false</DontKnow>
+          <AssociationName>
+            <Name>Utility Setting</Name>
+          </AssociationName>
+          <read_access>true</read_access>
+          <write_access>true</write_access>
+        </AccessRightAttribute>
+        <AccessRightAttribute>
+          <DontKnow>false</DontKnow>
+          <AssociationName>
+            <Name>Push</Name>
+          </AssociationName>
+        </AccessRightAttribute>
+        <AccessRightAttribute>
+          <DontKnow>false</DontKnow>
+          <AssociationName>
+            <Name>Firmware upgrade </Name>
+          </AssociationName>
+        </AccessRightAttribute>
+      </AssociationAccessRight>
+    </control_mode>
+    <remote_disconnect>
+      <EnableActionUserGenerate>false</EnableActionUserGenerate>
+      <MethodIndex>1</MethodIndex>
+      <MethodName>remote_disconnect</MethodName>
+      <Distributor_function_call_state>DIST_AFTER_CLASS_FUNCTION</Distributor_function_call_state>
+      <IsInternalActionFunction>false</IsInternalActionFunction>
+      <IsSupportAction>true</IsSupportAction>
+      <AssociationAccessRight>
+        <AccessRightMethod>
+          <DontKnow>false</DontKnow>
+          <AssociationName>
+            <Name>Public Client</Name>
+          </AssociationName>
+        </AccessRightMethod>
+        <AccessRightMethod>
+          <DontKnow>false</DontKnow>
+          <AssociationName>
+            <Name>Meter Reader</Name>
+          </AssociationName>
+        </AccessRightMethod>
+        <AccessRightMethod>
+          <DontKnow>false</DontKnow>
+          <AssociationName>
+            <Name>Utility Setting</Name>
+          </AssociationName>
+          <access>true</access>
+        </AccessRightMethod>
+        <AccessRightMethod>
+          <DontKnow>false</DontKnow>
+          <AssociationName>
+            <Name>Push</Name>
+          </AssociationName>
+        </AccessRightMethod>
+        <AccessRightMethod>
+          <DontKnow>false</DontKnow>
+          <AssociationName>
+            <Name>Firmware upgrade </Name>
+          </AssociationName>
+        </AccessRightMethod>
+      </AssociationAccessRight>
+      <MethodDataType>int8_t</MethodDataType>
+    </remote_disconnect>
+    <remote_reconnect>
+      <EnableActionUserGenerate>false</EnableActionUserGenerate>
+      <MethodIndex>2</MethodIndex>
+      <MethodName>remote_reconnect</MethodName>
+      <Distributor_function_call_state>DIST_AFTER_CLASS_FUNCTION</Distributor_function_call_state>
+      <IsInternalActionFunction>false</IsInternalActionFunction>
+      <IsSupportAction>true</IsSupportAction>
+      <AssociationAccessRight>
+        <AccessRightMethod>
+          <DontKnow>false</DontKnow>
+          <AssociationName>
+            <Name>Public Client</Name>
+          </AssociationName>
+        </AccessRightMethod>
+        <AccessRightMethod>
+          <DontKnow>false</DontKnow>
+          <AssociationName>
+            <Name>Meter Reader</Name>
+          </AssociationName>
+        </AccessRightMethod>
+        <AccessRightMethod>
+          <DontKnow>false</DontKnow>
+          <AssociationName>
+            <Name>Utility Setting</Name>
+          </AssociationName>
+          <access>true</access>
+        </AccessRightMethod>
+        <AccessRightMethod>
+          <DontKnow>false</DontKnow>
+          <AssociationName>
+            <Name>Push</Name>
+          </AssociationName>
+        </AccessRightMethod>
+        <AccessRightMethod>
+          <DontKnow>false</DontKnow>
+          <AssociationName>
+            <Name>Firmware upgrade </Name>
+          </AssociationName>
+        </AccessRightMethod>
+      </AssociationAccessRight>
+      <MethodDataType>int8_t</MethodDataType>
+    </remote_reconnect>
+  </Class70>
+</ArrayOfClass70>

@@ -1,0 +1,460 @@
+<?xml version="1.0"?>
+<ArrayOfDlmsType xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <DlmsType>
+    <Type>boolean</Type>
+    <Name>boolean</Name>
+    <Size>1</Size>
+    <length>1</length>
+    <Tag>Boolean</Tag>
+    <CType>uint8_t</CType>
+    <IsSimpleType>true</IsSimpleType>
+    <IsArray>false</IsArray>
+    <Describe>This is boolean type</Describe>
+    <IsEditable>false</IsEditable>
+    <CountUse>0</CountUse>
+    <Length>1</Length>
+    <StructureData />
+    <ValueSimple>False</ValueSimple>
+  </DlmsType>
+  <DlmsType>
+    <Type>BitString</Type>
+    <Name>bit-string</Name>
+    <Size>10</Size>
+    <length>1</length>
+    <Tag>Bit_String</Tag>
+    <CType>BitString</CType>
+    <IsSimpleType>true</IsSimpleType>
+    <IsArray>false</IsArray>
+    <Describe>This is bit-string type</Describe>
+    <IsEditable>false</IsEditable>
+    <CountUse>0</CountUse>
+    <Length>1</Length>
+    <StructureData />
+    <ValueSimple />
+  </DlmsType>
+  <DlmsType>
+    <Type>DoubleLong</Type>
+    <Name>double-long</Name>
+    <Size>4</Size>
+    <length>1</length>
+    <Tag>Double_Long</Tag>
+    <CType>int32_t</CType>
+    <IsSimpleType>true</IsSimpleType>
+    <IsArray>false</IsArray>
+    <Describe>This is double-long type</Describe>
+    <IsEditable>false</IsEditable>
+    <CountUse>0</CountUse>
+    <Length>1</Length>
+    <StructureData />
+    <ValueSimple>1</ValueSimple>
+  </DlmsType>
+  <DlmsType>
+    <Type>DoubleLongUnsigned</Type>
+    <Name>double-long-unsigned</Name>
+    <Size>4</Size>
+    <length>1</length>
+    <Tag>Double_Long_Unsigned</Tag>
+    <CType>uint32_t</CType>
+    <IsSimpleType>true</IsSimpleType>
+    <IsArray>false</IsArray>
+    <Describe>This is double-long-unsigned type</Describe>
+    <IsEditable>false</IsEditable>
+    <CountUse>0</CountUse>
+    <Length>1</Length>
+    <StructureData />
+    <ValueSimple>1</ValueSimple>
+  </DlmsType>
+  <DlmsType>
+    <Type>OctetString</Type>
+    <Name>octet-string</Name>
+    <Size>10</Size>
+    <length>1</length>
+    <Tag>Octet_String</Tag>
+    <CType>OctetString</CType>
+    <IsSimpleType>true</IsSimpleType>
+    <IsArray>false</IsArray>
+    <Describe>This is OctetString type</Describe>
+    <IsEditable>false</IsEditable>
+    <CountUse>0</CountUse>
+    <Length>1</Length>
+    <StructureData />
+    <ValueSimple />
+  </DlmsType>
+  <DlmsType>
+    <Type>VisibleString</Type>
+    <Name>visible-string</Name>
+    <Size>10</Size>
+    <length>1</length>
+    <Tag>Visible_String</Tag>
+    <CType>VisibleString</CType>
+    <IsSimpleType>true</IsSimpleType>
+    <IsArray>false</IsArray>
+    <Describe>This is visible-string type</Describe>
+    <IsEditable>false</IsEditable>
+    <CountUse>0</CountUse>
+    <Length>1</Length>
+    <StructureData />
+    <ValueSimple />
+  </DlmsType>
+  <DlmsType>
+    <Type>Utf8String</Type>
+    <Name>utf8-string</Name>
+    <Size>10</Size>
+    <length>1</length>
+    <Tag>Utf8_String</Tag>
+    <CType>Utf8String</CType>
+    <IsSimpleType>true</IsSimpleType>
+    <IsArray>false</IsArray>
+    <Describe>This is utf8-string type</Describe>
+    <IsEditable>false</IsEditable>
+    <CountUse>0</CountUse>
+    <Length>1</Length>
+    <StructureData />
+    <ValueSimple>False</ValueSimple>
+  </DlmsType>
+  <DlmsType>
+    <Type>Bcd</Type>
+    <Name>bcd</Name>
+    <Size>1</Size>
+    <length>1</length>
+    <Tag>Bcd</Tag>
+    <CType>uint8_t</CType>
+    <IsSimpleType>true</IsSimpleType>
+    <IsArray>false</IsArray>
+    <Describe>This is bcd type</Describe>
+    <IsEditable>false</IsEditable>
+    <CountUse>0</CountUse>
+    <Length>1</Length>
+    <StructureData />
+    <ValueSimple>1</ValueSimple>
+  </DlmsType>
+  <DlmsType>
+    <Type>Integer</Type>
+    <Name>integer</Name>
+    <Size>1</Size>
+    <length>1</length>
+    <Tag>Integer</Tag>
+    <CType>int8_t</CType>
+    <IsSimpleType>true</IsSimpleType>
+    <IsArray>false</IsArray>
+    <Describe>This is integer type</Describe>
+    <IsEditable>false</IsEditable>
+    <CountUse>0</CountUse>
+    <Length>1</Length>
+    <StructureData />
+    <ValueSimple>1</ValueSimple>
+  </DlmsType>
+  <DlmsType>
+    <Type>Long</Type>
+    <Name>long</Name>
+    <Size>1</Size>
+    <length>1</length>
+    <Tag>Long</Tag>
+    <CType>uint16_t</CType>
+    <IsSimpleType>true</IsSimpleType>
+    <IsArray>false</IsArray>
+    <Describe>This is long type</Describe>
+    <IsEditable>false</IsEditable>
+    <CountUse>0</CountUse>
+    <Length>1</Length>
+    <StructureData />
+    <ValueSimple>1</ValueSimple>
+  </DlmsType>
+  <DlmsType>
+    <Type>Unsigned</Type>
+    <Name>unsigned</Name>
+    <Size>1</Size>
+    <length>1</length>
+    <Tag>Unsigned</Tag>
+    <CType>uint8_t</CType>
+    <IsSimpleType>true</IsSimpleType>
+    <IsArray>false</IsArray>
+    <Describe>This is unsigned type</Describe>
+    <IsEditable>false</IsEditable>
+    <CountUse>0</CountUse>
+    <Length>1</Length>
+    <StructureData />
+    <ValueSimple>1</ValueSimple>
+  </DlmsType>
+  <DlmsType>
+    <Type>LongUnsigned</Type>
+    <Name>long-unsigned</Name>
+    <Size>2</Size>
+    <length>1</length>
+    <Tag>Long_Unsigned</Tag>
+    <CType>uint16_t</CType>
+    <IsSimpleType>true</IsSimpleType>
+    <IsArray>false</IsArray>
+    <Describe>This is long-unsigned type</Describe>
+    <IsEditable>false</IsEditable>
+    <CountUse>0</CountUse>
+    <Length>1</Length>
+    <StructureData />
+    <ValueSimple>1</ValueSimple>
+  </DlmsType>
+  <DlmsType>
+    <Type>Long64Unsigned</Type>
+    <Name>long64-unsigned</Name>
+    <Size>8</Size>
+    <length>1</length>
+    <Tag>Long64_Unsigned</Tag>
+    <CType>uint64_t</CType>
+    <IsSimpleType>true</IsSimpleType>
+    <IsArray>false</IsArray>
+    <Describe>This is long64-unsigned type</Describe>
+    <IsEditable>false</IsEditable>
+    <CountUse>0</CountUse>
+    <Length>1</Length>
+    <StructureData />
+    <ValueSimple>1</ValueSimple>
+  </DlmsType>
+  <DlmsType>
+    <Type>Enum</Type>
+    <Name>enum</Name>
+    <Size>1</Size>
+    <length>1</length>
+    <Tag>Enum</Tag>
+    <CType>uint8_t</CType>
+    <IsSimpleType>true</IsSimpleType>
+    <IsArray>false</IsArray>
+    <Describe>This is enum type</Describe>
+    <IsEditable>false</IsEditable>
+    <CountUse>0</CountUse>
+    <Length>1</Length>
+    <StructureData />
+    <ValueSimple>1</ValueSimple>
+  </DlmsType>
+  <DlmsType>
+    <Type>Float32</Type>
+    <Name>float32</Name>
+    <Size>4</Size>
+    <length>1</length>
+    <Tag>Float32</Tag>
+    <CType>float32_t</CType>
+    <IsSimpleType>true</IsSimpleType>
+    <IsArray>false</IsArray>
+    <Describe>This is float32 type</Describe>
+    <IsEditable>false</IsEditable>
+    <CountUse>0</CountUse>
+    <Length>1</Length>
+    <StructureData />
+    <ValueSimple>1.5</ValueSimple>
+  </DlmsType>
+  <DlmsType>
+    <Type>Float64</Type>
+    <Name>float64</Name>
+    <Size>8</Size>
+    <length>1</length>
+    <Tag>Float64</Tag>
+    <CType>float64_t</CType>
+    <IsSimpleType>true</IsSimpleType>
+    <IsArray>false</IsArray>
+    <Describe>This is float64 type</Describe>
+    <IsEditable>false</IsEditable>
+    <CountUse>0</CountUse>
+    <Length>1</Length>
+    <StructureData />
+    <ValueSimple>1.5</ValueSimple>
+  </DlmsType>
+  <DlmsType>
+    <Type>DateTime</Type>
+    <Name>date-time</Name>
+    <Size>12</Size>
+    <length>1</length>
+    <Tag>DateTime</Tag>
+    <CType>date_time_t</CType>
+    <IsSimpleType>true</IsSimpleType>
+    <IsArray>false</IsArray>
+    <Describe>This is date-time type</Describe>
+    <IsEditable>false</IsEditable>
+    <CountUse>0</CountUse>
+    <Length>1</Length>
+    <StructureData />
+    <ValueSimple>date_time</ValueSimple>
+  </DlmsType>
+  <DlmsType>
+    <Type>Date</Type>
+    <Name>date</Name>
+    <Size>5</Size>
+    <length>1</length>
+    <Tag>Date</Tag>
+    <CType>date_t</CType>
+    <IsSimpleType>true</IsSimpleType>
+    <IsArray>false</IsArray>
+    <Describe>This is date type</Describe>
+    <IsEditable>false</IsEditable>
+    <CountUse>0</CountUse>
+    <Length>1</Length>
+    <StructureData />
+    <ValueSimple>date</ValueSimple>
+  </DlmsType>
+  <DlmsType>
+    <Type>Time</Type>
+    <Name>time</Name>
+    <Size>4</Size>
+    <length>1</length>
+    <Tag>Time</Tag>
+    <CType>time_t</CType>
+    <IsSimpleType>true</IsSimpleType>
+    <IsArray>false</IsArray>
+    <Describe>This is time type</Describe>
+    <IsEditable>false</IsEditable>
+    <CountUse>0</CountUse>
+    <Length>1</Length>
+    <StructureData />
+    <ValueSimple>time</ValueSimple>
+  </DlmsType>
+  <DlmsType>
+    <Type>Structure</Type>
+    <Name>ActiveRelayTime</Name>
+    <Size>9</Size>
+    <length>1</length>
+    <Tag>Structure</Tag>
+    <CType>ActiveRelayTime_t</CType>
+    <IsSimpleType>false</IsSimpleType>
+    <IsArray>false</IsArray>
+    <Describe>This is Structure type</Describe>
+    <IsEditable>true</IsEditable>
+    <CountUse>1</CountUse>
+    <Length>1</Length>
+    <StructureData>
+      <DlmsType>
+        <Type>DoubleLongUnsigned</Type>
+        <Name>duration</Name>
+        <Size>4</Size>
+        <length>1</length>
+        <Tag>Double_Long_Unsigned</Tag>
+        <CType>uint32_t</CType>
+        <IsSimpleType>true</IsSimpleType>
+        <IsArray>false</IsArray>
+        <Describe>This is double-long-unsigned type</Describe>
+        <IsEditable>false</IsEditable>
+        <CountUse>0</CountUse>
+        <Length>1</Length>
+        <StructureData />
+      </DlmsType>
+      <DlmsType>
+        <Type>DoubleLongUnsigned</Type>
+        <Name>lockout_period</Name>
+        <Size>4</Size>
+        <length>1</length>
+        <Tag>Double_Long_Unsigned</Tag>
+        <CType>uint32_t</CType>
+        <IsSimpleType>true</IsSimpleType>
+        <IsArray>false</IsArray>
+        <Describe>This is double-long-unsigned type</Describe>
+        <IsEditable>false</IsEditable>
+        <CountUse>0</CountUse>
+        <Length>1</Length>
+        <StructureData />
+      </DlmsType>
+      <DlmsType>
+        <Type>Unsigned</Type>
+        <Name>number_of_repeat</Name>
+        <Size>1</Size>
+        <length>1</length>
+        <Tag>Unsigned</Tag>
+        <CType>uint8_t</CType>
+        <IsSimpleType>true</IsSimpleType>
+        <IsArray>false</IsArray>
+        <Describe>This is unsigned type</Describe>
+        <IsEditable>false</IsEditable>
+        <CountUse>0</CountUse>
+        <Length>1</Length>
+        <StructureData />
+      </DlmsType>
+    </StructureData>
+  </DlmsType>
+  <DlmsType>
+    <Type>Structure</Type>
+    <Name>PassiveRelayTime</Name>
+    <Size>21</Size>
+    <length>1</length>
+    <Tag>Structure</Tag>
+    <CType>PassiveRelayTime_t</CType>
+    <IsSimpleType>false</IsSimpleType>
+    <IsArray>false</IsArray>
+    <Describe>This is Structure type</Describe>
+    <IsEditable>true</IsEditable>
+    <CountUse>1</CountUse>
+    <Length>1</Length>
+    <StructureData>
+      <DlmsType>
+        <Type>DoubleLongUnsigned</Type>
+        <Name>duration</Name>
+        <Size>4</Size>
+        <length>1</length>
+        <Tag>Double_Long_Unsigned</Tag>
+        <CType>uint32_t</CType>
+        <IsSimpleType>true</IsSimpleType>
+        <IsArray>false</IsArray>
+        <Describe>This is double-long-unsigned type</Describe>
+        <IsEditable>false</IsEditable>
+        <CountUse>0</CountUse>
+        <Length>1</Length>
+        <StructureData />
+      </DlmsType>
+      <DlmsType>
+        <Type>DoubleLongUnsigned</Type>
+        <Name>lockout_period</Name>
+        <Size>4</Size>
+        <length>1</length>
+        <Tag>Double_Long_Unsigned</Tag>
+        <CType>uint32_t</CType>
+        <IsSimpleType>true</IsSimpleType>
+        <IsArray>false</IsArray>
+        <Describe>This is double-long-unsigned type</Describe>
+        <IsEditable>false</IsEditable>
+        <CountUse>0</CountUse>
+        <Length>1</Length>
+        <StructureData />
+      </DlmsType>
+      <DlmsType>
+        <Type>Unsigned</Type>
+        <Name>number_of_repeat</Name>
+        <Size>1</Size>
+        <length>1</length>
+        <Tag>Unsigned</Tag>
+        <CType>uint8_t</CType>
+        <IsSimpleType>true</IsSimpleType>
+        <IsArray>false</IsArray>
+        <Describe>This is unsigned type</Describe>
+        <IsEditable>false</IsEditable>
+        <CountUse>0</CountUse>
+        <Length>1</Length>
+        <StructureData />
+      </DlmsType>
+      <DlmsType>
+        <Type>OctetString</Type>
+        <Name>execution_time</Name>
+        <Size>12</Size>
+        <length>1</length>
+        <Tag>Octet_String</Tag>
+        <CType>OctetString</CType>
+        <IsSimpleType>true</IsSimpleType>
+        <IsArray>false</IsArray>
+        <Describe>This is OctetString type</Describe>
+        <IsEditable>false</IsEditable>
+        <CountUse>0</CountUse>
+        <Length>1</Length>
+        <StructureData />
+      </DlmsType>
+    </StructureData>
+  </DlmsType>
+  <DlmsType>
+    <Type>null-data</Type>
+    <Name>null-data</Name>
+    <Size>0</Size>
+    <length>1</length>
+    <Tag>NullData</Tag>
+    <CType />
+    <IsSimpleType>true</IsSimpleType>
+    <IsArray>false</IsArray>
+    <Describe>This is null-data</Describe>
+    <IsEditable>false</IsEditable>
+    <CountUse>0</CountUse>
+    <Length>1</Length>
+    <StructureData />
+    <ValueSimple>False</ValueSimple>
+  </DlmsType>
+</ArrayOfDlmsType>
