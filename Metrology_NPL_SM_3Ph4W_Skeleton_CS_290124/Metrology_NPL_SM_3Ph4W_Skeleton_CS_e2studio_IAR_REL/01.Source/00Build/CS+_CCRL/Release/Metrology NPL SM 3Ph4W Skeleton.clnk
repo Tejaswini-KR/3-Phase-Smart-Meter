@@ -1,0 +1,88 @@
+-Input=Release\cstart.obj
+-Input=Release\stkinit.obj
+-Input=Release\r_calib.obj
+-Input=Release\r_calib_sampling.obj
+-Input=Release\r_hoco_trimming.obj
+-Input=Release\dataflash.obj
+-Input=Release\inst_read.obj
+-Input=Release\platform.obj
+-Input=Release\startup.obj
+-Input=Release\config_storage.obj
+-Input=Release\wrp_app_mcu.obj
+-Input=Release\r_cg_12adc.obj
+-Input=Release\r_cg_12adc_user.obj
+-Input=Release\r_cg_cgc.obj
+-Input=Release\r_cg_cgc_user.obj
+-Input=Release\r_cg_crc.obj
+-Input=Release\r_cg_dsadc.obj
+-Input=Release\r_cg_dsadc_user.obj
+-Input=Release\r_cg_dtc.obj
+-Input=Release\r_cg_dtc_user.obj
+-Input=Release\r_cg_elc.obj
+-Input=Release\r_cg_elc_user.obj
+-Input=Release\r_cg_iica.obj
+-Input=Release\r_cg_iica_user.obj
+-Input=Release\r_cg_mac32bit.obj
+-Input=Release\r_cg_mac32bit_user.obj
+-Input=Release\r_cg_port.obj
+-Input=Release\r_cg_port_user.obj
+-Input=Release\r_cg_rtc.obj
+-Input=Release\r_cg_rtc_user.obj
+-Input=Release\r_cg_sau.obj
+-Input=Release\r_cg_sau_user.obj
+-Input=Release\r_cg_systeminit.obj
+-Input=Release\r_cg_tau.obj
+-Input=Release\r_cg_tau_user.obj
+-Input=Release\r_cg_wdt.obj
+-Input=Release\r_cg_wdt_user.obj
+-Input=Release\r_dscl_iirbiquad_config.obj
+-Input=Release\rl78i1c_hpf_config.obj
+-Input=Release\wrp_em_adc.obj
+-Input=Release\wrp_em_mcu.obj
+-Input=Release\wrp_em_pulse.obj
+-Input=Release\wrp_em_sw_property.obj
+-Input=Release\wrp_em_timer.obj
+-Input=Release\wrp_em_wdt.obj
+-Input=Release\main.obj
+-Input=Release\em_display.obj
+-Input=Release\r_drv_lcd_ext.obj
+-Input=Release\r_lcd_config.obj
+-Input=Release\r_lcd_display.obj
+-Input=Release\r_cg_lcd.obj
+-Input=Release\r_cg_lcd_user.obj
+-LIBrary=..\..\shared\Flash\fdl\CCRL\librl78\pfdl.lib
+-LIBrary=..\..\shared\metrology\filter\CCRL\hpf16_rl78_s3_ccrl_m.lib
+-LIBrary=..\..\shared\metrology\filter\CCRL\r_dscl_iirbiquad_i32_1.lib
+-LIBrary=..\..\shared\metrology\filter\CCRL\r_dscl_iirbiquad_i32_2.lib
+-LIBrary=..\..\shared\metrology\metrologylibrary\CCRL\230518_EMP4W_WQFR.lib
+-SECURITY_ID=00000000000000000000
+-DEVICE=C:\Program Files (x86)\Renesas Electronics\CS+\CC\Device\RL78\Devicefile\DR5F10NPL.DVF
+-DEBug
+-NOCOmpress
+-OUtput=Release\Metrology NPL SM 3Ph4W Skeleton.abs
+-LIBrary=C:\Program Files (x86)\Renesas Electronics\CS+\CC\CC-RL\V1.11.00\lib\rl78em4s.lib
+-LIBrary=C:\Program Files (x86)\Renesas Electronics\CS+\CC\CC-RL\V1.11.00\lib\malloc_n.lib
+-LIBrary=C:\Program Files (x86)\Renesas Electronics\CS+\CC\CC-RL\V1.11.00\lib\rl78em4r.lib
+-OCDBG=84
+-DEBUG_MONITOR=7FE00-7FFFF
+-USER_OPT_BYTE=7E7FE0
+-SELF
+-ENTry=_start
+-LISt=Release\Metrology NPL SM 3Ph4W Skeleton.map
+-SHow=ALL
+-AUTO_SECTION_LAYOUT
+-STARt=DTC_Vect_n/F8500,DTCD0_n/F8540,ADC_Data_n/F8600,.dataR,.bss/F8700
+-ROm=.data=.dataR
+-ROm=.sdata=.sdataR
+-NOMessage
+-STACk
+-Total_size
+-NOLOgo
+-end
+-Input="Release\Metrology NPL SM 3Ph4W Skeleton.abs"
+-DEVICE=C:\Program Files (x86)\Renesas Electronics\CS+\CC\Device\RL78\Devicefile\DR5F10NPL.DVF
+-OUtput=Release\Metrology NPL SM 3Ph4W Skeleton.mot
+-FOrm=Stype
+-NOMessage
+-exit
+
