@@ -1,1 +1,0 @@
-This folder contains DLMS library, in order to build the Skeleton successfully, please paste the DLMS library may need to be re-linked in IDE.

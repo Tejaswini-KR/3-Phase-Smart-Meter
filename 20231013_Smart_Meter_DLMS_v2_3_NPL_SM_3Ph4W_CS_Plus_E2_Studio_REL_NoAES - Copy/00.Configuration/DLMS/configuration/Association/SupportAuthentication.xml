@@ -1,8 +1,0 @@
-<?xml version="1.0"?>
-<class15SupportAuthentication xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <AESIn>TRUE</AESIn>
-  <MD5In>FALSE</MD5In>
-  <SHA1In>FALSE</SHA1In>
-  <GMACIn>FALSE</GMACIn>
-  <SHA256In>FALSE</SHA256In>
-</class15SupportAuthentication>

@@ -1,1 +1,0 @@
-This folder contains AES-GCM library, in order to build the Skeleton successfully, please paste the AES-GCM library here

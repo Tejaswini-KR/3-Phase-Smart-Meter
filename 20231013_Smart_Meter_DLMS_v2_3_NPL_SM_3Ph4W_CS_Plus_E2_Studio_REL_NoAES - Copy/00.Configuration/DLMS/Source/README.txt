@@ -1,1 +1,0 @@
-This folder contains generated source code of DLMS stack from OBIS GENERATOR. Now there is no data here.
