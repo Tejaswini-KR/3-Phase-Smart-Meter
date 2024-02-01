@@ -12,14 +12,6 @@
       <Bookmarks>0</Bookmarks>
     </Instance>
   </Class>
-  <Class Guid="d9e7a26a-0526-4119-b8c3-b0112e16eb03">
-    <Instance Guid="d9e7a26a-0526-4119-b8c3-b0112e16eb03">
-      <DebugConsole-COMport>COM1</DebugConsole-COMport>
-      <DebugConsole-Baudrate>0</DebugConsole-Baudrate>
-      <DebugConsole-Echoback>enable</DebugConsole-Echoback>
-      <DebugConsole-EnableDisable>enable</DebugConsole-EnableDisable>
-    </Instance>
-  </Class>
   <Class Guid="eeae2c1c-3b17-44ca-9a69-17638edf07a9">
     <Instance Guid="ffd1bb0e-b707-4d38-8165-aa8629d78fcc">
       <Name>PanelWatch1</Name>
@@ -161,6 +153,14 @@
       <EvaluationText />
       <LineByteCount>16</LineByteCount>
       <ViewAddressOffset>0</ViewAddressOffset>
+    </Instance>
+  </Class>
+  <Class Guid="d9e7a26a-0526-4119-b8c3-b0112e16eb03">
+    <Instance Guid="d9e7a26a-0526-4119-b8c3-b0112e16eb03">
+      <DebugConsole-COMport>COM1</DebugConsole-COMport>
+      <DebugConsole-Baudrate>0</DebugConsole-Baudrate>
+      <DebugConsole-Echoback>enable</DebugConsole-Echoback>
+      <DebugConsole-EnableDisable>enable</DebugConsole-EnableDisable>
     </Instance>
   </Class>
 </CubeSuiteProject.User>
