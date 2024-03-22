@@ -230,7 +230,10 @@ typedef uint32_t block_storage_type_t;
 /***********************************************************************************************************************
 Imported global variables and functions (from other files)
 ***********************************************************************************************************************/
-
+float32_t prev_month_kwh,prevtoprev_month_kwh,prev_month_kwh_Export,prevtoprev_month_kwh_Export; 
+float32_t the_last_import_active_energy_billing,the_last_export_active_energy_billing,Net_kWh;
+float32_t prev_month_kVAh,prevtoprev_month_kVAh,prev_month_kVAh_Export,prevtoprev_month_kVAh_Export; 
+float32_t the_last_import_apparent_energy_billing,the_last_export_apparent_energy_billing,Net_kVAh;
 /***********************************************************************************************************************
 Exported global variables and functions (to be accessed by other files)
 ***********************************************************************************************************************/
@@ -2898,7 +2901,7 @@ static void R_LOADSURVEY_RecordBilling(void)
 uint8_t R_BILLING_GetLastActiveEnergyImport(float32_t *p_cumulative_energy)
 {
     r_billing_t biling;
-    
+
     if (g_billing_table_header.EntryInUse == 0)
     {
         *p_cumulative_energy = R_TARIFF_GetImportActiveEnergyTotal();
@@ -3802,4 +3805,169 @@ void R_LoadSurvey_FindNextDay(r_loadsurvey_rtc_t  *p_capture_time)
             }
         }
     }
+}
+
+
+/******************************************************************************
+* Function Name : R_BILLING_GetLastActiveEnergyImport
+* Interface     : uint8_t R_BILLING_GetLastActiveEnergyImport(float32_t *p_cumulative_energy)
+* Description   :
+* Arguments     :
+* Return Value  : uint8_t
+******************************************************************************/
+uint8_t R_BILLING_Get_last2_ActiveEnergyImport(float32_t *p_cumulative_energy)
+{
+    r_billing_t biling;
+	
+	g_billing_table_header.EntryInUse = 3; //test
+	
+    if (g_billing_table_header.EntryInUse == 0)
+    {
+        *p_cumulative_energy = R_TARIFF_GetImportActiveEnergyTotal();
+    }
+    else
+    {
+        R_BILLING_GetEntryByIndex((g_billing_table_header.EntryInUse - 1), &biling); //prev month
+		//prev_month_kwh = 100; //test
+		prev_month_kwh = biling.CumulativeEnergykWh;
+		R_BILLING_GetEntryByIndex((g_billing_table_header.EntryInUse - 2), &biling); //prev to prev month
+		//prevtoprev_month_kwh = 150;
+		prevtoprev_month_kwh = biling.CumulativeEnergykWh;
+		
+	    *p_cumulative_energy = prev_month_kwh - prevtoprev_month_kwh;
+		
+       
+    }
+
+    return TRUE;
+}
+
+
+/******************************************************************************
+* Function Name : R_BILLING_GetLastActiveEnergyImport
+* Interface     : uint8_t R_BILLING_GetLastActiveEnergyImport(float32_t *p_cumulative_energy)
+* Description   :
+* Arguments     :
+* Return Value  : uint8_t
+******************************************************************************/
+uint8_t R_BILLING_GetLast2ActiveEnergyExport(float32_t *p_cumulative_energy)
+{
+    r_billing_t biling;
+	
+	g_billing_table_header.EntryInUse = 3; //test
+	
+    if (g_billing_table_header.EntryInUse == 0)
+    {
+        *p_cumulative_energy = R_TARIFF_GetExportActiveEnergyTotal();
+    }
+    else
+    {
+        R_BILLING_GetEntryByIndex((g_billing_table_header.EntryInUse - 1), &biling); //prev month
+		//prev_month_kwh = 300; //test
+		prev_month_kwh_Export = biling.CumulativeEnergykWh_Export;
+		R_BILLING_GetEntryByIndex((g_billing_table_header.EntryInUse - 2), &biling); //prev to prev month
+		//prevtoprev_month_kwh = 150;
+		prevtoprev_month_kwh_Export = biling.CumulativeEnergykWh_Export;
+		
+	    *p_cumulative_energy = prev_month_kwh_Export - prevtoprev_month_kwh_Export;
+		
+       
+    }
+
+    return TRUE;
+}
+
+/******************************************************************************
+* Function Name : NET kWh
+* Interface     : 
+* Description   :
+* Arguments     :
+* Return Value  : uint8_t
+******************************************************************************/
+void Get_Net_kWh_Energy(void)
+{
+	R_BILLING_Get_last2_ActiveEnergyImport(&the_last_import_active_energy_billing);
+	R_BILLING_GetLast2ActiveEnergyExport(&the_last_export_active_energy_billing);
+	Net_kWh = the_last_import_active_energy_billing - the_last_export_active_energy_billing;
+	
+}
+
+
+
+/******************************************************************************
+* Function Name : R_BILLING_GetLastActiveEnergyImport
+* Interface     : uint8_t R_BILLING_GetLastActiveEnergyImport(float32_t *p_cumulative_energy)
+* Description   :
+* Arguments     :
+* Return Value  : uint8_t
+******************************************************************************/
+uint8_t R_BILLING_Get_last2_ApparentEnergyImport(float32_t *p_cumulative_energy)
+{
+    r_billing_t biling;
+    if (g_billing_table_header.EntryInUse == 0)
+    {
+        *p_cumulative_energy = R_TARIFF_GetImportApparentEnergyTotal();
+    }
+    else
+    {
+        R_BILLING_GetEntryByIndex((g_billing_table_header.EntryInUse - 1), &biling); //prev month
+		//prev_month_kVAh = 100; //test
+		prev_month_kVAh = biling.CumulativeEnergykVAh;
+		R_BILLING_GetEntryByIndex((g_billing_table_header.EntryInUse - 2), &biling); //prev to prev month
+		//prevtoprev_month_kVAh = 150;
+		prevtoprev_month_kVAh = biling.CumulativeEnergykVAh;
+		
+	    *p_cumulative_energy = prev_month_kVAh - prevtoprev_month_kVAh;
+		
+       
+    }
+
+    return TRUE;
+}
+
+
+/******************************************************************************
+* Function Name : R_BILLING_GetLastActiveEnergyImport
+* Interface     : uint8_t R_BILLING_GetLastActiveEnergyImport(float32_t *p_cumulative_energy)
+* Description   :
+* Arguments     :
+* Return Value  : uint8_t
+******************************************************************************/
+uint8_t R_BILLING_GetLast2ApparentEnergyExport(float32_t *p_cumulative_energy)
+{
+    r_billing_t biling;
+    if (g_billing_table_header.EntryInUse == 0)
+    {
+        *p_cumulative_energy = R_TARIFF_GetExportApparentEnergyTotal();
+    }
+    else
+    {
+        R_BILLING_GetEntryByIndex((g_billing_table_header.EntryInUse - 1), &biling); //prev month
+		//prev_month_kVAh = 200; //test
+		prev_month_kVAh_Export = biling.CumulativeEnergykVAh_Export;
+		R_BILLING_GetEntryByIndex((g_billing_table_header.EntryInUse - 2), &biling); //prev to prev month
+		//prevtoprev_month_kVAh = 150;
+		prevtoprev_month_kVAh_Export = biling.CumulativeEnergykVAh_Export;
+		
+	    *p_cumulative_energy = prev_month_kVAh_Export - prevtoprev_month_kVAh_Export;
+		
+       
+    }
+
+    return TRUE;
+}
+
+/******************************************************************************
+* Function Name : NET kVAh
+* Interface     : 
+* Description   :
+* Arguments     :
+* Return Value  : uint8_t
+******************************************************************************/
+void Get_Net_kVAh_Energy(void)
+{
+	R_BILLING_Get_last2_ApparentEnergyImport(&the_last_import_apparent_energy_billing);
+	R_BILLING_GetLast2ApparentEnergyExport(&the_last_export_apparent_energy_billing);
+	Net_kVAh = the_last_import_apparent_energy_billing - the_last_export_apparent_energy_billing;
+	
 }

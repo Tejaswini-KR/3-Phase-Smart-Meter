@@ -162,8 +162,8 @@ Macro definitions
 #define R_EVENT_BIT_CURRENT_REVERSE                                                 (255)   // 255: not push current reverse event, 6: Push current reverse event.
 
 /* Event tamper configuration */
-#define EVENT_TAMPER_MAGNET_ENERGY_UPDATE_MODE                                      (EVENT_TAMPER_UPDATE_BY_SPECIFIED_POWER)
-#define EVENT_TAMPER_CASE_OPEN_ENERGY_UPDATE_MODE                                   (EVENT_TAMPER_UPDATE_BY_SPECIFIED_POWER)
+#define EVENT_TAMPER_MAGNET_ENERGY_UPDATE_MODE                                      (EVENT_TAMPER_UPDATE_NORMAL)//(EVENT_TAMPER_UPDATE_BY_SPECIFIED_POWER)
+#define EVENT_TAMPER_CASE_OPEN_ENERGY_UPDATE_MODE                                   (EVENT_TAMPER_UPDATE_NORMAL)//(EVENT_TAMPER_UPDATE_BY_SPECIFIED_POWER)
 #define EVENT_TAMPER_DC_DETECTION_ENERGY_UPDATE_MODE                                (EVENT_TAMPER_UPDATE_NORMAL)
 	
 #define EVENT_TAMPER_MAGNET_SPECIFIED_POWER                                         (6600.0f)

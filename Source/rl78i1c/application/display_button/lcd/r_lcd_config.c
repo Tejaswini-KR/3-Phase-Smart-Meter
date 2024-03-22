@@ -84,7 +84,7 @@ const LCD_NUM_TYPE_VALUE g_LCD_NumType_SET2[LCD_NUM_DIGIT_CHAR] =
 {0XEE},{0X48},{0XD6},{0XDA},{0X78},{0XBA},{0XBE},{0XC8},{0XFE},{0XFA},
 // A	B	C	D	E     F	     G      H     I      J      K	L     M	      N      O     P       Q      R      S     T      U       V     W       X      Y     Z
 {0xFC},{0x3E},{0xA6},{0x5E},{0xB6},{0xB4},{0x00},{0x7C},{0x08},{0x00},{0x00},{0x26},{0x00},{0x1C},{0x1E},{0xF4},{0x00},{0x14},{0xBA},{0x36},{0x6E},{0x00},{0x00},{0x00},{0x7C},{0x00},
-{0x10},
+{0x10},{0x08},
 };   
 
 const LCD_NUM_TYPE_VALUE g_LCD_NumType_SET3[LCD_NUM_DIGIT_CHAR] =                                

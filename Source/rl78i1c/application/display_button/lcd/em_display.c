@@ -48,6 +48,7 @@ Includes   <System Includes> , "Project Includes"
 #include "r_tariff.h"
 #include "r_max_demand.h"
 #include "powermgmt.h"
+#include "r_loadsurvey.h"
 /* Display tamper condition */
 //#include "memory_ext.h"
 #include "em_core.h"
@@ -72,7 +73,10 @@ Imported global variables and functions (from other files)
 /***********************************************************************************************************************
 Exported global variables and functions (to be accessed by other files)
 ***********************************************************************************************************************/
-
+extern float32_t prev_month_kwh,prevtoprev_month_kwh,prev_month_kwh_Export,prevtoprev_month_kwh_Export; 
+extern float32_t the_last_import_active_energy_billing,the_last_export_active_energy_billing,Net_kWh;
+extern float32_t prev_month_kVAh,prevtoprev_month_kVAh,prev_month_kVAh_Export,prevtoprev_month_kVAh_Export; 
+extern float32_t the_last_import_apparent_energy_billing,the_last_export_apparent_energy_billing,Net_kVAh;
 /***********************************************************************************************************************
 Private global variables and functions
 ***********************************************************************************************************************/
@@ -161,6 +165,10 @@ static void EM_LCD_DisplayCapacitiveReactiveMaxDemand(void);
 static void EM_LCD_DisplayInductiveReactiveMaxDemand(void);
 static void EM_LCD_DisplayAppMaxDemand(void);
 
+/* Net Energy */
+void EM_LCD_DisplayNetkWh(void);
+void EM_LCD_DisplayNetkVAh(void);
+
 /* Support calculation/display function */
 void EM_LCD_DisplayPOR(void);
 
@@ -199,23 +207,23 @@ const fp_display_t fp_display[] =
     EM_LCD_DisplayInstantVolt_Phase_R,
     EM_LCD_DisplayInstantVolt_Phase_Y,
     EM_LCD_DisplayInstantVolt_Phase_B,
-    EM_LCD_DisplayInstantVolt_Total,
+    //EM_LCD_DisplayInstantVolt_Total,
 
     /* IRMS */
     EM_LCD_DisplayInstantCurrent_Phase_R,
     EM_LCD_DisplayInstantCurrent_Phase_Y,
     EM_LCD_DisplayInstantCurrent_Phase_B,
-    EM_LCD_DisplayInstantCurrent_Total,
-    EM_LCD_DisplayInstantCurrent_Neutral,
+    //EM_LCD_DisplayInstantCurrent_Total,
+    //EM_LCD_DisplayInstantCurrent_Neutral,
 
     /* Current SUM vector */
-    EM_LCD_DisplayPhaseCurrentSumVector,
+    //EM_LCD_DisplayPhaseCurrentSumVector,
 
     /* PF */
     EM_LCD_DisplayPowerFactor_Phase_R,
     EM_LCD_DisplayPowerFactor_Phase_Y,
     EM_LCD_DisplayPowerFactor_Phase_B,
-    EM_LCD_DisplayPowerFactor_Total,
+    //EM_LCD_DisplayPowerFactor_Total,
 
     /* Freq */
     EM_LCD_DisplayLineFrequency,
@@ -224,30 +232,30 @@ const fp_display_t fp_display[] =
     EM_LCD_DisplayInstantActPower_Phase_R,
     EM_LCD_DisplayInstantActPower_Phase_Y,
     EM_LCD_DisplayInstantActPower_Phase_B,
-    EM_LCD_DisplayInstantActPower_Total,
+    //EM_LCD_DisplayInstantActPower_Total,
 
     EM_LCD_DisplayInstantReactPower_Phase_R,
     EM_LCD_DisplayInstantReactPower_Phase_Y,
     EM_LCD_DisplayInstantReactPower_Phase_B,
-    EM_LCD_DisplayInstantReactPower_Total,
+    //EM_LCD_DisplayInstantReactPower_Total,
     
     EM_LCD_DisplayInstantFundamentalActPower_Phase_R,
     EM_LCD_DisplayInstantFundamentalActPower_Phase_Y,
     EM_LCD_DisplayInstantFundamentalActPower_Phase_B,
-    EM_LCD_DisplayInstantFundamentalActPower_Total,
+   // EM_LCD_DisplayInstantFundamentalActPower_Total,
     
     EM_LCD_DisplayInstantAppPower_Phase_R,
     EM_LCD_DisplayInstantAppPower_Phase_Y,
     EM_LCD_DisplayInstantAppPower_Phase_B,
-    EM_LCD_DisplayInstantAppPower_Total,
+    //EM_LCD_DisplayInstantAppPower_Total,
 
     /* THD */
-    EM_LCD_DisplayVoltageTHD_Phase_R,
-    EM_LCD_DisplayVoltageTHD_Phase_Y,
-    EM_LCD_DisplayVoltageTHD_Phase_B,
-    EM_LCD_DisplayCurrentTHD_Phase_R,
-    EM_LCD_DisplayCurrentTHD_Phase_Y,
-    EM_LCD_DisplayCurrentTHD_Phase_B,
+//    EM_LCD_DisplayVoltageTHD_Phase_R,
+//    EM_LCD_DisplayVoltageTHD_Phase_Y,
+//    EM_LCD_DisplayVoltageTHD_Phase_B,
+//    EM_LCD_DisplayCurrentTHD_Phase_R,
+//    EM_LCD_DisplayCurrentTHD_Phase_Y,
+//    EM_LCD_DisplayCurrentTHD_Phase_B,
 
     /* Energy */
     /* Import Energy (sum all tariff) */
@@ -279,6 +287,8 @@ const fp_display_t fp_display[] =
     EM_LCD_DisplayCapacitiveReactiveMaxDemand,
     EM_LCD_DisplayInductiveReactiveMaxDemand,
     EM_LCD_DisplayAppMaxDemand,
+	EM_LCD_DisplayNetkWh,
+	EM_LCD_DisplayNetkVAh,
 
     /* Don't delete me, always end this list with NULL */
     NULL,
@@ -885,8 +895,8 @@ static void EM_LCD_DisplayInstantReactPower_Total(void)
     LCD_DisplaySpSign(S_T3);
  
    /* Display F0 at digit 7 and 8 */
-   LCD_DisplayDigit(8, LCD_CHAR_F);
-   LCD_DisplayDigit(9, 0); 
+   //LCD_DisplayDigit(8, LCD_CHAR_F);
+   //LCD_DisplayDigit(9, 0); 
  }
  
 /***********************************************************************************************************************
@@ -1085,8 +1095,8 @@ static void EM_LCD_DisplayPowerFactor(EM_LINE line)
     }
 
     /* Display "PF" sign */
-    LCD_DisplayDigit(8, LCD_CHAR_P);
-    LCD_DisplayDigit(9, LCD_CHAR_F);
+    //LCD_DisplayDigit(8, LCD_CHAR_P);
+    //LCD_DisplayDigit(9, LCD_CHAR_F);
 }
 
 /***********************************************************************************************************************
@@ -1164,7 +1174,7 @@ static void EM_LCD_DisplayImportExportStatus(uint8_t is_import)
     if (is_import == EM_LCD_IMPORT_ENERGY)
     {
         /* Display "import" sign "1" on digit 9 */
-        LCD_DisplayDigit(9, 1);
+        //LCD_DisplayDigit(9, 1);
     }
     else
     {
@@ -1189,7 +1199,6 @@ static void EM_LCD_DisplayInputActiveEnergy(float32_t value, uint8_t is_import)
     LCD_DisplaySpSign(S_T1);
     LCD_DisplaySpSign(S_T2);
     LCD_DisplaySpSign(S_T3);
-    LCD_DisplaySpSign(S_T4);
     LCD_DisplaySpSign(S_T7);
 
     /* Display import & export status */
@@ -1214,18 +1223,17 @@ static void EM_LCD_DisplayInputReactiveEnergy(float32_t value, uint8_t is_import
     LCD_DisplaySpSign(S_T2);	//v
     LCD_DisplaySpSign(S_T4);	//A
     LCD_DisplaySpSign(S_T5);	//r
-    //LCD_DisplaySpSign(S_T6);
     LCD_DisplaySpSign(S_T7);	//h
 
     if (is_inductive == EM_LCD_INDUCTIVE_REACTIVE)
     {
         /* Display "L" as Lag at digit 1 */
-        LCD_DisplayDigit(1, LCD_CHAR_L);
+        //LCD_DisplayDigit(1, LCD_CHAR_L);
     }
     else
     {
         /* Display "C" as Lead at digit 1 */
-        LCD_DisplayDigit(1, LCD_CHAR_C);
+        //LCD_DisplayDigit(1, LCD_CHAR_C);
     }
 
     /* Display import & export status */
@@ -1247,7 +1255,6 @@ static void EM_LCD_DisplayInputApparentEnergy(float32_t value, uint8_t is_import
     LCD_DisplaySpSign(S_T1);
     LCD_DisplaySpSign(S_T2);
     LCD_DisplaySpSign(S_T4);
-    LCD_DisplaySpSign(S_T5);
     LCD_DisplaySpSign(S_T7);
 
     /* Display import & export status */
@@ -1264,7 +1271,7 @@ static void EM_LCD_DisplayInputApparentEnergy(float32_t value, uint8_t is_import
 static void EM_LCD_DisplayTariffNumber(uint8_t tariff_no)
 {
     /* Display tariff number at digit 8 */
-    LCD_DisplayDigit(8, tariff_no);
+    //LCD_DisplayDigit(8, tariff_no);
 }
 
 /******************************************************************************
@@ -1345,11 +1352,10 @@ static void EM_LCD_DisplayInputReactiveMaxDemand(float32_t value, uint8_t is_ind
     }
 
     /* Display "kVar" sign */
-   LCD_DisplaySpSign(S_T1);
+    LCD_DisplaySpSign(S_T1);
     LCD_DisplaySpSign(S_T2);
     LCD_DisplaySpSign(S_T4);
     LCD_DisplaySpSign(S_T5);
-    //LCD_DisplaySpSign(S_T6);
 
 
     /* Display "MD" sign on LCD screen */
@@ -1358,12 +1364,12 @@ static void EM_LCD_DisplayInputReactiveMaxDemand(float32_t value, uint8_t is_ind
     if (is_inductive == EM_LCD_INDUCTIVE_REACTIVE)
     {
         /* Display "L" as Lag at digit 1 */
-        LCD_DisplayDigit(1, LCD_CHAR_L);
+        //LCD_DisplayDigit(1, LCD_CHAR_L);
     }
     else
     {
         /* Display "C" as Lead at digit 1 */
-        LCD_DisplayDigit(1, LCD_CHAR_C);
+       // LCD_DisplayDigit(1, LCD_CHAR_C);
     }
 }
 
@@ -1641,7 +1647,7 @@ static void EM_LCD_DisplayPhaseCurrentSumVector(void)
     //LCD_DisplaySpSign(S_T5);
     
     /* Display "S" sign --> number "5" at digit 9 */
-    LCD_DisplayDigit(9, 5); 
+    //LCD_DisplayDigit(9, 5); 
 
 }
 
@@ -1819,7 +1825,6 @@ static void EM_LCD_DisplayActMaxDemand(void)
     LCD_DisplaySpSign(S_T1);
     LCD_DisplaySpSign(S_T2);
     LCD_DisplaySpSign(S_T3);
-    LCD_DisplaySpSign(S_T4);
 
     /* Display "MD" sign on LCD screen */
     LCD_DisplaySpSign(S_MD);
@@ -1877,7 +1882,6 @@ static void EM_LCD_DisplayAppMaxDemand(void)
     LCD_DisplaySpSign(S_T1);
     LCD_DisplaySpSign(S_T2);
     LCD_DisplaySpSign(S_T4);
-    LCD_DisplaySpSign(S_T5);
 
     /* Display "MD" sign on LCD screen */
     LCD_DisplaySpSign(S_MD);
@@ -2037,7 +2041,7 @@ uint8_t LCD_DisplayFloat(float32_t fnum)
     /* The input number is less than 1/(10^(fra_digit)) */
 //    if ((WRP_EXT_Absf(fnum) < (ref_value + 1)) && (is_zero_point == 1))
 //    {
-//        fnum = 100;
+//        fnum = 000;
 //    }
     
     /* Display integer number */
@@ -2070,7 +2074,7 @@ uint8_t LCD_DisplayFloat3Digit(float32_t fnum)
 {
     /* Information of input number */
     uint8_t     i;
-    //uint8_t   sign;           /* Get sign of input number */
+    uint8_t   sign;           /* Get sign of input number */
     //float         f_fra_part;     /* Integer and fraction part of fnum at float type */
     uint8_t     num_fra_digit;  /* Get the number of number on fractional part */
     
@@ -2078,8 +2082,8 @@ uint8_t LCD_DisplayFloat3Digit(float32_t fnum)
     uint8_t     disp_status = LCD_INPUT_OK;
     uint8_t     is_zero_point = 0;
     uint8_t     is_input_float_number = 0;  /* Check the input type */
-    uint32_t    ref_value = 1;
-    
+    uint32_t    ref_value ;
+	
     /* Check the validation of fnum */
     if (WRP_EXT_Absf(fnum) < 0.001)
     {
@@ -2089,12 +2093,12 @@ uint8_t LCD_DisplayFloat3Digit(float32_t fnum)
                          * supported by CA78K0 compiler */
     {
         disp_status = LCD_WRONG_INPUT_ARGUMENT;
-        fnum = fnum/1000;
+        fnum = fnum/100000;
     }
     
     /* Get the number of digit on fractional part */    
     num_fra_digit = (LCD_LAST_POS_DIGIT - g_DecInfo1.pos) + 1;
-    
+	
     /* Check if input number is flaoting type or integer type */
     //f_fra_part = fnum - (int32_t)fnum;
     is_input_float_number = 1;
@@ -2216,3 +2220,69 @@ void EM_LCD_DisplayPOR(void)
 {
     g_is_por = 0x01;
 }
+
+
+/******************************************************************************
+* Function Name: void EM_LCD_DisplayPOR(void)
+* Description  : Display the sign to mark as PORSR
+* Arguments    : None
+* Return Value : NOne
+******************************************************************************/
+void EM_LCD_DisplayNetkWh(void)
+{
+	Net_kWh= 0.0;
+	Get_Net_kWh_Energy();
+    LCD_DisplayFloat(Net_kWh);
+	
+    /* Display "kWh" sign */
+    LCD_DisplaySpSign(S_T1);
+    LCD_DisplaySpSign(S_T2);
+    LCD_DisplaySpSign(S_T3);
+    LCD_DisplaySpSign(S_T7);
+	
+	/* Display "NET" sign */
+	SEG14 = 0x0B;
+	SEG13 = 0x68;
+	SEG16 = 0x44;
+	SEG15 = 0x59;
+	SEG18 = 0x60;
+	SEG17 = 0x02;
+	
+	if(Net_kWh<0)
+	{
+		LCD_DisplayDigit(1,36);
+	}
+}
+
+/******************************************************************************
+* Function Name: void EM_LCD_DisplayPOR(void)
+* Description  : Display the sign to mark as PORSR
+* Arguments    : None
+* Return Value : NOne
+******************************************************************************/
+void EM_LCD_DisplayNetkVAh(void)
+{
+	Net_kVAh= 0.0;
+	Get_Net_kVAh_Energy();
+    LCD_DisplayFloat(Net_kVAh);
+	
+    /* Display "kVAh" sign */
+    LCD_DisplaySpSign(S_T1);
+    LCD_DisplaySpSign(S_T2);
+    LCD_DisplaySpSign(S_T4);
+    LCD_DisplaySpSign(S_T7);
+	
+	/* Display "NET" sign */
+	SEG14 = 0x0B;
+	SEG13 = 0x68;
+	SEG16 = 0x44;
+	SEG15 = 0x59;
+	SEG18 = 0x60;
+	SEG17 = 0x02;
+	
+	if(Net_kVAh<0)
+	{
+		LCD_DisplayDigit(1,36);
+	}
+}
+

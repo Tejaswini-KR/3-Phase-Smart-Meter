@@ -85,7 +85,7 @@ Pragma directive
 Global variables and functions
 ***********************************************************************************************************************/
 /* Start user code for global. Do not edit comment generated here */
-volatile uint8_t calib_result = 0;
+void Get_Net_Energy(void);
 /* End user code. Do not edit comment generated here */
 
 static void R_MAIN_UserInit(void);

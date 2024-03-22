@@ -325,6 +325,10 @@ void R_LOADSURVEY_AccumulateCurrentBlock(void);
 void R_LOADSURVEY_PollingProcessing(void);
 
 uint8_t R_BILLING_GetLastActiveEnergyImport(float32_t *p_cumulative_energy);
+uint8_t R_BILLING_Get_last2_ActiveEnergyImport(float32_t *p_cumulative_energy);
+uint8_t R_BILLING_GetLast2ActiveEnergyExport(float32_t *p_cumulative_energy);
+uint8_t R_BILLING_Get_last2_ApparentEnergyImport(float32_t *p_cumulative_energy);
+uint8_t R_BILLING_GetLast2ApparentEnergyExport(float32_t *p_cumulative_energy);
 
 void R_BLOCKLOAD_AddSampleOfStandbyMode(float32_t v_rms);
 
@@ -351,5 +355,7 @@ uint8_t R_BILLING_Backup(void);
 uint8_t R_BLOCKLOAD_Restore(void);
 uint8_t R_DAILYLOAD_Restore(void);
 uint8_t R_BILLING_Restore(void);
+void Get_Net_kWh_Energy(void);
+void Get_Net_kVAh_Energy(void);
 
 #endif /* _R_LOADSURVEY_H */
