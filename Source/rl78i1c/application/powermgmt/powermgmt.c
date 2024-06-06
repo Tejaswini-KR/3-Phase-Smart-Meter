@@ -356,8 +356,11 @@ PWR_FUNC static void POWERMGMT_StandBy_Calculate(void)
     /* Turn on UART0 */
     SAU0EN = 1U;
     R_UART0_Create();
+	R_UART1_Create();
     R_UART0_SetBaudRate(POWERMGMT_DEBUG_PRINT_BAUDRATE);
     R_UART0_Start();
+	R_UART1_SetBaudRate(POWERMGMT_DEBUG_PRINT_BAUDRATE);
+	R_UART1_Start();
 
     /* Calculation time measurement timer */
     TAU0EN = 1U;

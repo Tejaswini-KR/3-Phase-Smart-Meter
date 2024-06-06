@@ -314,6 +314,12 @@ Macro definitions
 #define _4C00_UART_DIVISOR                      (0x4C00U)
 #define _0200_SAU1_CH2_BAUDRATE_DIVISOR         (0x0200U)
 
+//UART1
+#define _0004_SCR03_DEFAULT_VALUE               (0x0004U) /* SCR03 default value */
+#define _0020_SMR03_DEFAULT_VALUE               (0x0020U) /* SMR03 default value */
+#define _0004_SCR02_DEFAULT_VALUE               (0x0004U) /* SCR02 default value */
+#define _0020_SMR02_DEFAULT_VALUE               (0x0020U) /* SMR02 default value */
+
 /***********************************************************************************************************************
 Typedef definitions
 ***********************************************************************************************************************/
@@ -363,6 +369,12 @@ void R_UART0_Start_Reception(void);
 void R_UART0_Stop_Reception(void);
 MD_STATUS R_UART0_Send(uint8_t * const tx_buf, uint16_t tx_num);
 MD_STATUS R_UART0_Receive(uint8_t * const rx_buf, uint16_t rx_num);
+void R_UART1_Create(void);
+void R_UART1_Start(void);
+void R_UART1_Stop(void);
+MD_STATUS R_UART1_Send(uint8_t * const tx_buf, uint16_t tx_num);
+MD_STATUS R_UART1_Receive(uint8_t * const rx_buf, uint16_t rx_num);
+
 void R_SAU1_Create(void);
 void R_UART2_Create(void);
 void R_UART2_Start(void);
@@ -389,11 +401,19 @@ static void r_csi30_callback_receiveend(void);
 static void r_csi30_callback_error(uint8_t err_type);
 static void r_csi30_callback_sendend(void);
 
+static void r_uart1_callback_receiveend(void);
+static void r_uart1_callback_sendend(void);
+static void r_uart1_callback_error(uint8_t err_type);
+static void r_uart1_callback_softwareoverrun(uint16_t rx_data);
+
 /* Start user code for function. Do not edit comment generated here */
 uint8_t R_UART0_CheckOperating(void);
 void R_UART0_SetBaudRate(sau_std_baud_rate_t new_baud_rate);
+void R_UART1_SetBaudRate(sau_std_baud_rate_t new_baud_rate);
 void R_UART0_OnHocoChanged(void);
+void R_UART1_OnHocoChanged(void);
 void R_UART0_SetConfig(sau_std_length_t datalen, sau_std_parity_t parity, sau_std_stopbits_t stopbits);
+void R_UART1_SetConfig(sau_std_length_t datalen, sau_std_parity_t parity, sau_std_stopbits_t stopbits);
 
 uint8_t R_UART2_CheckOperating(void);
 void R_UART2_SetBaudRate(sau_std_baud_rate_t new_baud_rate);
@@ -405,4 +425,8 @@ NEAR_FUNC void r_uart0_interrupt_send(void);
 NEAR_FUNC void r_uart2_interrupt_receive(void);
 NEAR_FUNC void r_uart2_interrupt_send(void);
 NEAR_FUNC void r_csi30_interrupt(void);
+NEAR_FUNC void r_uart1_interrupt_receive(void);
+NEAR_FUNC void r_uart1_interrupt_send(void);
+
+
 #endif

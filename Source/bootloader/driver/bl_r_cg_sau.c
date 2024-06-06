@@ -322,5 +322,7 @@ MD_STATUS R_UART2_Send(uint8_t * tx_buf, uint16_t tx_num)
     return (status);
 }
 
+
+
 /* Start user code for adding. Do not edit comment generated here */
 /* End user code. Do not edit comment generated here */

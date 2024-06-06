@@ -367,6 +367,7 @@ void WRP_UART0_SendEndCallback(void)
     #if defined(SUPPORT_TCP_PROFILE) && (SUPPORT_TCP_PROFILE == TRUE)
     R_TCP_WRP_UartPhySendEnd(0);
     #endif
+    R_PHY_DeviceSendEnd(0);
     #endif /* _DLMS */
     #endif /* __DEBUG */
     
@@ -394,6 +395,8 @@ void WRP_UART0_ReceiveEndCallback(void)
     #if defined(SUPPORT_TCP_PROFILE) && (SUPPORT_TCP_PROFILE == TRUE)
     R_TCP_WRP_UartPhyReceiveData(0, g_received_byte_1st);
     #endif
+    /* DLMS Receive End */
+    R_PHY_DeviceReceiveEnd(0, g_received_byte_1st);
     #endif /* _DLMS */
     #endif /* __DEBUG */
     R_METER_CMD_UART_ReceiveEndCallback(1, g_received_byte_1st);

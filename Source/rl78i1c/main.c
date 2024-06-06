@@ -86,6 +86,7 @@ Global variables and functions
 ***********************************************************************************************************************/
 /* Start user code for global. Do not edit comment generated here */
 void Get_Net_Energy(void);
+//uint8_t tx_buff[10],rx_buff[10];
 /* End user code. Do not edit comment generated here */
 
 static void R_MAIN_UserInit(void);
@@ -114,6 +115,7 @@ void main(void)
         
             /* LCD Polling Processing */
             EM_DisplaySequence();
+			
             
             #ifndef __DEBUG
             #ifdef _DLMS

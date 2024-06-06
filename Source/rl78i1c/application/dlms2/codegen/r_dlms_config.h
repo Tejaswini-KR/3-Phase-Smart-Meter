@@ -81,7 +81,7 @@ extern const PhyChannelCfg g_phy_ch0;
 TCP configuration
 ******************************************************************************/
 
-#define SUPPORT_TCP_PROFILE                            (TRUE)
+#define SUPPORT_TCP_PROFILE                            (FALSE)
 
 #define	TCP_FRAME_INFO_SIZE							(832)
 /*

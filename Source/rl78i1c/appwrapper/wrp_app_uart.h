@@ -86,6 +86,14 @@ Macro definitions
 #define		WRP_UART0_DRIVER_SetBaudRate(new_baud_rate)	            R_UART0_SetBaudRate((sau_std_baud_rate_t)new_baud_rate)
 #define		WRP_UART0_DRIVER_SetConfig(length, parity, stopbits)    R_UART0_SetConfig(length, parity, stopbits)
 
+#define     WRP_UART1_DRIVER_Start()                                R_UART1_Start()
+#define     WRP_UART1_DRIVER_Stop()                                 R_UART1_Stop()
+#define     WRP_UART1_DRIVER_SendData(data, length)                 R_UART1_Send(data, length)
+#define     WRP_UART1_DRIVER_ReceiveData(data, length)              R_UART1_Receive(data, length)
+#define		WRP_UART1_DRIVER_CheckOperating()                       R_UART1_CheckOperating()
+#define		WRP_UART1_DRIVER_SetBaudRate(new_baud_rate)	            R_UART1_SetBaudRate((sau_std_baud_rate_t)new_baud_rate)
+#define		WRP_UART1_DRIVER_SetConfig(length, parity, stopbits)    R_UART1_SetConfig(length, parity, stopbits)
+
 /******************************************************************************
 Variable Externs
 ******************************************************************************/

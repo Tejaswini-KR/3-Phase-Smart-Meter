@@ -144,6 +144,8 @@ void R_RAM_InterruptVectorInit(void)
     //RAM_ISR_Table[VECTOR_INDEX(INTCSI30)] = R_CSI30_Interrupt;
     RAM_ISR_Table[VECTOR_INDEX(INTST0)] = r_uart0_interrupt_send;
     RAM_ISR_Table[VECTOR_INDEX(INTSR0)] = r_uart0_interrupt_receive;
+	RAM_ISR_Table[VECTOR_INDEX(INTST1)] = r_uart1_interrupt_send;
+    RAM_ISR_Table[VECTOR_INDEX(INTSR1)] = r_uart1_interrupt_receive;
     RAM_ISR_Table[VECTOR_INDEX(INTST2)] = r_uart2_interrupt_send;
     RAM_ISR_Table[VECTOR_INDEX(INTSR2)] = r_uart2_interrupt_receive;
     RAM_ISR_Table[VECTOR_INDEX(INTTM00)] = r_tau0_channel0_interrupt;

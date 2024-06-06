@@ -247,6 +247,11 @@ void start_peripheral_and_app(void)
     DEBUG_Init();
     DEBUG_Start();
     #endif /* __DEBUG */
+	
+	// MODBUS_UART
+    R_UART1_SetConfig(SAU_STD_LENGTH_8, SAU_STD_PARITY_NONE, SAU_STD_STOPBITS_1);
+    R_UART1_SetBaudRate(SAU_STD_BAUD_RATE_9600);
+    R_UART1_Start();
 
     /* LCD */
     //R_LCD_PowerOn(1);

@@ -208,8 +208,9 @@ void R_PHY_DEVICE_ChangeSetting8N1(PhyChannel phy_channel)
 uint8_t R_PHY_DEVICE_SendData(PhyChannel phy_channel, uint8_t *data, uint16_t length)
 {
     if (phy_channel == 0) {
-        WRP_UART_SendData(data, length);
+        //WRP_UART_SendData(data, length);
+        WRP_UART0_SendData(data, length);
     }
-    
+
 	return 0;
 }

@@ -167,6 +167,7 @@ void R_CGC_FclkUseFih(void)
 static void R_CGC_OnHocoChanged(void)
 {
     R_UART0_OnHocoChanged();
+	R_UART1_OnHocoChanged();
     R_UART2_OnHocoChanged();
 }
 
