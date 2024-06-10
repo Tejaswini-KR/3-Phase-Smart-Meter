@@ -72,6 +72,9 @@ Includes
 #ifdef _DLMS
 #include "r_dlms_main.h"
 #endif
+#include "Global_Var.h"
+#include "User_Def.h"
+#include "Func_Dec.h"
 /* End user code. Do not edit comment generated here */
 #include "r_cg_userdefine.h"
 
@@ -101,7 +104,7 @@ void main(void)
     R_MAIN_UserInit();
     /* Start user code. Do not edit comment generated here */
     startup();
-    
+    Initial_Setup();
     while (1U)
     {
         /* Power management control */
@@ -115,6 +118,20 @@ void main(void)
         
             /* LCD Polling Processing */
             EM_DisplaySequence();
+			
+			/* MODBUS Polling Processing */
+			if(Modbus_Bit_Fields.Valid_Frame_complete )
+     		{  
+     	  		Modbus_Bit_Fields.Valid_Frame_complete=FALSE;
+          		Query_Validation();
+     		}
+
+			if(Modbus_Bit_Fields.Modbus_uart_Idle)
+      		{
+    	  		Modbus_Bit_Fields.Modbus_uart_Idle=0;   
+    	  		R_SAU0_Create();// reinitialize  the uart driver	
+          		R_UART1_RX_ON(); 
+      		}
 			
             
             #ifndef __DEBUG
@@ -182,4 +199,20 @@ static void R_MAIN_UserInit(void)
 }
 
 /* Start user code for adding. Do not edit comment generated here */
+/***********************************************************************************************************************
+* Function Name: Initial_Setup
+* Description  : This function adds user code before implementing Initial_Setup function.
+* Arguments    : None
+* Return Value : None
+***********************************************************************************************************************/
+void Initial_Setup(void)
+{
+	Mtr_Set_Const.Meter_Id=10;
+  	Mtr_Set_Const.Baud_Rate=9600;
+  	Mtr_Set_Const.Parity=0; 
+	Silent_Interval=Char_Frame_Delay;
+    RS485_DIR = 1;
+    R_UART1_RX_ON(); 
+	Power_ON_Reset=0;
+}
 /* End user code. Do not edit comment generated here */

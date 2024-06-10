@@ -33,6 +33,9 @@ Includes
 #include "r_cg_sau.h"
 /* Start user code for include. Do not edit comment generated here */
 #include "wrp_app_uart.h"
+#include "Global_Var.h"
+#include "User_Def.h"
+#include "Func_Dec.h"
 /* End user code. Do not edit comment generated here */
 #include "r_cg_userdefine.h"
 
@@ -443,36 +446,38 @@ static void r_csi30_callback_sendend(void)
 ***********************************************************************************************************************/
 NEAR_FUNC void r_uart1_interrupt_receive(void)
 {
-    volatile uint8_t rx_data;
-    volatile uint8_t err_type;
-    
-	EI();
-	
-    err_type = (uint8_t)(SSR03 & 0x0007U);
-    SIR03 = (uint16_t)err_type;
-
-    if (err_type != 0U)
-    {
-        r_uart1_callback_error(err_type);
-    }
-    
-    rx_data = RXD1;
-
-    if (g_uart1_rx_length > g_uart1_rx_count)
-    {
-        *gp_uart1_rx_address = rx_data;
-        gp_uart1_rx_address++;
-        g_uart1_rx_count++;
-
-        if (g_uart1_rx_length == g_uart1_rx_count)
-        {
-            r_uart1_callback_receiveend();
-        }
-    }
-    else
-    {
-        r_uart1_callback_softwareoverrun(rx_data);
-    }
+    uint8_t Rx_Buf_Temp;   
+	Modbus_Bit_Fields.Modbus_uart_Idle=0;
+	Uart_Monitor_Counter=4;//re-enable the uart after 10 sec if there is no interrupt
+ 
+   	Rx_Buf_Temp = RXD1;// Receive Data Available 
+	// Modbus_State 0 ready to receive fresh query after valid SI
+	switch (Modbus_State)
+	{
+	case 0: if (Modbus_Bit_Fields.SI_Over) //Receive the Modbus ID
+		{
+			Modbus_RX_Array[0] = Rx_Buf_Temp;
+			 if (Modbus_RX_Array[0] == Mtr_Set_Const.Meter_Id || Modbus_RX_Array[0] == 210) 
+				 {
+				  {	
+				 	Modbus_State = 1;
+					RX_Byte = 1;
+				  }
+				}
+				 Modbus_Bit_Fields.SI_Over = FALSE;
+				} //ignore the data if it is middle of the frame
+				Silent_Interval = Char_Frame_Delay; //Feed_Delay;
+			return;
+	case 1:
+			Modbus_RX_Array[RX_Byte++] = Rx_Buf_Temp;// looking for next chars in a frame
+			Silent_Interval = Char_Frame_Delay; // reload the mb break interval
+			return;
+	default:
+			Modbus_State = 0;
+			RX_Byte = 0;
+			Silent_Interval = Char_Frame_Delay; // Reload the Modbus  break interval
+		return;
+	}
 }
 /***********************************************************************************************************************
 * Function Name: r_uart1_interrupt_send
@@ -490,7 +495,12 @@ NEAR_FUNC void r_uart1_interrupt_send(void)
     }
     else
     {
-        r_uart1_callback_sendend();
+        SMR02 &= (uint16_t)~(_0001_SAU_BUFFER_EMPTY);
+
+        if ((SSR02 & _0040_SAU_UNDER_EXECUTE) == 0U)
+        {
+            r_uart1_callback_sendend();
+        }
     }
 }
 /***********************************************************************************************************************
