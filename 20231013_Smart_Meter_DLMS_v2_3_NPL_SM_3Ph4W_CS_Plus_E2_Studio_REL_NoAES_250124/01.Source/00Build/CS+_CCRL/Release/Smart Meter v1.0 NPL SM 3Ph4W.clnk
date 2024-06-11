@@ -181,6 +181,22 @@
 -Input=Release\storage_em.obj
 -Input=Release\r_systeminit_user.obj
 -Input=Release\r_cg_crc_user.obj
+-Input=Release\event_log.obj
+-Input=Release\fsm.obj
+-Input=Release\gsm.obj
+-Input=Release\gsm_gprs_handler.obj
+-Input=Release\gsm_idle_handler.obj
+-Input=Release\gsm_init_handler.obj
+-Input=Release\gsm_settings.obj
+-Input=Release\gsm_status.obj
+-Input=Release\gsm_utils.obj
+-Input=Release\main.obj
+-Input=Release\uart.obj
+-Input=Release\utils.obj
+-Input=Release\test_functions.obj
+-Input=Release\test_setup.obj
+-Input=Release\test_util.obj
+-Input=Release\tester.obj
 -LIBrary=..\..\rl78i1c\application\fft\libs\CCRL\lib_FFT.lib
 -LIBrary=..\..\shared\dlms2\hash\CCRL\md5_rl78_ccrl_m.lib
 -LIBrary=..\..\shared\dlms2\hash\CCRL\sha_rl78_s3_ccrl_m.lib
@@ -199,9 +215,9 @@
 -SEction_forbid=(.constf)
 -SEction_forbid=(EMCallback_f)
 -OUtput=Release\Smart Meter v1.0 NPL SM 3Ph4W.abs
--LIBrary=C:\Program Files (x86)\Renesas Electronics\CS+\CC\CC-RL\V1.11.00\lib\rl78em4s.lib
--LIBrary=C:\Program Files (x86)\Renesas Electronics\CS+\CC\CC-RL\V1.11.00\lib\malloc_n.lib
--LIBrary=C:\Program Files (x86)\Renesas Electronics\CS+\CC\CC-RL\V1.11.00\lib\rl78em4r.lib
+-LIBrary=C:\Program Files (x86)\Renesas Electronics\CS+\CC\CC-RL\V1.12.01\lib\rl78em4s.lib
+-LIBrary=C:\Program Files (x86)\Renesas Electronics\CS+\CC\CC-RL\V1.12.01\lib\malloc_n.lib
+-LIBrary=C:\Program Files (x86)\Renesas Electronics\CS+\CC\CC-RL\V1.12.01\lib\rl78em4r.lib
 -OCDBG=84
 -DEBUG_MONITOR
 -USER_OPT_BYTE=7E7FE0

@@ -1,9 +1,9 @@
 ﻿<CubeSuiteProject>
-  <ProductVersion>9.06.00.00</ProductVersion>
+  <ProductVersion>9.10.00.00</ProductVersion>
   <Class Guid="68f4a651-b9cd-473b-a595-b00447132ffa">
     <Instance Guid="00000000-0000-0000-0000-000000000000">
       <FormatVersion>2.0</FormatVersion>
-      <FileVersion>9.6</FileVersion>
+      <FileVersion>9.10</FileVersion>
       <ProjectGuid>eb682011-cee3-47f8-8f7e-b3aa2001ed35</ProjectGuid>
       <ProjectItemGuid>cc927d64-3337-4378-beab-dec3e5fe5a88</ProjectItemGuid>
       <FileCategoryGuid>2a04ce05-7180-4e61-a492-19196c1799e6</FileCategoryGuid>
@@ -226,6 +226,7 @@
   </Class>
   <Class Guid="fb98844b-2c27-4275-9804-f6e63e204da0">
     <Instance Guid="2a349cb6-b982-4ade-adcd-104b883ad81c">
+      <TypeOfStorageOfUserSettings>UserMtudFile</TypeOfStorageOfUserSettings>
       <UseStandardLicenseOnly>True</UseStandardLicenseOnly>
       <MemoCount>0</MemoCount>
     </Instance>
@@ -263,7 +264,7 @@
   </Class>
   <Class Guid="1159186b-b838-4741-8324-8293bf3d5c5f">
     <Instance Guid="1159186b-b838-4741-8324-8293bf3d5c5f">
-      <DataFormatVersion>1.3</DataFormatVersion>
+      <DataFormatVersion>1.5</DataFormatVersion>
       <BuildModeCount>2</BuildModeCount>
       <BuildMode0>RABlAGYAYQB1AGwAdABCAHUAaQBsAGQA</BuildMode0>
       <BatchBuildFlag0>False</BatchBuildFlag0>
@@ -280,12 +281,15 @@
       <SourceItemType3>LibrarySource</SourceItemType3>
       <SourceItemCount>4</SourceItemCount>
       <LastDeviceChangedCounter>0</LastDeviceChangedCounter>
+      <LastDeviceNameOnPG>R5F10NPL</LastDeviceNameOnPG>
+      <LastDeviceChangedCounterOnPG>0</LastDeviceChangedCounterOnPG>
     </Instance>
     <Instance Guid="6bb7060d-7e24-4135-bd9b-7db166417523">
       <AsmOptionI-DefaultValue />
       <BuildMode-DefaultValue>DefaultBuild</BuildMode-DefaultValue>
       <COptionOsize-DefaultValue>Default</COptionOsize-DefaultValue>
       <GeneralOptionCpu-DefaultValue>S3</GeneralOptionCpu-DefaultValue>
+      <GeneralOptionDspAsmFolder-DefaultValue />
       <GeneralOptionErrorFile-DefaultValue>False</GeneralOptionErrorFile-DefaultValue>
       <GeneralOptionInstalledFolder-DefaultValue />
       <GeneralOptionMirrorArea-DefaultValue>Maa0</GeneralOptionMirrorArea-DefaultValue>
@@ -299,6 +303,9 @@
       <OutputMessageFormat-DefaultValue>%TargetFiles%</OutputMessageFormat-DefaultValue>
       <AsmOptionISystem-DefaultValue />
       <COptionI-DefaultValue />
+      <CompilerDspAsmVersion-DefaultValue>
+
+0</CompilerDspAsmVersion-DefaultValue>
       <CompilerVersion-DefaultValue>
 
 0</CompilerVersion-DefaultValue>
@@ -316,13 +323,14 @@
       <COptionISystem-DefaultValue />
       <DependencyFileExistCheckingType-DefaultValue>Rebuild</DependencyFileExistCheckingType-DefaultValue>
       <GeneralOptionErrorFileName-DefaultValue>%ProjectName%.err</GeneralOptionErrorFileName-DefaultValue>
-      <GeneralOptionLimitDevice-DefaultValue>Limit</GeneralOptionLimitDevice-DefaultValue>
       <GeneralOptionObjPath-DefaultValue>%BuildModeName%</GeneralOptionObjPath-DefaultValue>
       <HexOptionOutputFolder-DefaultValue>%BuildModeName%</HexOptionOutputFolder-DefaultValue>
       <LibOptionOutputFileName-DefaultValue>%ProjectName%.lib</LibOptionOutputFileName-DefaultValue>
+      <LinkOptionFlashSecurityId-DefaultValue>FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF</LinkOptionFlashSecurityId-DefaultValue>
       <LinkOptionOutputFileName-DefaultValue>%ProjectName%.abs</LinkOptionOutputFileName-DefaultValue>
       <TemporaryFolder-DefaultValue />
       <COptionD-DefaultValue />
+      <GeneralOptionLimitDevice-DefaultValue>Limit</GeneralOptionLimitDevice-DefaultValue>
       <HexOptionOutputFileName-DefaultValue>%ProjectName%.mot</HexOptionOutputFileName-DefaultValue>
       <LibOptionLibraryStandard-DefaultValue>False</LibOptionLibraryStandard-DefaultValue>
       <LinkOptionLibraryStandard-DefaultValue>True</LinkOptionLibraryStandard-DefaultValue>
@@ -354,6 +362,9 @@
       <GeneralOptionNoWarningNum-0>20177,20174,20550</GeneralOptionNoWarningNum-0>
       <GeneralOptionOutput-0>LoadModuleFile</GeneralOptionOutput-0>
       <GeneralOptionSimultaneousBuild-0>False</GeneralOptionSimultaneousBuild-0>
+      <CompilerDspAsmVersion-0>
+
+0</CompilerDspAsmVersion-0>
       <CompilerVersion-0>V1.11.00
 C:\Program Files (x86)\Renesas Electronics\CS+\CC\CC-RL\V1.11.00
 293569604616192</CompilerVersion-0>
@@ -364,11 +375,13 @@ C:\Program Files (x86)\Renesas Electronics\CS+\CC\CC-RL\V1.11.00
       <LinkOptionSecurityId-0>00000000000000000000</LinkOptionSecurityId-0>
       <DependencyFileExistCheckingType-0>Rebuild</DependencyFileExistCheckingType-0>
       <GeneralOptionErrorFileName-0>%ProjectName%.err</GeneralOptionErrorFileName-0>
-      <GeneralOptionLimitDevice-0>Limit</GeneralOptionLimitDevice-0>
       <GeneralOptionObjPath-0>%BuildModeName%</GeneralOptionObjPath-0>
+      <LinkOptionFlashSecurityId-0>FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF</LinkOptionFlashSecurityId-0>
       <TemporaryFolder-0 />
+      <GeneralOptionLimitDevice-0>Limit</GeneralOptionLimitDevice-0>
       <GeneralOptionOtherAdditionalOptions-0 />
       <LastCompilerVersion-0>V1.11.00</LastCompilerVersion-0>
+      <GeneralOptionCpu-1>S3</GeneralOptionCpu-1>
       <GeneralOptionErrorFile-1>False</GeneralOptionErrorFile-1>
       <GeneralOptionMirrorArea-1>Maa0</GeneralOptionMirrorArea-1>
       <GeneralOptionNoWarningNum-1>20177,20174,20550</GeneralOptionNoWarningNum-1>
@@ -381,12 +394,14 @@ C:\Program Files (x86)\Renesas Electronics\CS+\CC\CC-RL\V1.11.00
       <LinkOptionSecurityId-1>00000000000000000000</LinkOptionSecurityId-1>
       <DependencyFileExistCheckingType-1>Rebuild</DependencyFileExistCheckingType-1>
       <GeneralOptionErrorFileName-1>%ProjectName%.err</GeneralOptionErrorFileName-1>
-      <GeneralOptionLimitDevice-1>Limit</GeneralOptionLimitDevice-1>
       <GeneralOptionObjPath-1>%BuildModeName%</GeneralOptionObjPath-1>
+      <LinkOptionFlashSecurityId-1>FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF</LinkOptionFlashSecurityId-1>
       <TemporaryFolder-1 />
+      <GeneralOptionLimitDevice-1>Limit</GeneralOptionLimitDevice-1>
       <GeneralOptionOtherAdditionalOptions-1 />
     </Instance>
     <Instance Guid="86bebc9e-2f6f-4e72-83c8-8883e6cf6d33">
+      <COptionAnsi-DefaultValue>False</COptionAnsi-DefaultValue>
       <COptionAsmPath-DefaultValue>False</COptionAsmPath-DefaultValue>
       <COptionChangeMessageError-DefaultValue>No</COptionChangeMessageError-DefaultValue>
       <COptionCharacterSet-DefaultValue>Auto</COptionCharacterSet-DefaultValue>
@@ -402,7 +417,6 @@ C:\Program Files (x86)\Renesas Electronics\CS+\CC\CC-RL\V1.11.00
       <COptionOsize-DefaultValue>Default</COptionOsize-DefaultValue>
       <COptionPrnPath-DefaultValue>False</COptionPrnPath-DefaultValue>
       <COptionStackProtector-DefaultValue>None</COptionStackProtector-DefaultValue>
-      <COptionAnsi-DefaultValue>False</COptionAnsi-DefaultValue>
       <COptionAsmPathValue-DefaultValue>%BuildModeName%</COptionAsmPathValue-DefaultValue>
       <COptionChangeMessageErrorNumber-DefaultValue />
       <COptionFarRom-DefaultValue>False</COptionFarRom-DefaultValue>
@@ -412,28 +426,30 @@ C:\Program Files (x86)\Renesas Electronics\CS+\CC\CC-RL\V1.11.00
       <COptionPreCompileCommands-DefaultValue />
       <COptionPrnPathValue-DefaultValue>%BuildModeName%</COptionPrnPathValue-DefaultValue>
       <COptionSignedChar-DefaultValue>None</COptionSignedChar-DefaultValue>
+      <COptionStrictStd-DefaultValue>False</COptionStrictStd-DefaultValue>
+      <CppOptionCharacterSet-DefaultValue>Utf8</CppOptionCharacterSet-DefaultValue>
+      <CppOptionLangOfCppSourceFile-DefaultValue>Cpp14</CppOptionLangOfCppSourceFile-DefaultValue>
       <COptionControlFlowIntegrity-DefaultValue>None</COptionControlFlowIntegrity-DefaultValue>
       <COptionMisra2004RuleFile-DefaultValue />
       <COptionOdeleteStaticFunc-DefaultValue>None</COptionOdeleteStaticFunc-DefaultValue>
       <COptionP-DefaultValue>False</COptionP-DefaultValue>
       <COptionPostCompileCommands-DefaultValue />
       <COptionPreinclude-DefaultValue />
+      <COptionRefsWithoutDeclaration-DefaultValue>False</COptionRefsWithoutDeclaration-DefaultValue>
       <COptionSignedBitfield-DefaultValue>None</COptionSignedBitfield-DefaultValue>
-      <COptionStrictStd-DefaultValue>False</COptionStrictStd-DefaultValue>
       <COptionD-DefaultValue />
+      <COptionLargeVariable-DefaultValue>False</COptionLargeVariable-DefaultValue>
       <COptionMisra2004RuleNumberApply-DefaultValue />
       <COptionOinlineLevel-DefaultValue>FitToOptimization</COptionOinlineLevel-DefaultValue>
       <COptionOtherAdditionalOptions-DefaultValue />
       <COptionPack-DefaultValue>False</COptionPack-DefaultValue>
       <COptionPrepPath-DefaultValue>%BuildModeName%</COptionPrepPath-DefaultValue>
-      <COptionRefsWithoutDeclaration-DefaultValue>False</COptionRefsWithoutDeclaration-DefaultValue>
-      <COptionLargeVariable-DefaultValue>False</COptionLargeVariable-DefaultValue>
       <COptionMisra2004RuleNumberIgnore-DefaultValue />
+      <COptionNestComment-DefaultValue>False</COptionNestComment-DefaultValue>
       <COptionOinlineSize-DefaultValue>100</COptionOinlineSize-DefaultValue>
       <COptionU-DefaultValue />
       <COptionVolatile-DefaultValue>False</COptionVolatile-DefaultValue>
       <COptionMisra2004RuleNumberRequiredAdd-DefaultValue />
-      <COptionNestComment-DefaultValue>False</COptionNestComment-DefaultValue>
       <COptionOpipeline-DefaultValue>None</COptionOpipeline-DefaultValue>
       <COptionPreprocessComment-DefaultValue>False</COptionPreprocessComment-DefaultValue>
       <COptionSwitch-DefaultValue>Auto</COptionSwitch-DefaultValue>
@@ -466,6 +482,7 @@ C:\Program Files (x86)\Renesas Electronics\CS+\CC\CC-RL\V1.11.00
       <COptionMisraIntermodule-DefaultValue>False</COptionMisraIntermodule-DefaultValue>
       <IsLockedByUser>False</IsLockedByUser>
       <TimeTagModified--0>-8585377845460858971</TimeTagModified--0>
+      <COptionAnsi-0>False</COptionAnsi-0>
       <COptionAsmPath-0>False</COptionAsmPath-0>
       <COptionChangeMessageError-0>No</COptionChangeMessageError-0>
       <COptionCharacterSet-0>Auto</COptionCharacterSet-0>
@@ -492,7 +509,6 @@ C:\Program Files (x86)\Renesas Electronics\CS+\CC\CC-RL\V1.11.00
       <COptionOsize-0>Default</COptionOsize-0>
       <COptionPrnPath-0>False</COptionPrnPath-0>
       <COptionStackProtector-0>None</COptionStackProtector-0>
-      <COptionAnsi-0>False</COptionAnsi-0>
       <COptionAsmPathValue-0>%BuildModeName%</COptionAsmPathValue-0>
       <COptionChangeMessageErrorNumber-0 />
       <COptionFarRom-0>False</COptionFarRom-0>
@@ -502,28 +518,30 @@ C:\Program Files (x86)\Renesas Electronics\CS+\CC\CC-RL\V1.11.00
       <COptionPreCompileCommands-0 />
       <COptionPrnPathValue-0>%BuildModeName%</COptionPrnPathValue-0>
       <COptionSignedChar-0>Signed</COptionSignedChar-0>
+      <COptionStrictStd-0>False</COptionStrictStd-0>
+      <CppOptionCharacterSet-0>Utf8</CppOptionCharacterSet-0>
+      <CppOptionLangOfCppSourceFile-0>Cpp14</CppOptionLangOfCppSourceFile-0>
       <COptionControlFlowIntegrity-0>None</COptionControlFlowIntegrity-0>
       <COptionMisra2004RuleFile-0 />
       <COptionOdeleteStaticFunc-0>None</COptionOdeleteStaticFunc-0>
       <COptionP-0>False</COptionP-0>
       <COptionPostCompileCommands-0 />
       <COptionPreinclude-0 />
+      <COptionRefsWithoutDeclaration-0>False</COptionRefsWithoutDeclaration-0>
       <COptionSignedBitfield-0>None</COptionSignedBitfield-0>
-      <COptionStrictStd-0>False</COptionStrictStd-0>
       <COptionD-0 />
+      <COptionLargeVariable-0>False</COptionLargeVariable-0>
       <COptionMisra2004RuleNumberApply-0 />
       <COptionOinlineLevel-0>OnlySpecifiedFunctions</COptionOinlineLevel-0>
       <COptionOtherAdditionalOptions-0 />
       <COptionPack-0>False</COptionPack-0>
       <COptionPrepPath-0>%BuildModeName%</COptionPrepPath-0>
-      <COptionRefsWithoutDeclaration-0>False</COptionRefsWithoutDeclaration-0>
-      <COptionLargeVariable-0>False</COptionLargeVariable-0>
       <COptionMisra2004RuleNumberIgnore-0 />
+      <COptionNestComment-0>False</COptionNestComment-0>
       <COptionOinlineSize-0>100</COptionOinlineSize-0>
       <COptionU-0 />
       <COptionVolatile-0>False</COptionVolatile-0>
       <COptionMisra2004RuleNumberRequiredAdd-0 />
-      <COptionNestComment-0>False</COptionNestComment-0>
       <COptionOpipeline-0>None</COptionOpipeline-0>
       <COptionPreprocessComment-0>True</COptionPreprocessComment-0>
       <COptionSwitch-0>Auto</COptionSwitch-0>
@@ -555,6 +573,7 @@ C:\Program Files (x86)\Renesas Electronics\CS+\CC\CC-RL\V1.11.00
       <COptionCheckLanguageExtension-0>False</COptionCheckLanguageExtension-0>
       <COptionMisraIntermodule-0>False</COptionMisraIntermodule-0>
       <TimeTagModified--1>-8585444169538295792</TimeTagModified--1>
+      <COptionAnsi-1>False</COptionAnsi-1>
       <COptionAsmPath-1>False</COptionAsmPath-1>
       <COptionChangeMessageError-1>No</COptionChangeMessageError-1>
       <COptionCharacterSet-1>Auto</COptionCharacterSet-1>
@@ -581,7 +600,6 @@ C:\Program Files (x86)\Renesas Electronics\CS+\CC\CC-RL\V1.11.00
       <COptionOsize-1>Default</COptionOsize-1>
       <COptionPrnPath-1>False</COptionPrnPath-1>
       <COptionStackProtector-1>None</COptionStackProtector-1>
-      <COptionAnsi-1>False</COptionAnsi-1>
       <COptionAsmPathValue-1>%BuildModeName%</COptionAsmPathValue-1>
       <COptionChangeMessageErrorNumber-1 />
       <COptionFarRom-1>False</COptionFarRom-1>
@@ -591,28 +609,30 @@ C:\Program Files (x86)\Renesas Electronics\CS+\CC\CC-RL\V1.11.00
       <COptionPreCompileCommands-1 />
       <COptionPrnPathValue-1>%BuildModeName%</COptionPrnPathValue-1>
       <COptionSignedChar-1>Signed</COptionSignedChar-1>
+      <COptionStrictStd-1>False</COptionStrictStd-1>
+      <CppOptionCharacterSet-1>Utf8</CppOptionCharacterSet-1>
+      <CppOptionLangOfCppSourceFile-1>Cpp14</CppOptionLangOfCppSourceFile-1>
       <COptionControlFlowIntegrity-1>None</COptionControlFlowIntegrity-1>
       <COptionMisra2004RuleFile-1 />
       <COptionOdeleteStaticFunc-1>None</COptionOdeleteStaticFunc-1>
       <COptionP-1>False</COptionP-1>
       <COptionPostCompileCommands-1 />
       <COptionPreinclude-1 />
+      <COptionRefsWithoutDeclaration-1>False</COptionRefsWithoutDeclaration-1>
       <COptionSignedBitfield-1>None</COptionSignedBitfield-1>
-      <COptionStrictStd-1>False</COptionStrictStd-1>
       <COptionD-1 />
+      <COptionLargeVariable-1>False</COptionLargeVariable-1>
       <COptionMisra2004RuleNumberApply-1 />
       <COptionOinlineLevel-1>OnlySpecifiedFunctions</COptionOinlineLevel-1>
       <COptionOtherAdditionalOptions-1 />
       <COptionPack-1>False</COptionPack-1>
       <COptionPrepPath-1>%BuildModeName%</COptionPrepPath-1>
-      <COptionRefsWithoutDeclaration-1>False</COptionRefsWithoutDeclaration-1>
-      <COptionLargeVariable-1>False</COptionLargeVariable-1>
       <COptionMisra2004RuleNumberIgnore-1 />
+      <COptionNestComment-1>False</COptionNestComment-1>
       <COptionOinlineSize-1>100</COptionOinlineSize-1>
       <COptionU-1 />
       <COptionVolatile-1>False</COptionVolatile-1>
       <COptionMisra2004RuleNumberRequiredAdd-1 />
-      <COptionNestComment-1>False</COptionNestComment-1>
       <COptionOpipeline-1>None</COptionOpipeline-1>
       <COptionPreprocessComment-1>True</COptionPreprocessComment-1>
       <COptionSwitch-1>Auto</COptionSwitch-1>
@@ -727,6 +747,59 @@ C:\Program Files (x86)\Renesas Electronics\CS+\CC\CC-RL\V1.11.00
       <SMSAsmOptionOtherAdditionalOptions-1 />
       <SMSAsmOptionU-1 />
     </Instance>
+    <Instance Guid="a9166fef-6885-413b-b164-116661915fd2">
+      <DSPAsmOptionCore-DefaultValue>V2Core</DSPAsmOptionCore-DefaultValue>
+      <DSPAsmOptionI-DefaultValue />
+      <DSPAsmOptionNoDebugInfo-DefaultValue>True</DSPAsmOptionNoDebugInfo-DefaultValue>
+      <DSPAsmOptionOutputAsm-DefaultValue>False</DSPAsmOptionOutputAsm-DefaultValue>
+      <DSPAsmOptionPreDSPAssembleCommands-DefaultValue />
+      <DSPAsmOptionCodeSectionStart-DefaultValue />
+      <DSPAsmOptionOutputVerilog-DefaultValue>False</DSPAsmOptionOutputVerilog-DefaultValue>
+      <DSPAsmOptionPostDSPAssembleCommands-DefaultValue />
+      <DSPAsmOptionTextmacro-DefaultValue />
+      <DSPAsmOptionDataSectionStart-DefaultValue />
+      <DSPAsmOptionDefine-DefaultValue />
+      <DSPAsmOptionList-DefaultValue>False</DSPAsmOptionList-DefaultValue>
+      <DSPAsmOptionOtherAdditionalOptions-DefaultValue />
+      <DSPAsmOptionAllowTextMacroRedefine-DefaultValue>False</DSPAsmOptionAllowTextMacroRedefine-DefaultValue>
+      <DSPAsmOptionLabel-DefaultValue>False</DSPAsmOptionLabel-DefaultValue>
+      <DSPAsmOptionMacroIdentifyExact-DefaultValue>Forward</DSPAsmOptionMacroIdentifyExact-DefaultValue>
+      <IsLockedByUser>False</IsLockedByUser>
+      <TimeTagModified--0>-8584835858972135278</TimeTagModified--0>
+      <DSPAsmOptionCore-0>V2Core</DSPAsmOptionCore-0>
+      <DSPAsmOptionI-0 />
+      <DSPAsmOptionNoDebugInfo-0>True</DSPAsmOptionNoDebugInfo-0>
+      <DSPAsmOptionOutputAsm-0>False</DSPAsmOptionOutputAsm-0>
+      <DSPAsmOptionPreDSPAssembleCommands-0 />
+      <DSPAsmOptionCodeSectionStart-0 />
+      <DSPAsmOptionOutputVerilog-0>False</DSPAsmOptionOutputVerilog-0>
+      <DSPAsmOptionPostDSPAssembleCommands-0 />
+      <DSPAsmOptionTextmacro-0 />
+      <DSPAsmOptionDataSectionStart-0 />
+      <DSPAsmOptionDefine-0 />
+      <DSPAsmOptionList-0>False</DSPAsmOptionList-0>
+      <DSPAsmOptionOtherAdditionalOptions-0 />
+      <DSPAsmOptionAllowTextMacroRedefine-0>False</DSPAsmOptionAllowTextMacroRedefine-0>
+      <DSPAsmOptionLabel-0>False</DSPAsmOptionLabel-0>
+      <DSPAsmOptionMacroIdentifyExact-0>Forward</DSPAsmOptionMacroIdentifyExact-0>
+      <TimeTagModified--1>-8584835858972135278</TimeTagModified--1>
+      <DSPAsmOptionCore-1>V2Core</DSPAsmOptionCore-1>
+      <DSPAsmOptionI-1 />
+      <DSPAsmOptionNoDebugInfo-1>True</DSPAsmOptionNoDebugInfo-1>
+      <DSPAsmOptionOutputAsm-1>False</DSPAsmOptionOutputAsm-1>
+      <DSPAsmOptionPreDSPAssembleCommands-1 />
+      <DSPAsmOptionCodeSectionStart-1 />
+      <DSPAsmOptionOutputVerilog-1>False</DSPAsmOptionOutputVerilog-1>
+      <DSPAsmOptionPostDSPAssembleCommands-1 />
+      <DSPAsmOptionTextmacro-1 />
+      <DSPAsmOptionDataSectionStart-1 />
+      <DSPAsmOptionDefine-1 />
+      <DSPAsmOptionList-1>False</DSPAsmOptionList-1>
+      <DSPAsmOptionOtherAdditionalOptions-1 />
+      <DSPAsmOptionAllowTextMacroRedefine-1>False</DSPAsmOptionAllowTextMacroRedefine-1>
+      <DSPAsmOptionLabel-1>False</DSPAsmOptionLabel-1>
+      <DSPAsmOptionMacroIdentifyExact-1>Forward</DSPAsmOptionMacroIdentifyExact-1>
+    </Instance>
     <Instance Guid="7ec2f657-357c-4418-bb9b-bbb98af0d62c">
       <LinkOptionAutoSectionLayout-DefaultValue>True</LinkOptionAutoSectionLayout-DefaultValue>
       <LinkOptionCpu-DefaultValue>False</LinkOptionCpu-DefaultValue>
@@ -752,63 +825,67 @@ C:\Program Files (x86)\Renesas Electronics\CS+\CC\CC-RL\V1.11.00
       <LinkOptionOcdbgValue-DefaultValue />
       <LinkOptionOptimizeSymbolDelete-DefaultValue>False</LinkOptionOptimizeSymbolDelete-DefaultValue>
       <LinkOptionOutputFileName-DefaultValue>%ProjectName%.abs</LinkOptionOutputFileName-DefaultValue>
-      <LinkOptionStart-DefaultValue />
+      <LinkOptionSplitSection-DefaultValue>False</LinkOptionSplitSection-DefaultValue>
       <LinkOptionVfinfoFolder-DefaultValue>%BuildModeName%</LinkOptionVfinfoFolder-DefaultValue>
       <LinkOptionCheckDevice-DefaultValue>False</LinkOptionCheckDevice-DefaultValue>
-      <LinkOptionDebugMonitorSetting-DefaultValue>None</LinkOptionDebugMonitorSetting-DefaultValue>
       <LinkOptionDefine-DefaultValue />
-      <LinkOptionFSymbol-DefaultValue />
       <LinkOptionHide-DefaultValue>False</LinkOptionHide-DefaultValue>
       <LinkOptionLibraryStandard-DefaultValue>True</LinkOptionLibraryStandard-DefaultValue>
       <LinkOptionMsgUnused-DefaultValue>False</LinkOptionMsgUnused-DefaultValue>
       <LinkOptionOptimizeSameCode-DefaultValue>False</LinkOptionOptimizeSameCode-DefaultValue>
       <LinkOptionPadding-DefaultValue>False</LinkOptionPadding-DefaultValue>
+      <LinkOptionSecurityOptByte-DefaultValue>False</LinkOptionSecurityOptByte-DefaultValue>
       <LinkOptionShowSymbol-DefaultValue>False</LinkOptionShowSymbol-DefaultValue>
+      <LinkOptionStart-DefaultValue />
       <LinkOptionTotalSize-DefaultValue>False</LinkOptionTotalSize-DefaultValue>
       <LinkOptionVfinfoFileName-DefaultValue>%ProjectName%_vfi.h</LinkOptionVfinfoFileName-DefaultValue>
       <LinkOptionChangeMessageInformation-DefaultValue>None</LinkOptionChangeMessageInformation-DefaultValue>
       <LinkOptionCheck64KOnly-DefaultValue>False</LinkOptionCheck64KOnly-DefaultValue>
-      <LinkOptionDebugMonitor-DefaultValue>7FE00-7FFFF</LinkOptionDebugMonitor-DefaultValue>
+      <LinkOptionFSymbol-DefaultValue />
       <LinkOptionLibraryStandard2-DefaultValue>C90</LinkOptionLibraryStandard2-DefaultValue>
       <LinkOptionLogo-DefaultValue>False</LinkOptionLogo-DefaultValue>
-      <LinkOptionRom-DefaultValue />
       <LinkOptionSameSize-DefaultValue>1E</LinkOptionSameSize-DefaultValue>
+      <LinkOptionSecurityOptByteValue-DefaultValue />
       <LinkOptionShowReference-DefaultValue>False</LinkOptionShowReference-DefaultValue>
       <LinkOptionVectN-DefaultValue />
       <LinkOptionVfinfoOutputType-DefaultValue />
       <LinkOptionChangeMessageInformationNumber-DefaultValue />
+      <LinkOptionDebugMonitorSetting-DefaultValue>None</LinkOptionDebugMonitorSetting-DefaultValue>
       <LinkOptionLibraryLibMalloc-DefaultValue>False</LinkOptionLibraryLibMalloc-DefaultValue>
       <LinkOptionNoCheckSectionLayout-DefaultValue>False</LinkOptionNoCheckSectionLayout-DefaultValue>
       <LinkOptionOptimizeBranch-DefaultValue>False</LinkOptionOptimizeBranch-DefaultValue>
       <LinkOptionPreLinkCommands-DefaultValue />
+      <LinkOptionRom-DefaultValue />
       <LinkOptionShowXreference-DefaultValue>False</LinkOptionShowXreference-DefaultValue>
-      <LinkOptionUserOptByte-DefaultValue>True</LinkOptionUserOptByte-DefaultValue>
       <LinkOptionVect-DefaultValue />
       <LinkOptionCFI-DefaultValue>False</LinkOptionCFI-DefaultValue>
       <LinkOptionChangeMessageWarning-DefaultValue>None</LinkOptionChangeMessageWarning-DefaultValue>
+      <LinkOptionDebugMonitor-DefaultValue>7FE00-7FFFF</LinkOptionDebugMonitor-DefaultValue>
+      <LinkOptionDspMemoryArea-DefaultValue>None</LinkOptionDspMemoryArea-DefaultValue>
       <LinkOptionLibraryRuntime-DefaultValue>True</LinkOptionLibraryRuntime-DefaultValue>
       <LinkOptionPostLinkCommands-DefaultValue />
       <LinkOptionShowTotalSize-DefaultValue>False</LinkOptionShowTotalSize-DefaultValue>
       <LinkOptionSymbolForbid-DefaultValue />
-      <LinkOptionUserOptByteValue-DefaultValue />
       <LinkOptionCFIAddFunc-DefaultValue />
       <LinkOptionChangeMessageWarningNumber-DefaultValue />
       <LinkOptionOtherAdditionalOptions-DefaultValue />
       <LinkOptionSameCodeForbid-DefaultValue />
-      <LinkOptionSelf-DefaultValue>None</LinkOptionSelf-DefaultValue>
       <LinkOptionShowVector-DefaultValue>False</LinkOptionShowVector-DefaultValue>
+      <LinkOptionUserOptByte-DefaultValue>True</LinkOptionUserOptByte-DefaultValue>
       <LinkOptionCFIIgnoreModule-DefaultValue />
       <LinkOptionChangeMessageError-DefaultValue>None</LinkOptionChangeMessageError-DefaultValue>
-      <LinkOptionOcdTr-DefaultValue>None</LinkOptionOcdTr-DefaultValue>
       <LinkOptionSectionForbid-DefaultValue />
       <LinkOptionShowStruct-DefaultValue>False</LinkOptionShowStruct-DefaultValue>
+      <LinkOptionUserOptByteValue-DefaultValue />
       <LinkOptionAbsoluteForbid-DefaultValue />
       <LinkOptionChangeMessageErrorNumber-DefaultValue />
-      <LinkOptionOcdHpi-DefaultValue>None</LinkOptionOcdHpi-DefaultValue>
+      <LinkOptionSelf-DefaultValue>None</LinkOptionSelf-DefaultValue>
       <LinkOptionShowRelocationAttribute-DefaultValue>False</LinkOptionShowRelocationAttribute-DefaultValue>
       <LinkOptionSplitVect-DefaultValue>False</LinkOptionSplitVect-DefaultValue>
-      <LinkOptionRrm-DefaultValue>False</LinkOptionRrm-DefaultValue>
+      <LinkOptionOcdTr-DefaultValue>None</LinkOptionOcdTr-DefaultValue>
       <LinkOptionShowCFI-DefaultValue>False</LinkOptionShowCFI-DefaultValue>
+      <LinkOptionOcdHpi-DefaultValue>None</LinkOptionOcdHpi-DefaultValue>
+      <LinkOptionRrm-DefaultValue>False</LinkOptionRrm-DefaultValue>
       <LinkOptionRrmValue-DefaultValue />
       <IsLockedByUser>False</IsLockedByUser>
       <TimeTagModified--0>-8585123711102114831</TimeTagModified--0>
@@ -836,66 +913,70 @@ C:\Program Files (x86)\Renesas Electronics\CS+\CC\CC-RL\V1.11.00
       <LinkOptionOcdbgValue-0>84</LinkOptionOcdbgValue-0>
       <LinkOptionOptimizeSymbolDelete-0>False</LinkOptionOptimizeSymbolDelete-0>
       <LinkOptionOutputFileName-0>em_middleware.abs</LinkOptionOutputFileName-0>
-      <LinkOptionStart-0>EMCallback_f/74B00,EMCnst_f,.constf,.data,.SLIB,.RLIB,EMTextI_f,EMText_f/74C00,.dataR,.bss/F8700</LinkOptionStart-0>
+      <LinkOptionSplitSection-0>False</LinkOptionSplitSection-0>
       <LinkOptionVfinfoFolder-0>%BuildModeName%</LinkOptionVfinfoFolder-0>
       <LinkOptionCheckDevice-0>False</LinkOptionCheckDevice-0>
-      <LinkOptionDebugMonitorSetting-0>YesAddressRange</LinkOptionDebugMonitorSetting-0>
       <LinkOptionDefine-0 />
-      <LinkOptionFSymbol-0>EMText_f
-</LinkOptionFSymbol-0>
       <LinkOptionHide-0>False</LinkOptionHide-0>
       <LinkOptionLibraryStandard-0>True</LinkOptionLibraryStandard-0>
       <LinkOptionMsgUnused-0>False</LinkOptionMsgUnused-0>
       <LinkOptionOptimizeSameCode-0>False</LinkOptionOptimizeSameCode-0>
       <LinkOptionPadding-0>False</LinkOptionPadding-0>
+      <LinkOptionSecurityOptByte-0>False</LinkOptionSecurityOptByte-0>
       <LinkOptionShowSymbol-0>False</LinkOptionShowSymbol-0>
+      <LinkOptionStart-0>EMCallback_f/74B00,EMCnst_f,.constf,.data,.SLIB,.RLIB,EMTextI_f,EMText_f/74C00,.dataR,.bss/F8700</LinkOptionStart-0>
       <LinkOptionTotalSize-0>True</LinkOptionTotalSize-0>
       <LinkOptionVfinfoFileName-0>%ProjectName%_vfi.h</LinkOptionVfinfoFileName-0>
       <LinkOptionChangeMessageInformation-0>SpecifiesNumber</LinkOptionChangeMessageInformation-0>
       <LinkOptionCheck64KOnly-0>False</LinkOptionCheck64KOnly-0>
-      <LinkOptionDebugMonitor-0>7FE00-7FFFF</LinkOptionDebugMonitor-0>
+      <LinkOptionFSymbol-0>EMText_f
+</LinkOptionFSymbol-0>
       <LinkOptionLibraryStandard2-0>C90</LinkOptionLibraryStandard2-0>
       <LinkOptionLogo-0>False</LinkOptionLogo-0>
-      <LinkOptionRom-0>.data=.dataR
-</LinkOptionRom-0>
       <LinkOptionSameSize-0>1E</LinkOptionSameSize-0>
+      <LinkOptionSecurityOptByteValue-0 />
       <LinkOptionShowReference-0>False</LinkOptionShowReference-0>
       <LinkOptionVectN-0 />
       <LinkOptionVfinfoOutputType-0 />
       <LinkOptionChangeMessageInformationNumber-0>1195</LinkOptionChangeMessageInformationNumber-0>
+      <LinkOptionDebugMonitorSetting-0>YesAddressRange</LinkOptionDebugMonitorSetting-0>
       <LinkOptionLibraryLibMalloc-0>False</LinkOptionLibraryLibMalloc-0>
       <LinkOptionNoCheckSectionLayout-0>False</LinkOptionNoCheckSectionLayout-0>
       <LinkOptionOptimizeBranch-0>True</LinkOptionOptimizeBranch-0>
       <LinkOptionPreLinkCommands-0 />
+      <LinkOptionRom-0>.data=.dataR
+</LinkOptionRom-0>
       <LinkOptionShowXreference-0>False</LinkOptionShowXreference-0>
-      <LinkOptionUserOptByte-0>True</LinkOptionUserOptByte-0>
       <LinkOptionVect-0 />
       <LinkOptionCFI-0>False</LinkOptionCFI-0>
       <LinkOptionChangeMessageWarning-0>None</LinkOptionChangeMessageWarning-0>
+      <LinkOptionDebugMonitor-0>7FE00-7FFFF</LinkOptionDebugMonitor-0>
+      <LinkOptionDspMemoryArea-0>None</LinkOptionDspMemoryArea-0>
       <LinkOptionLibraryRuntime-0>True</LinkOptionLibraryRuntime-0>
       <LinkOptionPostLinkCommands-0>(robocopy "%BuildModeName%" "%BuildModeName%\..\..\..\shared\metrology\metrologyapp\CCRL" em_middleware.fsy em_middleware.mot em_middleware.abs /IS /NS /NP /NJH /NJS /NDL /NFL) ^&amp; IF %ERRORLEVEL% LSS 8 SET ERRORLEVEL = 0
 </LinkOptionPostLinkCommands-0>
       <LinkOptionShowTotalSize-0>False</LinkOptionShowTotalSize-0>
       <LinkOptionSymbolForbid-0 />
-      <LinkOptionUserOptByteValue-0>7E7FE0</LinkOptionUserOptByteValue-0>
       <LinkOptionCFIAddFunc-0 />
       <LinkOptionChangeMessageWarningNumber-0 />
       <LinkOptionOtherAdditionalOptions-0 />
       <LinkOptionSameCodeForbid-0 />
-      <LinkOptionSelf-0>Self</LinkOptionSelf-0>
       <LinkOptionShowVector-0>False</LinkOptionShowVector-0>
+      <LinkOptionUserOptByte-0>True</LinkOptionUserOptByte-0>
       <LinkOptionCFIIgnoreModule-0 />
       <LinkOptionChangeMessageError-0>None</LinkOptionChangeMessageError-0>
-      <LinkOptionOcdTr-0>None</LinkOptionOcdTr-0>
       <LinkOptionSectionForbid-0 />
       <LinkOptionShowStruct-0>False</LinkOptionShowStruct-0>
+      <LinkOptionUserOptByteValue-0>7E7FE0</LinkOptionUserOptByteValue-0>
       <LinkOptionAbsoluteForbid-0 />
       <LinkOptionChangeMessageErrorNumber-0 />
-      <LinkOptionOcdHpi-0>None</LinkOptionOcdHpi-0>
+      <LinkOptionSelf-0>Self</LinkOptionSelf-0>
       <LinkOptionShowRelocationAttribute-0>False</LinkOptionShowRelocationAttribute-0>
       <LinkOptionSplitVect-0>False</LinkOptionSplitVect-0>
-      <LinkOptionRrm-0>False</LinkOptionRrm-0>
+      <LinkOptionOcdTr-0>None</LinkOptionOcdTr-0>
       <LinkOptionShowCFI-0>False</LinkOptionShowCFI-0>
+      <LinkOptionOcdHpi-0>None</LinkOptionOcdHpi-0>
+      <LinkOptionRrm-0>False</LinkOptionRrm-0>
       <LinkOptionRrmValue-0 />
       <TimeTagModified--1>-8585123711102114831</TimeTagModified--1>
       <LinkOptionAutoSectionLayout-1>False</LinkOptionAutoSectionLayout-1>
@@ -922,66 +1003,70 @@ C:\Program Files (x86)\Renesas Electronics\CS+\CC\CC-RL\V1.11.00
       <LinkOptionOcdbgValue-1>84</LinkOptionOcdbgValue-1>
       <LinkOptionOptimizeSymbolDelete-1>False</LinkOptionOptimizeSymbolDelete-1>
       <LinkOptionOutputFileName-1>em_middleware.abs</LinkOptionOutputFileName-1>
-      <LinkOptionStart-1>EMCallback_f/74B00,EMCnst_f,.constf,.data,.SLIB,.RLIB,EMTextI_f,EMText_f/74C00,.dataR,.bss/F8700</LinkOptionStart-1>
+      <LinkOptionSplitSection-1>False</LinkOptionSplitSection-1>
       <LinkOptionVfinfoFolder-1>%BuildModeName%</LinkOptionVfinfoFolder-1>
       <LinkOptionCheckDevice-1>False</LinkOptionCheckDevice-1>
-      <LinkOptionDebugMonitorSetting-1>YesAddressRange</LinkOptionDebugMonitorSetting-1>
       <LinkOptionDefine-1 />
-      <LinkOptionFSymbol-1>EMText_f
-</LinkOptionFSymbol-1>
       <LinkOptionHide-1>False</LinkOptionHide-1>
       <LinkOptionLibraryStandard-1>True</LinkOptionLibraryStandard-1>
       <LinkOptionMsgUnused-1>False</LinkOptionMsgUnused-1>
       <LinkOptionOptimizeSameCode-1>False</LinkOptionOptimizeSameCode-1>
       <LinkOptionPadding-1>False</LinkOptionPadding-1>
+      <LinkOptionSecurityOptByte-1>False</LinkOptionSecurityOptByte-1>
       <LinkOptionShowSymbol-1>False</LinkOptionShowSymbol-1>
+      <LinkOptionStart-1>EMCallback_f/74B00,EMCnst_f,.constf,.data,.SLIB,.RLIB,EMTextI_f,EMText_f/74C00,.dataR,.bss/F8700</LinkOptionStart-1>
       <LinkOptionTotalSize-1>True</LinkOptionTotalSize-1>
       <LinkOptionVfinfoFileName-1>%ProjectName%_vfi.h</LinkOptionVfinfoFileName-1>
       <LinkOptionChangeMessageInformation-1>SpecifiesNumber</LinkOptionChangeMessageInformation-1>
       <LinkOptionCheck64KOnly-1>False</LinkOptionCheck64KOnly-1>
-      <LinkOptionDebugMonitor-1>7FE00-7FFFF</LinkOptionDebugMonitor-1>
+      <LinkOptionFSymbol-1>EMText_f
+</LinkOptionFSymbol-1>
       <LinkOptionLibraryStandard2-1>C90</LinkOptionLibraryStandard2-1>
       <LinkOptionLogo-1>False</LinkOptionLogo-1>
-      <LinkOptionRom-1>.data=.dataR
-</LinkOptionRom-1>
       <LinkOptionSameSize-1>1E</LinkOptionSameSize-1>
+      <LinkOptionSecurityOptByteValue-1 />
       <LinkOptionShowReference-1>False</LinkOptionShowReference-1>
       <LinkOptionVectN-1 />
       <LinkOptionVfinfoOutputType-1 />
       <LinkOptionChangeMessageInformationNumber-1>1195</LinkOptionChangeMessageInformationNumber-1>
+      <LinkOptionDebugMonitorSetting-1>YesAddressRange</LinkOptionDebugMonitorSetting-1>
       <LinkOptionLibraryLibMalloc-1>False</LinkOptionLibraryLibMalloc-1>
       <LinkOptionNoCheckSectionLayout-1>False</LinkOptionNoCheckSectionLayout-1>
       <LinkOptionOptimizeBranch-1>True</LinkOptionOptimizeBranch-1>
       <LinkOptionPreLinkCommands-1 />
+      <LinkOptionRom-1>.data=.dataR
+</LinkOptionRom-1>
       <LinkOptionShowXreference-1>False</LinkOptionShowXreference-1>
-      <LinkOptionUserOptByte-1>True</LinkOptionUserOptByte-1>
       <LinkOptionVect-1 />
       <LinkOptionCFI-1>False</LinkOptionCFI-1>
       <LinkOptionChangeMessageWarning-1>None</LinkOptionChangeMessageWarning-1>
+      <LinkOptionDebugMonitor-1>7FE00-7FFFF</LinkOptionDebugMonitor-1>
+      <LinkOptionDspMemoryArea-1>None</LinkOptionDspMemoryArea-1>
       <LinkOptionLibraryRuntime-1>True</LinkOptionLibraryRuntime-1>
       <LinkOptionPostLinkCommands-1>(robocopy "%BuildModeName%" "%BuildModeName%\..\..\..\shared\metrology\metrologyapp\CCRL" em_middleware.fsy em_middleware.mot em_middleware.abs /IS /NS /NP /NJH /NJS /NDL /NFL) ^&amp; IF %ERRORLEVEL% LSS 8 SET ERRORLEVEL = 0
 </LinkOptionPostLinkCommands-1>
       <LinkOptionShowTotalSize-1>False</LinkOptionShowTotalSize-1>
       <LinkOptionSymbolForbid-1 />
-      <LinkOptionUserOptByteValue-1>7E7FE0</LinkOptionUserOptByteValue-1>
       <LinkOptionCFIAddFunc-1 />
       <LinkOptionChangeMessageWarningNumber-1 />
       <LinkOptionOtherAdditionalOptions-1 />
       <LinkOptionSameCodeForbid-1 />
-      <LinkOptionSelf-1>Self</LinkOptionSelf-1>
       <LinkOptionShowVector-1>False</LinkOptionShowVector-1>
+      <LinkOptionUserOptByte-1>True</LinkOptionUserOptByte-1>
       <LinkOptionCFIIgnoreModule-1 />
       <LinkOptionChangeMessageError-1>None</LinkOptionChangeMessageError-1>
-      <LinkOptionOcdTr-1>None</LinkOptionOcdTr-1>
       <LinkOptionSectionForbid-1 />
       <LinkOptionShowStruct-1>False</LinkOptionShowStruct-1>
+      <LinkOptionUserOptByteValue-1>7E7FE0</LinkOptionUserOptByteValue-1>
       <LinkOptionAbsoluteForbid-1 />
       <LinkOptionChangeMessageErrorNumber-1 />
-      <LinkOptionOcdHpi-1>None</LinkOptionOcdHpi-1>
+      <LinkOptionSelf-1>Self</LinkOptionSelf-1>
       <LinkOptionShowRelocationAttribute-1>False</LinkOptionShowRelocationAttribute-1>
       <LinkOptionSplitVect-1>False</LinkOptionSplitVect-1>
-      <LinkOptionRrm-1>False</LinkOptionRrm-1>
+      <LinkOptionOcdTr-1>None</LinkOptionOcdTr-1>
       <LinkOptionShowCFI-1>False</LinkOptionShowCFI-1>
+      <LinkOptionOcdHpi-1>None</LinkOptionOcdHpi-1>
+      <LinkOptionRrm-1>False</LinkOptionRrm-1>
       <LinkOptionRrmValue-1 />
     </Instance>
     <Instance Guid="2584cb35-e8a6-473b-a8f3-b4f7be9e18fa">
@@ -1012,11 +1097,13 @@ C:\Program Files (x86)\Renesas Electronics\CS+\CC\CC-RL\V1.11.00
       <HexOptionFixRecordLengthAndAlign-DefaultValue>False</HexOptionFixRecordLengthAndAlign-DefaultValue>
       <HexOptionChangeMessageWarningNumber-DefaultValue />
       <HexOptionFixRecordLengthAndAlignValue-DefaultValue>1</HexOptionFixRecordLengthAndAlignValue-DefaultValue>
-      <HexOptionByteCount-DefaultValue>False</HexOptionByteCount-DefaultValue>
       <HexOptionChangeMessageError-DefaultValue>None</HexOptionChangeMessageError-DefaultValue>
+      <HexOptionCrcOperations-DefaultValue />
+      <HexOptionFixRecordLengthAndAlignValue2-DefaultValue>1</HexOptionFixRecordLengthAndAlignValue2-DefaultValue>
+      <HexOptionByteCount-DefaultValue>False</HexOptionByteCount-DefaultValue>
+      <HexOptionChangeMessageErrorNumber-DefaultValue />
       <HexOptionVerboseCrc-DefaultValue>False</HexOptionVerboseCrc-DefaultValue>
       <HexOptionByteCountValue-DefaultValue>FF</HexOptionByteCountValue-DefaultValue>
-      <HexOptionChangeMessageErrorNumber-DefaultValue />
       <HexOptionEndRecord-DefaultValue>None</HexOptionEndRecord-DefaultValue>
       <HexOptionS9-DefaultValue>False</HexOptionS9-DefaultValue>
       <IsLockedByUser>False</IsLockedByUser>
@@ -1049,11 +1136,13 @@ C:\Program Files (x86)\Renesas Electronics\CS+\CC\CC-RL\V1.11.00
       <HexOptionFixRecordLengthAndAlign-0>False</HexOptionFixRecordLengthAndAlign-0>
       <HexOptionChangeMessageWarningNumber-0 />
       <HexOptionFixRecordLengthAndAlignValue-0>1</HexOptionFixRecordLengthAndAlignValue-0>
-      <HexOptionByteCount-0>False</HexOptionByteCount-0>
       <HexOptionChangeMessageError-0>None</HexOptionChangeMessageError-0>
+      <HexOptionCrcOperations-0 />
+      <HexOptionFixRecordLengthAndAlignValue2-0>1</HexOptionFixRecordLengthAndAlignValue2-0>
+      <HexOptionByteCount-0>False</HexOptionByteCount-0>
+      <HexOptionChangeMessageErrorNumber-0 />
       <HexOptionVerboseCrc-0>False</HexOptionVerboseCrc-0>
       <HexOptionByteCountValue-0>FF</HexOptionByteCountValue-0>
-      <HexOptionChangeMessageErrorNumber-0 />
       <HexOptionEndRecord-0>None</HexOptionEndRecord-0>
       <HexOptionS9-0>False</HexOptionS9-0>
       <TimeTagModified--1>-8585456357686848849</TimeTagModified--1>
@@ -1085,11 +1174,13 @@ C:\Program Files (x86)\Renesas Electronics\CS+\CC\CC-RL\V1.11.00
       <HexOptionFixRecordLengthAndAlign-1>False</HexOptionFixRecordLengthAndAlign-1>
       <HexOptionChangeMessageWarningNumber-1 />
       <HexOptionFixRecordLengthAndAlignValue-1>1</HexOptionFixRecordLengthAndAlignValue-1>
-      <HexOptionByteCount-1>False</HexOptionByteCount-1>
       <HexOptionChangeMessageError-1>None</HexOptionChangeMessageError-1>
+      <HexOptionCrcOperations-1 />
+      <HexOptionFixRecordLengthAndAlignValue2-1>1</HexOptionFixRecordLengthAndAlignValue2-1>
+      <HexOptionByteCount-1>False</HexOptionByteCount-1>
+      <HexOptionChangeMessageErrorNumber-1 />
       <HexOptionVerboseCrc-1>False</HexOptionVerboseCrc-1>
       <HexOptionByteCountValue-1>FF</HexOptionByteCountValue-1>
-      <HexOptionChangeMessageErrorNumber-1 />
       <HexOptionEndRecord-1>None</HexOptionEndRecord-1>
       <HexOptionS9-1>False</HexOptionS9-1>
     </Instance>
@@ -1209,6 +1300,7 @@ C:\Program Files (x86)\Renesas Electronics\CS+\CC\CC-RL\V1.11.00
       <GeneratorOptionUitron-DefaultValue>False</GeneratorOptionUitron-DefaultValue>
       <GeneratorOptionOutputMISRAC-DefaultValue>False</GeneratorOptionOutputMISRAC-DefaultValue>
       <GeneratorOptionCa78k0r-DefaultValue>False</GeneratorOptionCa78k0r-DefaultValue>
+      <GeneratorOptionIncludeFileForFAA-DefaultValue>True</GeneratorOptionIncludeFileForFAA-DefaultValue>
       <IsLockedByUser>False</IsLockedByUser>
       <TimeTagModified--0>-8587422977087865844</TimeTagModified--0>
       <GeneratorOptionUpdateIO-0>None</GeneratorOptionUpdateIO-0>
@@ -1219,6 +1311,7 @@ C:\Program Files (x86)\Renesas Electronics\CS+\CC\CC-RL\V1.11.00
       <GeneratorOptionUitron-0>False</GeneratorOptionUitron-0>
       <GeneratorOptionOutputMISRAC-0>False</GeneratorOptionOutputMISRAC-0>
       <GeneratorOptionCa78k0r-0>False</GeneratorOptionCa78k0r-0>
+      <GeneratorOptionIncludeFileForFAA-0>True</GeneratorOptionIncludeFileForFAA-0>
       <TimeTagModified--1>-8587225785478654835</TimeTagModified--1>
       <GeneratorOptionUpdateIO-1>None</GeneratorOptionUpdateIO-1>
       <GeneratorOtherAdditionalOptions-1 />
@@ -1227,6 +1320,7 @@ C:\Program Files (x86)\Renesas Electronics\CS+\CC\CC-RL\V1.11.00
       <GeneratorOptionUitron-1>False</GeneratorOptionUitron-1>
       <GeneratorOptionOutputMISRAC-1>False</GeneratorOptionOutputMISRAC-1>
       <GeneratorOptionCa78k0r-1>False</GeneratorOptionCa78k0r-1>
+      <GeneratorOptionIncludeFileForFAA-1>True</GeneratorOptionIncludeFileForFAA-1>
     </Instance>
     <Instance Guid="82e24bfc-809a-459a-b42b-fc45d9e5cecb">
       <LinkOrder-0>0</LinkOrder-0>
@@ -42817,6 +42911,22 @@ C:\Program Files (x86)\Renesas Electronics\CS+\CC\CC-RL\V1.11.00
       <ChannelVariableName14 />
       <ChannelVariableName15 />
       <ChannelVariableName16 />
+      <ChannelVariableName17 />
+      <ChannelVariableName18 />
+      <ChannelVariableName19 />
+      <ChannelVariableName20 />
+      <ChannelVariableName21 />
+      <ChannelVariableName22 />
+      <ChannelVariableName23 />
+      <ChannelVariableName24 />
+      <ChannelVariableName25 />
+      <ChannelVariableName26 />
+      <ChannelVariableName27 />
+      <ChannelVariableName28 />
+      <ChannelVariableName29 />
+      <ChannelVariableName30 />
+      <ChannelVariableName31 />
+      <ChannelVariableName32 />
       <ChannelVariableType1>Auto</ChannelVariableType1>
       <ChannelVariableType2>Auto</ChannelVariableType2>
       <ChannelVariableType3>Auto</ChannelVariableType3>
@@ -42833,6 +42943,22 @@ C:\Program Files (x86)\Renesas Electronics\CS+\CC\CC-RL\V1.11.00
       <ChannelVariableType14>Auto</ChannelVariableType14>
       <ChannelVariableType15>Auto</ChannelVariableType15>
       <ChannelVariableType16>Auto</ChannelVariableType16>
+      <ChannelVariableType17>Auto</ChannelVariableType17>
+      <ChannelVariableType18>Auto</ChannelVariableType18>
+      <ChannelVariableType19>Auto</ChannelVariableType19>
+      <ChannelVariableType20>Auto</ChannelVariableType20>
+      <ChannelVariableType21>Auto</ChannelVariableType21>
+      <ChannelVariableType22>Auto</ChannelVariableType22>
+      <ChannelVariableType23>Auto</ChannelVariableType23>
+      <ChannelVariableType24>Auto</ChannelVariableType24>
+      <ChannelVariableType25>Auto</ChannelVariableType25>
+      <ChannelVariableType26>Auto</ChannelVariableType26>
+      <ChannelVariableType27>Auto</ChannelVariableType27>
+      <ChannelVariableType28>Auto</ChannelVariableType28>
+      <ChannelVariableType29>Auto</ChannelVariableType29>
+      <ChannelVariableType30>Auto</ChannelVariableType30>
+      <ChannelVariableType31>Auto</ChannelVariableType31>
+      <ChannelVariableType32>Auto</ChannelVariableType32>
       <ChannelValuePerGrid1>25.5</ChannelValuePerGrid1>
       <ChannelValuePerGrid2>25.5</ChannelValuePerGrid2>
       <ChannelValuePerGrid3>25.5</ChannelValuePerGrid3>
@@ -42849,6 +42975,22 @@ C:\Program Files (x86)\Renesas Electronics\CS+\CC\CC-RL\V1.11.00
       <ChannelValuePerGrid14>25.5</ChannelValuePerGrid14>
       <ChannelValuePerGrid15>25.5</ChannelValuePerGrid15>
       <ChannelValuePerGrid16>25.5</ChannelValuePerGrid16>
+      <ChannelValuePerGrid17>25.5</ChannelValuePerGrid17>
+      <ChannelValuePerGrid18>25.5</ChannelValuePerGrid18>
+      <ChannelValuePerGrid19>25.5</ChannelValuePerGrid19>
+      <ChannelValuePerGrid20>25.5</ChannelValuePerGrid20>
+      <ChannelValuePerGrid21>25.5</ChannelValuePerGrid21>
+      <ChannelValuePerGrid22>25.5</ChannelValuePerGrid22>
+      <ChannelValuePerGrid23>25.5</ChannelValuePerGrid23>
+      <ChannelValuePerGrid24>25.5</ChannelValuePerGrid24>
+      <ChannelValuePerGrid25>25.5</ChannelValuePerGrid25>
+      <ChannelValuePerGrid26>25.5</ChannelValuePerGrid26>
+      <ChannelValuePerGrid27>25.5</ChannelValuePerGrid27>
+      <ChannelValuePerGrid28>25.5</ChannelValuePerGrid28>
+      <ChannelValuePerGrid29>25.5</ChannelValuePerGrid29>
+      <ChannelValuePerGrid30>25.5</ChannelValuePerGrid30>
+      <ChannelValuePerGrid31>25.5</ChannelValuePerGrid31>
+      <ChannelValuePerGrid32>25.5</ChannelValuePerGrid32>
       <ChannelValueOffset1>0</ChannelValueOffset1>
       <ChannelValueOffset2>0</ChannelValueOffset2>
       <ChannelValueOffset3>0</ChannelValueOffset3>
@@ -42865,6 +43007,22 @@ C:\Program Files (x86)\Renesas Electronics\CS+\CC\CC-RL\V1.11.00
       <ChannelValueOffset14>0</ChannelValueOffset14>
       <ChannelValueOffset15>0</ChannelValueOffset15>
       <ChannelValueOffset16>0</ChannelValueOffset16>
+      <ChannelValueOffset17>0</ChannelValueOffset17>
+      <ChannelValueOffset18>0</ChannelValueOffset18>
+      <ChannelValueOffset19>0</ChannelValueOffset19>
+      <ChannelValueOffset20>0</ChannelValueOffset20>
+      <ChannelValueOffset21>0</ChannelValueOffset21>
+      <ChannelValueOffset22>0</ChannelValueOffset22>
+      <ChannelValueOffset23>0</ChannelValueOffset23>
+      <ChannelValueOffset24>0</ChannelValueOffset24>
+      <ChannelValueOffset25>0</ChannelValueOffset25>
+      <ChannelValueOffset26>0</ChannelValueOffset26>
+      <ChannelValueOffset27>0</ChannelValueOffset27>
+      <ChannelValueOffset28>0</ChannelValueOffset28>
+      <ChannelValueOffset29>0</ChannelValueOffset29>
+      <ChannelValueOffset30>0</ChannelValueOffset30>
+      <ChannelValueOffset31>0</ChannelValueOffset31>
+      <ChannelValueOffset32>0</ChannelValueOffset32>
       <ChannelColor1>c0ff0a4f</ChannelColor1>
       <ChannelColor2>c05be416</ChannelColor2>
       <ChannelColor3>c0056dff</ChannelColor3>
@@ -42881,6 +43039,22 @@ C:\Program Files (x86)\Renesas Electronics\CS+\CC\CC-RL\V1.11.00
       <ChannelColor14>c0317f0c</ChannelColor14>
       <ChannelColor15>c060493e</ChannelColor15>
       <ChannelColor16>c072808e</ChannelColor16>
+      <ChannelColor17>c0ff6666</ChannelColor17>
+      <ChannelColor18>c0ffcc66</ChannelColor18>
+      <ChannelColor19>c066cc66</ChannelColor19>
+      <ChannelColor20>c06666ff</ChannelColor20>
+      <ChannelColor21>c0cc66ff</ChannelColor21>
+      <ChannelColor22>c0ff9900</ChannelColor22>
+      <ChannelColor23>c000aa00</ChannelColor23>
+      <ChannelColor24>c00000ff</ChannelColor24>
+      <ChannelColor25>c0cc00ff</ChannelColor25>
+      <ChannelColor26>c0ff0000</ChannelColor26>
+      <ChannelColor27>c0006600</ChannelColor27>
+      <ChannelColor28>c02222cc</ChannelColor28>
+      <ChannelColor29>c09900cc</ChannelColor29>
+      <ChannelColor30>c0990000</ChannelColor30>
+      <ChannelColor31>c0004400</ChannelColor31>
+      <ChannelColor32>c0663399</ChannelColor32>
     </Instance>
   </Class>
   <Class Guid="78a5c5cd-76cb-4bcc-a031-3020011fbc9a">
