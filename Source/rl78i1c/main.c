@@ -207,11 +207,12 @@ static void R_MAIN_UserInit(void)
 ***********************************************************************************************************************/
 void Initial_Setup(void)
 {
+	PWR_232 = 0;
 	Mtr_Set_Const.Meter_Id=10;
   	Mtr_Set_Const.Baud_Rate=9600;
   	Mtr_Set_Const.Parity=0; 
 	Silent_Interval=Char_Frame_Delay;
-    RS485_DIR = 1;
+    //RS485_DIR = 1;
     R_UART1_RX_ON(); 
 	Power_ON_Reset=0;
 }
