@@ -1,0 +1,17 @@
+{
+    "files.associations": {
+        "fsm.h": "c",
+        "event_log.h": "c",
+        "stdio.h": "c",
+        "uart.h": "c",
+        "unistd.h": "c",
+        "io.h": "c",
+        "process.h": "c",
+        "utils.h": "c",
+        "gsm_utils.h": "c",
+        "type_def.h": "c",
+        "test_util.h": "c",
+        "test_setup.h": "c",
+        "test_functions.h": "c"
+    }
+}
