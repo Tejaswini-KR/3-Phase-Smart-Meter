@@ -303,9 +303,9 @@
       <OutputMessageFormat-DefaultValue>%TargetFiles%</OutputMessageFormat-DefaultValue>
       <AsmOptionISystem-DefaultValue />
       <COptionI-DefaultValue />
-      <CompilerDspAsmVersion-DefaultValue>
-
-0</CompilerDspAsmVersion-DefaultValue>
+      <CompilerDspAsmVersion-DefaultValue>V1.04.02
+C:\Program Files (x86)\Renesas Electronics\CS+\CC\FAA\V1.04.02
+285881613156352</CompilerDspAsmVersion-DefaultValue>
       <CompilerVersion-DefaultValue>
 
 0</CompilerVersion-DefaultValue>
@@ -362,9 +362,9 @@
       <GeneralOptionNoWarningNum-0>20177,20174,20550</GeneralOptionNoWarningNum-0>
       <GeneralOptionOutput-0>LoadModuleFile</GeneralOptionOutput-0>
       <GeneralOptionSimultaneousBuild-0>False</GeneralOptionSimultaneousBuild-0>
-      <CompilerDspAsmVersion-0>
-
-0</CompilerDspAsmVersion-0>
+      <CompilerDspAsmVersion-0>V1.04.02
+C:\Program Files (x86)\Renesas Electronics\CS+\CC\FAA\V1.04.02
+285881613156352</CompilerDspAsmVersion-0>
       <CompilerVersion-0>V1.11.00
 C:\Program Files (x86)\Renesas Electronics\CS+\CC\CC-RL\V1.11.00
 293569604616192</CompilerVersion-0>

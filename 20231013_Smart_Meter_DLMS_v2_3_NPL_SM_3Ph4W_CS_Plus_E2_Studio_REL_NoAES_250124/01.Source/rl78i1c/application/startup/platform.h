@@ -148,6 +148,13 @@ Macro definitions
 //#define FAST_FOTA      /* Smart Meter with FOTA Bootloader */
 #define LEGACY_FOTA    /* Smart Meter with LEGACY Bootloader */
 
+
+// Define if GSM is supported
+#define GSM
+
+// Define if GSM_GPRS connectivity is present
+#define GSM_GPRS
+
 /***********************************************************************************************************************
 Variable Externs
 ***********************************************************************************************************************/

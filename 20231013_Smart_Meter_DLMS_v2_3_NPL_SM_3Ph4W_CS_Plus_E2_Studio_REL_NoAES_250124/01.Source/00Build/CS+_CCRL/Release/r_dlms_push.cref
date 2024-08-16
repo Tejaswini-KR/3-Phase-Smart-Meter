@@ -1,6 +1,6 @@
 ****..\..\rl78i1c\application\dlms2\usercode\apps\r_dlms_push.c
 v2 
-:1718021576
+:1723447486
 #1
 F "__DI" N I!1 T!2 ?18-2 
 T "void" KBV I!2 0x0 
@@ -4659,257 +4659,257 @@ F "R_LOAD_CTRL_Init" F I!4654 T!2 ?220-55
 F "R_LOAD_CTRL_PollingProcess" F I!4655 T!2 ?221-55 
 F "R_LIMITER_Init" F I!4656 T!2 ?222-55 
 F "R_LIMITER_PollingProcessing" F I!4657 T!2 ?223-55 
-T "tag_EVENT_TYPE_T" KE I!4658 T!9 !190-49 0x1 EM0:"EVENT_TYPE_VOLTAGE_RELATED" EM1:"EVENT_TYPE_CURRENT_RELATED" EM2:"EVENT_TYPE_POWER_RELATED" EM3:"EVENT_TYPE_TRANSACTION_RELATED" EM4:"EVENT_TYPE_OTHERS" EM5:"EVENT_TYPE_NON_ROLLOVER_EVENTS" EM6:"EVENT_TYPE_CONTROL_EVENTS" EM250:"EVENT_TYPE_UNSPECIFIED" EM254:"EVENT_TYPE_NOT_APPLICABLE" EM255:"EVENT_TYPE_UNKNOWN" 
-T "EVENT_TYPE_T" KT I!4659 T!4658 !202-49 0x1 
-T "tagEventStateType" KE I!4660 T!277 !206-49 0x1 EM0:"EVENT_STATE_RELEASE" EM1:"EVENT_STATE_ENTER" 
-T "EVENT_STATE_T" KT I!4661 T!4660 !210-49 0x1 
-T "tagEventType" KE I!4662 T!277 !212-49 0x1 EM0:"NONE_NAME" EM1:"EVENT_VOLTAGE_MISSING_R" EM2:"EVENT_VOLTAGE_MISSING_Y" EM3:"EVENT_VOLTAGE_MISSING_B" EM4:"EVENT_OVER_VOLTAGE" EM5:"EVENT_LOW_VOLTAGE" EM6:"EVENT_VOLTAGE_UNBALANCE" EM7:"EVENT_CURRENT_REVERSE_R" EM8:"EVENT_CURRENT_REVERSE_Y" EM9:"EVENT_CURRENT_REVERSE_B" EM10:"EVENT_CURRENT_UNBALANCE" EM11:"EVENT_CURRENT_BYPASS" EM12:"EVENT_OVER_CURRENT" EM13:"EVENT_POWER_FAILED" EM14:"EVENT_MAGNET" EM15:"EVENT_DC_DETECTED" EM16:"EVENT_LOW_PF" EM17:"EVENT_OVERLOAD" EM18:"EVENT_CASE_OPEN" EM19:"EVENT_FREQ_OUT_RANGE" 
-T "EVENT_NAME_T" KT I!4663 T!4662 !235-49 0x1 
-T "tagEventOneEventTick" KS I!4664 !238-49 0x3 VM!4665 VM!4666 VM!4667 
-V "occurred_count" - I!4665 O!4664 T!105 !240-49 .1 0x1 BO0 BIS8 
-V "restored_count" - I!4666 O!4664 T!105 !241-49 .1 0x1 BO8 BIS8 
-V "current_state" - I!4667 O!4664 T!4661 !242-49 .1 0x1 BO16 BIS8 
-T "EVENT_ONE_EVENT_TICK" KT I!4668 T!4664 !244-49 0x3 
-T "tageEventOneEventNoTick" KS I!4669 !246-49 0x1 VM!4670 
-V "current_state" - I!4670 O!4669 T!4661 !248-49 .1 0x1 BO0 BIS8 
-T "EVENT_ONE_EVENT_NOTICK" KT I!4671 T!4669 !250-49 0x1 
-T "tagEventTick" KS I!4672 !252-49 0x40 VM!4673 VM!4674 VM!4675 VM!4676 VM!4677 VM!4678 VM!4679 VM!4680 VM!4681 VM!4682 VM!4683 VM!4684 VM!4685 VM!4686 VM!4687 VM!4688 VM!4689 VM!4690 VM!4691 VM!4692 VM!4693 VM!4694 VM!4695 VM!4696 
-V "voltage_missing_R" - I!4673 O!4672 T!4668 !255-49 .1 0x3 BO0 BIS24 
-V "voltage_missing_Y" - I!4674 O!4672 T!4668 !256-49 .1 0x3 BO24 BIS24 
-V "voltage_missing_B" - I!4675 O!4672 T!4668 !257-49 .1 0x3 BO48 BIS24 
-V "over_voltage" - I!4676 O!4672 T!4668 !259-49 .1 0x3 BO72 BIS24 
-V "low_voltage" - I!4677 O!4672 T!4668 !260-49 .1 0x3 BO96 BIS24 
-V "voltage_unbalance" - I!4678 O!4672 T!4668 !261-49 .1 0x3 BO120 BIS24 
-V "current_reverse_R" - I!4679 O!4672 T!4668 !264-49 .1 0x3 BO144 BIS24 
-V "current_reverse_Y" - I!4680 O!4672 T!4668 !265-49 .1 0x3 BO168 BIS24 
-V "current_reverse_B" - I!4681 O!4672 T!4668 !266-49 .1 0x3 BO192 BIS24 
-V "current_unbalance" - I!4682 O!4672 T!4668 !268-49 .1 0x3 BO216 BIS24 
-V "current_bypass" - I!4683 O!4672 T!4668 !269-49 .1 0x3 BO240 BIS24 
-V "over_current" - I!4684 O!4672 T!4668 !270-49 .1 0x3 BO264 BIS24 
-V "power_failed" - I!4685 O!4672 T!4671 !273-49 .1 0x1 BO288 BIS8 
-V "magnet" - I!4686 O!4672 T!4668 !276-49 .1 0x3 BO296 BIS24 
-V "dc_detected" - I!4687 O!4672 T!4668 !277-49 .1 0x3 BO320 BIS24 
-V "low_pf" - I!4688 O!4672 T!4668 !278-49 .1 0x3 BO344 BIS24 
-V "paid_mode" - I!4689 O!4672 T!4671 !279-49 .1 0x1 BO368 BIS8 
-V "meter_mode" - I!4690 O!4672 T!4671 !280-49 .1 0x1 BO376 BIS8 
-V "overload" - I!4691 O!4672 T!4668 !281-49 .1 0x3 BO384 BIS24 
-V "comm_module" - I!4692 O!4672 T!4668 !282-49 .1 0x3 BO408 BIS24 
-V "case_open" - I!4693 O!4672 T!4668 !285-49 .1 0x3 BO432 BIS24 
-V "relay_status" - I!4694 O!4672 T!4668 !288-49 .1 0x3 BO456 BIS24 
-V "freq_out_range" - I!4695 O!4672 T!4668 !290-49 .1 0x3 BO480 BIS24 
-V "rtc_failed" - I!4696 O!4672 T!4671 !291-49 .1 0x1 BO504 BIS8 
-T "EVENT_INFO" KT I!4697 T!4672 !294-49 0x40 
-T "tagEventFlag" KU I!4698 !297-49 0x8 VM!4738 VM!4739 
-T "tagEventFlag_bit" KS I!4699 !299-49 0x5 VM!4700 VM!4701 VM!4702 VM!4703 VM!4704 VM!4705 VM!4706 VM!4707 VM!4708 VM!4709 VM!4710 VM!4711 VM!4712 VM!4713 VM!4714 VM!4715 VM!4716 VM!4717 VM!4718 VM!4719 VM!4720 VM!4721 VM!4722 VM!4723 VM!4724 VM!4725 VM!4726 VM!4727 VM!4728 VM!4729 VM!4730 VM!4731 VM!4732 VM!4733 VM!4734 VM!4735 VM!4736 VM!4737 
-V "is_voltage_missing_R" - I!4700 O!4699 T!105 !303-49 .1 0x1 BO0 BIS1 
-V "is_voltage_missing_Y" - I!4701 O!4699 T!105 !304-49 .1 0x1 BO1 BIS1 
-V "is_voltage_missing_B" - I!4702 O!4699 T!105 !305-49 .1 0x1 BO2 BIS1 
-V "is_over_voltage" - I!4703 O!4699 T!105 !307-49 .1 0x1 BO3 BIS1 
-V "is_low_voltage" - I!4704 O!4699 T!105 !308-49 .1 0x1 BO4 BIS1 
-V "is_voltage_unbalance" - I!4705 O!4699 T!105 !309-49 .1 0x1 BO5 BIS1 
-V "is_current_reverse_R" - I!4706 O!4699 T!105 !312-49 .1 0x1 BO6 BIS1 
-V "is_current_reverse_Y" - I!4707 O!4699 T!105 !313-49 .1 0x1 BO7 BIS1 
-V "is_current_reverse_B" - I!4708 O!4699 T!105 !314-49 .1 0x1 BO8 BIS1 
-V "is_current_unbalance" - I!4709 O!4699 T!105 !316-49 .1 0x1 BO9 BIS1 
-V "is_current_bypass" - I!4710 O!4699 T!105 !317-49 .1 0x1 BO10 BIS1 
-V "is_over_current" - I!4711 O!4699 T!105 !318-49 .1 0x1 BO11 BIS1 
-V "is_power_failed" - I!4712 O!4699 T!105 !321-49 .1 0x1 BO12 BIS1 
-V "set_rtc" - I!4713 O!4699 T!105 !324-49 .1 0x1 BO13 BIS1 
-V "set_dip" - I!4714 O!4699 T!105 !325-49 .1 0x1 BO14 BIS1 
-V "set_pcp" - I!4715 O!4699 T!105 !326-49 .1 0x1 BO15 BIS1 
-V "set_billing_dates" - I!4716 O!4699 T!105 !327-49 .1 0x1 BO16 BIS1 
-V "md_reset" - I!4717 O!4699 T!105 !328-49 .1 0x1 BO17 BIS1 
-V "is_magnet" - I!4718 O!4699 T!105 !331-49 .1 0x1 BO18 BIS1 
-V "is_dc_detected" - I!4719 O!4699 T!105 !332-49 .1 0x1 BO19 BIS1 
-V "is_low_pf" - I!4720 O!4699 T!105 !333-49 .1 0x1 BO20 BIS1 
-V "paid_mode" - I!4721 O!4699 T!105 !334-49 .1 0x1 BO21 BIS1 
-V "meter_mode" - I!4722 O!4699 T!105 !335-49 .1 0x1 BO22 BIS1 
-V "is_overload" - I!4723 O!4699 T!105 !336-49 .1 0x1 BO23 BIS1 
-V "is_case_open" - I!4724 O!4699 T!105 !339-49 .1 0x1 BO24 BIS1 
-V "bill_counter" - I!4725 O!4699 T!105 !341-49 .1 0x1 BO25 BIS1 
-V "set_calendar" - I!4726 O!4699 T!105 !344-49 .1 0x1 BO26 BIS1 
-V "fw_activated" - I!4727 O!4699 T!105 !345-49 .1 0x1 BO27 BIS1 
-V "set_loadlimit" - I!4728 O!4699 T!105 !346-49 .1 0x1 BO28 BIS1 
-V "enb_loadlimit_fn" - I!4729 O!4699 T!105 !347-49 .1 0x1 BO29 BIS1 
-V "dis_loadlimit_fn" - I!4730 O!4699 T!105 !348-49 .1 0x1 BO30 BIS1 
-V "set_lls" - I!4731 O!4699 T!105 !349-49 .1 0x1 BO31 BIS1 
-V "set_hls_us" - I!4732 O!4699 T!105 !350-49 .1 0x1 BO32 BIS1 
-V "set_hls_fw" - I!4733 O!4699 T!105 !351-49 .1 0x1 BO33 BIS1 
-V "set_global_key" - I!4734 O!4699 T!105 !352-49 .1 0x1 BO34 BIS1 
-V "set_eswf" - I!4735 O!4699 T!105 !353-49 .1 0x1 BO35 BIS1 
-V "comm_module" - I!4736 O!4699 T!105 !356-49 .1 0x1 BO36 BIS1 
-V "relay_status_changed" - I!4737 O!4699 T!105 !359-49 .1 0x1 BO37 BIS1 
-V "bits" - I!4738 O!4698 T!4699 !362-49 .1 0x5 BO0 BIS40 
-V "value" - I!4739 O!4698 T!113 !364-49 .2 0x8 BO0 BIS64 
-T "EVENT_FLAG" KT I!4740 T!4698 !366-49 0x8 
-T "tagEventRequestFlag" KS I!4741 !368-49 0x4 VM!4742 VM!4743 VM!4744 VM!4745 VM!4746 VM!4747 VM!4748 VM!4749 VM!4750 VM!4751 VM!4752 VM!4753 VM!4754 VM!4755 VM!4756 VM!4757 VM!4758 VM!4759 VM!4760 VM!4761 
-V "is_fw_activation" - I!4742 O!4741 T!108 !370-49 .2 0x2 BO0 BIS1 
-V "is_max_demand_end" - I!4743 O!4741 T!108 !371-49 .2 0x2 BO1 BIS1 
-V "is_tariff_changed" - I!4744 O!4741 T!108 !372-49 .2 0x2 BO2 BIS1 
-V "is_lcd_refresh" - I!4745 O!4741 T!108 !373-49 .2 0x2 BO3 BIS1 
-V "is_lcd_scroll" - I!4746 O!4741 T!108 !374-49 .2 0x2 BO4 BIS1 
-V "is_billing_request" - I!4747 O!4741 T!108 !375-49 .2 0x2 BO5 BIS1 
-V "is_blockload_request" - I!4748 O!4741 T!108 !376-49 .2 0x2 BO6 BIS1 
-V "is_relay_switch" - I!4749 O!4741 T!108 !377-49 .2 0x2 BO7 BIS1 
-V "event_alert" - I!4750 O!4741 T!108 !378-49 #1552-1 1549-1 .2 0x2 BO8 BIS1 
-V "periodic_msg_1" - I!4751 O!4741 T!108 !379-49 #1542-1 1539-1 .2 0x2 BO9 BIS1 
-V "periodic_msg_2" - I!4752 O!4741 T!108 !380-49 #1547-1 1544-1 .2 0x2 BO10 BIS1 
-V "is_cal_active_req" - I!4753 O!4741 T!108 !381-49 .2 0x2 BO11 BIS1 
-V "is_rtc_failed" - I!4754 O!4741 T!108 !382-49 .2 0x2 BO12 BIS1 
-V "is_freq_out_range" - I!4755 O!4741 T!108 !383-49 .2 0x2 BO13 BIS1 
-V "is_dailyload_request" - I!4756 O!4741 T!108 !384-49 .2 0x2 BO14 BIS1 
-V "is_rtc_revert" - I!4757 O!4741 T!108 !385-49 .2 0x2 BO15 BIS1 
-V "is_rtc_forward" - I!4758 O!4741 T!108 !386-49 .2 0x2 BO16 BIS1 
-V "act_cal_season_change" - I!4759 O!4741 T!108 !388-49 .2 0x2 BO17 BIS1 
-V "act_cal_week_profile_change" - I!4760 O!4741 T!108 !389-49 .2 0x2 BO18 BIS1 
-V "min_interval" - I!4761 O!4741 T!108 !391-49 .2 0x2 BO19 BIS1 
-T "EVENT_REQUEST_FLAG" KT I!4762 T!4741 !393-49 0x4 
-T "tagEventPersistentTime" KS I!4763 !395-49 0x24 VM!4764 VM!4765 VM!4766 VM!4767 VM!4768 VM!4769 VM!4770 VM!4771 VM!4772 VM!4773 VM!4774 VM!4775 VM!4776 VM!4777 VM!4778 VM!4779 VM!4780 VM!4781 VM!4782 VM!4783 VM!4784 VM!4785 VM!4786 VM!4787 VM!4788 VM!4789 VM!4790 VM!4791 VM!4792 VM!4793 VM!4794 VM!4795 VM!4796 VM!4797 VM!4798 VM!4799 
-V "voltage_missing_R_occur" - I!4764 O!4763 T!105 !399-49 .1 0x1 BO0 BIS8 
-V "voltage_missing_R_restore" - I!4765 O!4763 T!105 !400-49 .1 0x1 BO8 BIS8 
-V "voltage_missing_Y_occur" - I!4766 O!4763 T!105 !401-49 .1 0x1 BO16 BIS8 
-V "voltage_missing_Y_restore" - I!4767 O!4763 T!105 !402-49 .1 0x1 BO24 BIS8 
-V "voltage_missing_B_occur" - I!4768 O!4763 T!105 !403-49 .1 0x1 BO32 BIS8 
-V "voltage_missing_B_restore" - I!4769 O!4763 T!105 !404-49 .1 0x1 BO40 BIS8 
-V "over_voltage_occur" - I!4770 O!4763 T!105 !406-49 .1 0x1 BO48 BIS8 
-V "over_voltage_restore" - I!4771 O!4763 T!105 !407-49 .1 0x1 BO56 BIS8 
-V "low_voltage_occur" - I!4772 O!4763 T!105 !408-49 .1 0x1 BO64 BIS8 
-V "low_voltage_restore" - I!4773 O!4763 T!105 !409-49 .1 0x1 BO72 BIS8 
-V "voltage_unbalance_occur" - I!4774 O!4763 T!105 !410-49 .1 0x1 BO80 BIS8 
-V "voltage_unbalance_restore" - I!4775 O!4763 T!105 !411-49 .1 0x1 BO88 BIS8 
-V "current_reverse_R_occur" - I!4776 O!4763 T!105 !414-49 .1 0x1 BO96 BIS8 
-V "current_reverse_R_restore" - I!4777 O!4763 T!105 !415-49 .1 0x1 BO104 BIS8 
-V "current_reverse_Y_occur" - I!4778 O!4763 T!105 !416-49 .1 0x1 BO112 BIS8 
-V "current_reverse_Y_restore" - I!4779 O!4763 T!105 !417-49 .1 0x1 BO120 BIS8 
-V "current_reverse_B_occur" - I!4780 O!4763 T!105 !418-49 .1 0x1 BO128 BIS8 
-V "current_reverse_B_restore" - I!4781 O!4763 T!105 !419-49 .1 0x1 BO136 BIS8 
-V "current_unbalance_occur" - I!4782 O!4763 T!105 !420-49 .1 0x1 BO144 BIS8 
-V "current_unbalance_restore" - I!4783 O!4763 T!105 !421-49 .1 0x1 BO152 BIS8 
-V "current_bypass_occur" - I!4784 O!4763 T!105 !422-49 .1 0x1 BO160 BIS8 
-V "current_bypass_restore" - I!4785 O!4763 T!105 !423-49 .1 0x1 BO168 BIS8 
-V "over_current_occur" - I!4786 O!4763 T!105 !424-49 .1 0x1 BO176 BIS8 
-V "over_current_restore" - I!4787 O!4763 T!105 !425-49 .1 0x1 BO184 BIS8 
-V "power_fail" - I!4788 O!4763 T!105 !428-49 .1 0x1 BO192 BIS8 
-V "power_restore" - I!4789 O!4763 T!105 !429-49 .1 0x1 BO200 BIS8 
-V "magnet_occur" - I!4790 O!4763 T!105 !432-49 .1 0x1 BO208 BIS8 
-V "magnet_restore" - I!4791 O!4763 T!105 !433-49 .1 0x1 BO216 BIS8 
-V "dc_occur" - I!4792 O!4763 T!105 !434-49 .1 0x1 BO224 BIS8 
-V "dc_restore" - I!4793 O!4763 T!105 !435-49 .1 0x1 BO232 BIS8 
-V "low_power_pf_occur" - I!4794 O!4763 T!105 !436-49 .1 0x1 BO240 BIS8 
-V "low_power_pf_restore" - I!4795 O!4763 T!105 !437-49 .1 0x1 BO248 BIS8 
-V "overload_occur" - I!4796 O!4763 T!105 !438-49 .1 0x1 BO256 BIS8 
-V "overload_restore" - I!4797 O!4763 T!105 !439-49 .1 0x1 BO264 BIS8 
-V "case_open" - I!4798 O!4763 T!105 !442-49 .1 0x1 BO272 BIS8 
-V "freq_out_range" - I!4799 O!4763 T!105 !443-49 .1 0x1 BO280 BIS8 
-T "EVENT_PERSISTENT_TIME" KT I!4800 T!4763 !445-49 0x24 
-T "tagRelayPersistentTime" KS I!4801 !447-49 0x2 VM!4802 VM!4803 
-V "relay_disc" - I!4802 O!4801 T!105 !451-49 .1 0x1 BO0 BIS8 
-V "relay_reconn" - I!4803 O!4801 T!105 !452-49 .1 0x1 BO8 BIS8 
-T "RELAY_PERSISTENT_TIME" KT I!4804 T!4801 !454-49 0x2 
-T "tagEventDateTime" KS I!4805 !456-49 0x8 VM!4806 VM!4807 VM!4808 VM!4809 VM!4810 VM!4811 VM!4812 
-V "Sec" - I!4806 O!4805 T!105 !458-49 .1 0x1 BO0 BIS8 
-V "Min" - I!4807 O!4805 T!105 !459-49 .1 0x1 BO8 BIS8 
-V "Hour" - I!4808 O!4805 T!105 !460-49 .1 0x1 BO16 BIS8 
-V "Day" - I!4809 O!4805 T!105 !461-49 .1 0x1 BO24 BIS8 
-V "Week" - I!4810 O!4805 T!105 !462-49 .1 0x1 BO32 BIS8 
-V "Month" - I!4811 O!4805 T!105 !463-49 .1 0x1 BO40 BIS8 
-V "Year" - I!4812 O!4805 T!108 !464-49 .2 0x2 BO48 BIS16 
-T "EVENT_DATE_TIME_T" KT I!4813 T!4805 !466-49 0x8 
-T "EVENT_ID_T" KT I!4814 T!108 !468-49 0x2 
-T "tagEventParametersSnapshotShort" KS I!4815 !470-49 0xa VM!4816 VM!4817 
-V "captured_time" - I!4816 O!4815 T!4813 !472-49 .2 0x8 BO0 BIS64 
-V "code" - I!4817 O!4815 T!4814 !473-49 .2 0x2 BO64 BIS16 
-T "EVENT_PARAMS_SHORT_T" KT I!4818 T!4815 !475-49 0xa 
-T "tagEventParametersSnapshot" KS I!4819 !477-49 0x3a VM!4820 VM!4821 VM!4822 VM!4823 VM!4824 VM!4825 VM!4826 VM!4827 VM!4828 VM!4829 VM!4830 VM!4831 VM!4832 VM!4833 
-V "captured_time" - I!4820 O!4819 T!4813 !479-49 .2 0x8 BO0 BIS64 
-V "code" - I!4821 O!4819 T!4814 !480-49 .2 0x2 BO64 BIS16 
-V "IR" - I!4822 O!4819 T!115 !482-49 .2 0x4 BO80 BIS32 
-V "IY" - I!4823 O!4819 T!115 !483-49 .2 0x4 BO112 BIS32 
-V "IB" - I!4824 O!4819 T!115 !484-49 .2 0x4 BO144 BIS32 
-V "VRN" - I!4825 O!4819 T!115 !486-49 .2 0x4 BO176 BIS32 
-V "VYN" - I!4826 O!4819 T!115 !487-49 .2 0x4 BO208 BIS32 
-V "VBN" - I!4827 O!4819 T!115 !488-49 .2 0x4 BO240 BIS32 
-V "PF_R" - I!4828 O!4819 T!115 !490-49 .2 0x4 BO272 BIS32 
-V "PF_Y" - I!4829 O!4819 T!115 !491-49 .2 0x4 BO304 BIS32 
-V "PF_B" - I!4830 O!4819 T!115 !492-49 .2 0x4 BO336 BIS32 
-V "ActiveEnergyImport" - I!4831 O!4819 T!115 !494-49 .2 0x4 BO368 BIS32 
-V "ActiveEnergyExport" - I!4832 O!4819 T!115 !495-49 .2 0x4 BO400 BIS32 
-V "TamperCounter" - I!4833 O!4819 T!111 !497-49 .2 0x4 BO432 BIS32 
-T "EVENT_PARAMS_T" KT I!4834 T!4819 !499-49 0x3a 
-T "tagEVENT_ARGS_T" KS I!4835 !501-49 0x3e VM!4836 VM!4837 VM!4838 VM!4839 
-V "type" - I!4836 O!4835 T!4659 !503-49 .1 0x1 BO0 BIS8 
-V "status" - I!4837 O!4835 T!4661 !504-49 .1 0x1 BO8 BIS8 
-V "esw_bit_number" - I!4838 O!4835 T!105 !505-49 .1 0x1 BO16 BIS8 
-V "data" - I!4839 O!4835 T!4834 !506-49 .2 0x3a BO32 BIS464 
-T "EVENT_ARGS_T" KT I!4840 T!4835 !508-49 0x3e 
-T "tagEventTableConfig_t" KS I!4841 !510-49 0xa VM!4842 VM!4843 VM!4844 VM!4845 
-V "TableStartAddr" - I!4842 O!4841 T!111 !512-49 .2 0x4 BO0 BIS32 
-V "MaxEntries" - I!4843 O!4841 T!111 !513-49 .2 0x4 BO32 BIS32 
-V "IsRollover" - I!4844 O!4841 T!105 !514-49 .1 0x1 BO64 BIS8 
-V "LogSize" - I!4845 O!4841 T!105 !515-49 .1 0x1 BO72 BIS8 
-T "EventTableConfig_t" KT I!4846 T!4841 !517-49 0xa 
-T "tagEventTableHeader_t" KS I!4847 !519-49 0x4 VM!4848 VM!4849 
-V "StartPosition" - I!4848 O!4847 T!108 !521-49 .2 0x2 BO0 BIS16 
-V "EntriesInUse" - I!4849 O!4847 T!108 !522-49 .2 0x2 BO16 BIS16 
-T "EventTableHeader_t" KT I!4850 T!4847 !524-49 0x4 
-T "e_r_event_tamper_update_mode" KE I!4851 T!277 !526-49 0x1 EM0:"EVENT_TAMPER_UPDATE_NORMAL" EM1:"EVENT_TAMPER_UPDATE_BY_SPECIFIED_POWER" 
-T "r_event_tamper_update_mode" KT I!4852 T!4851 !530-49 0x1 
-T "EVENT_PLUGIN_CALLBACK" KT I!4853 T!4854 !532-49 0x4 
+T "tag_EVENT_TYPE_T" KE I!4658 T!9 !193-49 0x1 EM0:"EVENT_TYPE_VOLTAGE_RELATED" EM1:"EVENT_TYPE_CURRENT_RELATED" EM2:"EVENT_TYPE_POWER_RELATED" EM3:"EVENT_TYPE_TRANSACTION_RELATED" EM4:"EVENT_TYPE_OTHERS" EM5:"EVENT_TYPE_NON_ROLLOVER_EVENTS" EM6:"EVENT_TYPE_CONTROL_EVENTS" EM250:"EVENT_TYPE_UNSPECIFIED" EM254:"EVENT_TYPE_NOT_APPLICABLE" EM255:"EVENT_TYPE_UNKNOWN" 
+T "EVENT_TYPE_T" KT I!4659 T!4658 !205-49 0x1 
+T "tagEventStateType" KE I!4660 T!277 !209-49 0x1 EM0:"EVENT_STATE_RELEASE" EM1:"EVENT_STATE_ENTER" 
+T "EVENT_STATE_T" KT I!4661 T!4660 !213-49 0x1 
+T "tagEventType" KE I!4662 T!277 !215-49 0x1 EM0:"NONE_NAME" EM1:"EVENT_VOLTAGE_MISSING_R" EM2:"EVENT_VOLTAGE_MISSING_Y" EM3:"EVENT_VOLTAGE_MISSING_B" EM4:"EVENT_OVER_VOLTAGE" EM5:"EVENT_LOW_VOLTAGE" EM6:"EVENT_VOLTAGE_UNBALANCE" EM7:"EVENT_CURRENT_REVERSE_R" EM8:"EVENT_CURRENT_REVERSE_Y" EM9:"EVENT_CURRENT_REVERSE_B" EM10:"EVENT_CURRENT_UNBALANCE" EM11:"EVENT_CURRENT_BYPASS" EM12:"EVENT_OVER_CURRENT" EM13:"EVENT_POWER_FAILED" EM14:"EVENT_MAGNET" EM15:"EVENT_DC_DETECTED" EM16:"EVENT_LOW_PF" EM17:"EVENT_OVERLOAD" EM18:"EVENT_CASE_OPEN" EM19:"EVENT_FREQ_OUT_RANGE" 
+T "EVENT_NAME_T" KT I!4663 T!4662 !238-49 0x1 
+T "tagEventOneEventTick" KS I!4664 !241-49 0x3 VM!4665 VM!4666 VM!4667 
+V "occurred_count" - I!4665 O!4664 T!105 !243-49 .1 0x1 BO0 BIS8 
+V "restored_count" - I!4666 O!4664 T!105 !244-49 .1 0x1 BO8 BIS8 
+V "current_state" - I!4667 O!4664 T!4661 !245-49 .1 0x1 BO16 BIS8 
+T "EVENT_ONE_EVENT_TICK" KT I!4668 T!4664 !247-49 0x3 
+T "tageEventOneEventNoTick" KS I!4669 !249-49 0x1 VM!4670 
+V "current_state" - I!4670 O!4669 T!4661 !251-49 .1 0x1 BO0 BIS8 
+T "EVENT_ONE_EVENT_NOTICK" KT I!4671 T!4669 !253-49 0x1 
+T "tagEventTick" KS I!4672 !255-49 0x40 VM!4673 VM!4674 VM!4675 VM!4676 VM!4677 VM!4678 VM!4679 VM!4680 VM!4681 VM!4682 VM!4683 VM!4684 VM!4685 VM!4686 VM!4687 VM!4688 VM!4689 VM!4690 VM!4691 VM!4692 VM!4693 VM!4694 VM!4695 VM!4696 
+V "voltage_missing_R" - I!4673 O!4672 T!4668 !258-49 .1 0x3 BO0 BIS24 
+V "voltage_missing_Y" - I!4674 O!4672 T!4668 !259-49 .1 0x3 BO24 BIS24 
+V "voltage_missing_B" - I!4675 O!4672 T!4668 !260-49 .1 0x3 BO48 BIS24 
+V "over_voltage" - I!4676 O!4672 T!4668 !262-49 .1 0x3 BO72 BIS24 
+V "low_voltage" - I!4677 O!4672 T!4668 !263-49 .1 0x3 BO96 BIS24 
+V "voltage_unbalance" - I!4678 O!4672 T!4668 !264-49 .1 0x3 BO120 BIS24 
+V "current_reverse_R" - I!4679 O!4672 T!4668 !267-49 .1 0x3 BO144 BIS24 
+V "current_reverse_Y" - I!4680 O!4672 T!4668 !268-49 .1 0x3 BO168 BIS24 
+V "current_reverse_B" - I!4681 O!4672 T!4668 !269-49 .1 0x3 BO192 BIS24 
+V "current_unbalance" - I!4682 O!4672 T!4668 !271-49 .1 0x3 BO216 BIS24 
+V "current_bypass" - I!4683 O!4672 T!4668 !272-49 .1 0x3 BO240 BIS24 
+V "over_current" - I!4684 O!4672 T!4668 !273-49 .1 0x3 BO264 BIS24 
+V "power_failed" - I!4685 O!4672 T!4671 !276-49 .1 0x1 BO288 BIS8 
+V "magnet" - I!4686 O!4672 T!4668 !279-49 .1 0x3 BO296 BIS24 
+V "dc_detected" - I!4687 O!4672 T!4668 !280-49 .1 0x3 BO320 BIS24 
+V "low_pf" - I!4688 O!4672 T!4668 !281-49 .1 0x3 BO344 BIS24 
+V "paid_mode" - I!4689 O!4672 T!4671 !282-49 .1 0x1 BO368 BIS8 
+V "meter_mode" - I!4690 O!4672 T!4671 !283-49 .1 0x1 BO376 BIS8 
+V "overload" - I!4691 O!4672 T!4668 !284-49 .1 0x3 BO384 BIS24 
+V "comm_module" - I!4692 O!4672 T!4668 !285-49 .1 0x3 BO408 BIS24 
+V "case_open" - I!4693 O!4672 T!4668 !288-49 .1 0x3 BO432 BIS24 
+V "relay_status" - I!4694 O!4672 T!4668 !291-49 .1 0x3 BO456 BIS24 
+V "freq_out_range" - I!4695 O!4672 T!4668 !293-49 .1 0x3 BO480 BIS24 
+V "rtc_failed" - I!4696 O!4672 T!4671 !294-49 .1 0x1 BO504 BIS8 
+T "EVENT_INFO" KT I!4697 T!4672 !297-49 0x40 
+T "tagEventFlag" KU I!4698 !300-49 0x8 VM!4738 VM!4739 
+T "tagEventFlag_bit" KS I!4699 !302-49 0x5 VM!4700 VM!4701 VM!4702 VM!4703 VM!4704 VM!4705 VM!4706 VM!4707 VM!4708 VM!4709 VM!4710 VM!4711 VM!4712 VM!4713 VM!4714 VM!4715 VM!4716 VM!4717 VM!4718 VM!4719 VM!4720 VM!4721 VM!4722 VM!4723 VM!4724 VM!4725 VM!4726 VM!4727 VM!4728 VM!4729 VM!4730 VM!4731 VM!4732 VM!4733 VM!4734 VM!4735 VM!4736 VM!4737 
+V "is_voltage_missing_R" - I!4700 O!4699 T!105 !306-49 .1 0x1 BO0 BIS1 
+V "is_voltage_missing_Y" - I!4701 O!4699 T!105 !307-49 .1 0x1 BO1 BIS1 
+V "is_voltage_missing_B" - I!4702 O!4699 T!105 !308-49 .1 0x1 BO2 BIS1 
+V "is_over_voltage" - I!4703 O!4699 T!105 !310-49 .1 0x1 BO3 BIS1 
+V "is_low_voltage" - I!4704 O!4699 T!105 !311-49 .1 0x1 BO4 BIS1 
+V "is_voltage_unbalance" - I!4705 O!4699 T!105 !312-49 .1 0x1 BO5 BIS1 
+V "is_current_reverse_R" - I!4706 O!4699 T!105 !315-49 .1 0x1 BO6 BIS1 
+V "is_current_reverse_Y" - I!4707 O!4699 T!105 !316-49 .1 0x1 BO7 BIS1 
+V "is_current_reverse_B" - I!4708 O!4699 T!105 !317-49 .1 0x1 BO8 BIS1 
+V "is_current_unbalance" - I!4709 O!4699 T!105 !319-49 .1 0x1 BO9 BIS1 
+V "is_current_bypass" - I!4710 O!4699 T!105 !320-49 .1 0x1 BO10 BIS1 
+V "is_over_current" - I!4711 O!4699 T!105 !321-49 .1 0x1 BO11 BIS1 
+V "is_power_failed" - I!4712 O!4699 T!105 !324-49 .1 0x1 BO12 BIS1 
+V "set_rtc" - I!4713 O!4699 T!105 !327-49 .1 0x1 BO13 BIS1 
+V "set_dip" - I!4714 O!4699 T!105 !328-49 .1 0x1 BO14 BIS1 
+V "set_pcp" - I!4715 O!4699 T!105 !329-49 .1 0x1 BO15 BIS1 
+V "set_billing_dates" - I!4716 O!4699 T!105 !330-49 .1 0x1 BO16 BIS1 
+V "md_reset" - I!4717 O!4699 T!105 !331-49 .1 0x1 BO17 BIS1 
+V "is_magnet" - I!4718 O!4699 T!105 !334-49 .1 0x1 BO18 BIS1 
+V "is_dc_detected" - I!4719 O!4699 T!105 !335-49 .1 0x1 BO19 BIS1 
+V "is_low_pf" - I!4720 O!4699 T!105 !336-49 .1 0x1 BO20 BIS1 
+V "paid_mode" - I!4721 O!4699 T!105 !337-49 .1 0x1 BO21 BIS1 
+V "meter_mode" - I!4722 O!4699 T!105 !338-49 .1 0x1 BO22 BIS1 
+V "is_overload" - I!4723 O!4699 T!105 !339-49 .1 0x1 BO23 BIS1 
+V "is_case_open" - I!4724 O!4699 T!105 !342-49 .1 0x1 BO24 BIS1 
+V "bill_counter" - I!4725 O!4699 T!105 !344-49 .1 0x1 BO25 BIS1 
+V "set_calendar" - I!4726 O!4699 T!105 !347-49 .1 0x1 BO26 BIS1 
+V "fw_activated" - I!4727 O!4699 T!105 !348-49 .1 0x1 BO27 BIS1 
+V "set_loadlimit" - I!4728 O!4699 T!105 !349-49 .1 0x1 BO28 BIS1 
+V "enb_loadlimit_fn" - I!4729 O!4699 T!105 !350-49 .1 0x1 BO29 BIS1 
+V "dis_loadlimit_fn" - I!4730 O!4699 T!105 !351-49 .1 0x1 BO30 BIS1 
+V "set_lls" - I!4731 O!4699 T!105 !352-49 .1 0x1 BO31 BIS1 
+V "set_hls_us" - I!4732 O!4699 T!105 !353-49 .1 0x1 BO32 BIS1 
+V "set_hls_fw" - I!4733 O!4699 T!105 !354-49 .1 0x1 BO33 BIS1 
+V "set_global_key" - I!4734 O!4699 T!105 !355-49 .1 0x1 BO34 BIS1 
+V "set_eswf" - I!4735 O!4699 T!105 !356-49 .1 0x1 BO35 BIS1 
+V "comm_module" - I!4736 O!4699 T!105 !359-49 .1 0x1 BO36 BIS1 
+V "relay_status_changed" - I!4737 O!4699 T!105 !362-49 .1 0x1 BO37 BIS1 
+V "bits" - I!4738 O!4698 T!4699 !365-49 .1 0x5 BO0 BIS40 
+V "value" - I!4739 O!4698 T!113 !367-49 .2 0x8 BO0 BIS64 
+T "EVENT_FLAG" KT I!4740 T!4698 !369-49 0x8 
+T "tagEventRequestFlag" KS I!4741 !371-49 0x4 VM!4742 VM!4743 VM!4744 VM!4745 VM!4746 VM!4747 VM!4748 VM!4749 VM!4750 VM!4751 VM!4752 VM!4753 VM!4754 VM!4755 VM!4756 VM!4757 VM!4758 VM!4759 VM!4760 VM!4761 
+V "is_fw_activation" - I!4742 O!4741 T!108 !373-49 .2 0x2 BO0 BIS1 
+V "is_max_demand_end" - I!4743 O!4741 T!108 !374-49 .2 0x2 BO1 BIS1 
+V "is_tariff_changed" - I!4744 O!4741 T!108 !375-49 .2 0x2 BO2 BIS1 
+V "is_lcd_refresh" - I!4745 O!4741 T!108 !376-49 .2 0x2 BO3 BIS1 
+V "is_lcd_scroll" - I!4746 O!4741 T!108 !377-49 .2 0x2 BO4 BIS1 
+V "is_billing_request" - I!4747 O!4741 T!108 !378-49 .2 0x2 BO5 BIS1 
+V "is_blockload_request" - I!4748 O!4741 T!108 !379-49 .2 0x2 BO6 BIS1 
+V "is_relay_switch" - I!4749 O!4741 T!108 !380-49 .2 0x2 BO7 BIS1 
+V "event_alert" - I!4750 O!4741 T!108 !381-49 #1552-1 1549-1 .2 0x2 BO8 BIS1 
+V "periodic_msg_1" - I!4751 O!4741 T!108 !382-49 #1542-1 1539-1 .2 0x2 BO9 BIS1 
+V "periodic_msg_2" - I!4752 O!4741 T!108 !383-49 #1547-1 1544-1 .2 0x2 BO10 BIS1 
+V "is_cal_active_req" - I!4753 O!4741 T!108 !384-49 .2 0x2 BO11 BIS1 
+V "is_rtc_failed" - I!4754 O!4741 T!108 !385-49 .2 0x2 BO12 BIS1 
+V "is_freq_out_range" - I!4755 O!4741 T!108 !386-49 .2 0x2 BO13 BIS1 
+V "is_dailyload_request" - I!4756 O!4741 T!108 !387-49 .2 0x2 BO14 BIS1 
+V "is_rtc_revert" - I!4757 O!4741 T!108 !388-49 .2 0x2 BO15 BIS1 
+V "is_rtc_forward" - I!4758 O!4741 T!108 !389-49 .2 0x2 BO16 BIS1 
+V "act_cal_season_change" - I!4759 O!4741 T!108 !391-49 .2 0x2 BO17 BIS1 
+V "act_cal_week_profile_change" - I!4760 O!4741 T!108 !392-49 .2 0x2 BO18 BIS1 
+V "min_interval" - I!4761 O!4741 T!108 !394-49 .2 0x2 BO19 BIS1 
+T "EVENT_REQUEST_FLAG" KT I!4762 T!4741 !396-49 0x4 
+T "tagEventPersistentTime" KS I!4763 !398-49 0x24 VM!4764 VM!4765 VM!4766 VM!4767 VM!4768 VM!4769 VM!4770 VM!4771 VM!4772 VM!4773 VM!4774 VM!4775 VM!4776 VM!4777 VM!4778 VM!4779 VM!4780 VM!4781 VM!4782 VM!4783 VM!4784 VM!4785 VM!4786 VM!4787 VM!4788 VM!4789 VM!4790 VM!4791 VM!4792 VM!4793 VM!4794 VM!4795 VM!4796 VM!4797 VM!4798 VM!4799 
+V "voltage_missing_R_occur" - I!4764 O!4763 T!105 !402-49 .1 0x1 BO0 BIS8 
+V "voltage_missing_R_restore" - I!4765 O!4763 T!105 !403-49 .1 0x1 BO8 BIS8 
+V "voltage_missing_Y_occur" - I!4766 O!4763 T!105 !404-49 .1 0x1 BO16 BIS8 
+V "voltage_missing_Y_restore" - I!4767 O!4763 T!105 !405-49 .1 0x1 BO24 BIS8 
+V "voltage_missing_B_occur" - I!4768 O!4763 T!105 !406-49 .1 0x1 BO32 BIS8 
+V "voltage_missing_B_restore" - I!4769 O!4763 T!105 !407-49 .1 0x1 BO40 BIS8 
+V "over_voltage_occur" - I!4770 O!4763 T!105 !409-49 .1 0x1 BO48 BIS8 
+V "over_voltage_restore" - I!4771 O!4763 T!105 !410-49 .1 0x1 BO56 BIS8 
+V "low_voltage_occur" - I!4772 O!4763 T!105 !411-49 .1 0x1 BO64 BIS8 
+V "low_voltage_restore" - I!4773 O!4763 T!105 !412-49 .1 0x1 BO72 BIS8 
+V "voltage_unbalance_occur" - I!4774 O!4763 T!105 !413-49 .1 0x1 BO80 BIS8 
+V "voltage_unbalance_restore" - I!4775 O!4763 T!105 !414-49 .1 0x1 BO88 BIS8 
+V "current_reverse_R_occur" - I!4776 O!4763 T!105 !417-49 .1 0x1 BO96 BIS8 
+V "current_reverse_R_restore" - I!4777 O!4763 T!105 !418-49 .1 0x1 BO104 BIS8 
+V "current_reverse_Y_occur" - I!4778 O!4763 T!105 !419-49 .1 0x1 BO112 BIS8 
+V "current_reverse_Y_restore" - I!4779 O!4763 T!105 !420-49 .1 0x1 BO120 BIS8 
+V "current_reverse_B_occur" - I!4780 O!4763 T!105 !421-49 .1 0x1 BO128 BIS8 
+V "current_reverse_B_restore" - I!4781 O!4763 T!105 !422-49 .1 0x1 BO136 BIS8 
+V "current_unbalance_occur" - I!4782 O!4763 T!105 !423-49 .1 0x1 BO144 BIS8 
+V "current_unbalance_restore" - I!4783 O!4763 T!105 !424-49 .1 0x1 BO152 BIS8 
+V "current_bypass_occur" - I!4784 O!4763 T!105 !425-49 .1 0x1 BO160 BIS8 
+V "current_bypass_restore" - I!4785 O!4763 T!105 !426-49 .1 0x1 BO168 BIS8 
+V "over_current_occur" - I!4786 O!4763 T!105 !427-49 .1 0x1 BO176 BIS8 
+V "over_current_restore" - I!4787 O!4763 T!105 !428-49 .1 0x1 BO184 BIS8 
+V "power_fail" - I!4788 O!4763 T!105 !431-49 .1 0x1 BO192 BIS8 
+V "power_restore" - I!4789 O!4763 T!105 !432-49 .1 0x1 BO200 BIS8 
+V "magnet_occur" - I!4790 O!4763 T!105 !435-49 .1 0x1 BO208 BIS8 
+V "magnet_restore" - I!4791 O!4763 T!105 !436-49 .1 0x1 BO216 BIS8 
+V "dc_occur" - I!4792 O!4763 T!105 !437-49 .1 0x1 BO224 BIS8 
+V "dc_restore" - I!4793 O!4763 T!105 !438-49 .1 0x1 BO232 BIS8 
+V "low_power_pf_occur" - I!4794 O!4763 T!105 !439-49 .1 0x1 BO240 BIS8 
+V "low_power_pf_restore" - I!4795 O!4763 T!105 !440-49 .1 0x1 BO248 BIS8 
+V "overload_occur" - I!4796 O!4763 T!105 !441-49 .1 0x1 BO256 BIS8 
+V "overload_restore" - I!4797 O!4763 T!105 !442-49 .1 0x1 BO264 BIS8 
+V "case_open" - I!4798 O!4763 T!105 !445-49 .1 0x1 BO272 BIS8 
+V "freq_out_range" - I!4799 O!4763 T!105 !446-49 .1 0x1 BO280 BIS8 
+T "EVENT_PERSISTENT_TIME" KT I!4800 T!4763 !448-49 0x24 
+T "tagRelayPersistentTime" KS I!4801 !450-49 0x2 VM!4802 VM!4803 
+V "relay_disc" - I!4802 O!4801 T!105 !454-49 .1 0x1 BO0 BIS8 
+V "relay_reconn" - I!4803 O!4801 T!105 !455-49 .1 0x1 BO8 BIS8 
+T "RELAY_PERSISTENT_TIME" KT I!4804 T!4801 !457-49 0x2 
+T "tagEventDateTime" KS I!4805 !459-49 0x8 VM!4806 VM!4807 VM!4808 VM!4809 VM!4810 VM!4811 VM!4812 
+V "Sec" - I!4806 O!4805 T!105 !461-49 .1 0x1 BO0 BIS8 
+V "Min" - I!4807 O!4805 T!105 !462-49 .1 0x1 BO8 BIS8 
+V "Hour" - I!4808 O!4805 T!105 !463-49 .1 0x1 BO16 BIS8 
+V "Day" - I!4809 O!4805 T!105 !464-49 .1 0x1 BO24 BIS8 
+V "Week" - I!4810 O!4805 T!105 !465-49 .1 0x1 BO32 BIS8 
+V "Month" - I!4811 O!4805 T!105 !466-49 .1 0x1 BO40 BIS8 
+V "Year" - I!4812 O!4805 T!108 !467-49 .2 0x2 BO48 BIS16 
+T "EVENT_DATE_TIME_T" KT I!4813 T!4805 !469-49 0x8 
+T "EVENT_ID_T" KT I!4814 T!108 !471-49 0x2 
+T "tagEventParametersSnapshotShort" KS I!4815 !473-49 0xa VM!4816 VM!4817 
+V "captured_time" - I!4816 O!4815 T!4813 !475-49 .2 0x8 BO0 BIS64 
+V "code" - I!4817 O!4815 T!4814 !476-49 .2 0x2 BO64 BIS16 
+T "EVENT_PARAMS_SHORT_T" KT I!4818 T!4815 !478-49 0xa 
+T "tagEventParametersSnapshot" KS I!4819 !480-49 0x3a VM!4820 VM!4821 VM!4822 VM!4823 VM!4824 VM!4825 VM!4826 VM!4827 VM!4828 VM!4829 VM!4830 VM!4831 VM!4832 VM!4833 
+V "captured_time" - I!4820 O!4819 T!4813 !482-49 .2 0x8 BO0 BIS64 
+V "code" - I!4821 O!4819 T!4814 !483-49 .2 0x2 BO64 BIS16 
+V "IR" - I!4822 O!4819 T!115 !485-49 .2 0x4 BO80 BIS32 
+V "IY" - I!4823 O!4819 T!115 !486-49 .2 0x4 BO112 BIS32 
+V "IB" - I!4824 O!4819 T!115 !487-49 .2 0x4 BO144 BIS32 
+V "VRN" - I!4825 O!4819 T!115 !489-49 .2 0x4 BO176 BIS32 
+V "VYN" - I!4826 O!4819 T!115 !490-49 .2 0x4 BO208 BIS32 
+V "VBN" - I!4827 O!4819 T!115 !491-49 .2 0x4 BO240 BIS32 
+V "PF_R" - I!4828 O!4819 T!115 !493-49 .2 0x4 BO272 BIS32 
+V "PF_Y" - I!4829 O!4819 T!115 !494-49 .2 0x4 BO304 BIS32 
+V "PF_B" - I!4830 O!4819 T!115 !495-49 .2 0x4 BO336 BIS32 
+V "ActiveEnergyImport" - I!4831 O!4819 T!115 !497-49 .2 0x4 BO368 BIS32 
+V "ActiveEnergyExport" - I!4832 O!4819 T!115 !498-49 .2 0x4 BO400 BIS32 
+V "TamperCounter" - I!4833 O!4819 T!111 !500-49 .2 0x4 BO432 BIS32 
+T "EVENT_PARAMS_T" KT I!4834 T!4819 !502-49 0x3a 
+T "tagEVENT_ARGS_T" KS I!4835 !504-49 0x3e VM!4836 VM!4837 VM!4838 VM!4839 
+V "type" - I!4836 O!4835 T!4659 !506-49 .1 0x1 BO0 BIS8 
+V "status" - I!4837 O!4835 T!4661 !507-49 .1 0x1 BO8 BIS8 
+V "esw_bit_number" - I!4838 O!4835 T!105 !508-49 .1 0x1 BO16 BIS8 
+V "data" - I!4839 O!4835 T!4834 !509-49 .2 0x3a BO32 BIS464 
+T "EVENT_ARGS_T" KT I!4840 T!4835 !511-49 0x3e 
+T "tagEventTableConfig_t" KS I!4841 !513-49 0xa VM!4842 VM!4843 VM!4844 VM!4845 
+V "TableStartAddr" - I!4842 O!4841 T!111 !515-49 .2 0x4 BO0 BIS32 
+V "MaxEntries" - I!4843 O!4841 T!111 !516-49 .2 0x4 BO32 BIS32 
+V "IsRollover" - I!4844 O!4841 T!105 !517-49 .1 0x1 BO64 BIS8 
+V "LogSize" - I!4845 O!4841 T!105 !518-49 .1 0x1 BO72 BIS8 
+T "EventTableConfig_t" KT I!4846 T!4841 !520-49 0xa 
+T "tagEventTableHeader_t" KS I!4847 !522-49 0x4 VM!4848 VM!4849 
+V "StartPosition" - I!4848 O!4847 T!108 !524-49 .2 0x2 BO0 BIS16 
+V "EntriesInUse" - I!4849 O!4847 T!108 !525-49 .2 0x2 BO16 BIS16 
+T "EventTableHeader_t" KT I!4850 T!4847 !527-49 0x4 
+T "e_r_event_tamper_update_mode" KE I!4851 T!277 !529-49 0x1 EM0:"EVENT_TAMPER_UPDATE_NORMAL" EM1:"EVENT_TAMPER_UPDATE_BY_SPECIFIED_POWER" 
+T "r_event_tamper_update_mode" KT I!4852 T!4851 !533-49 0x1 
+T "EVENT_PLUGIN_CALLBACK" KT I!4853 T!4854 !535-49 0x4 
 T "" KP I!4854 T!4855 0x4 
 T "" KF I!4855 T!2 0x0 P!4856 
 V "" N I!4856 O!4855 T!4857 .2 0x2 
 T "" KP I!4857 T!4840 0x2 
-V "g_event_state" GN I!4858 T!4697 ?536-49 .1 0x40 
-V "g_event_flag" GN I!4859 T!4740 ?537-49 .2 0x8 
-V "g_event_request_flag" GN I!4860 T!4762 ?538-49 #1542-1 #1547-1 #1552-1 1539-1 1544-1 1549-1 .2 0x4 
-V "EventArgs" GN I!4861 T!4840 ?539-49 .2 0x3e 
-V "g_tamper_counter" GN I!4862 T!111 ?540-49 .2 0x4 
-V "g_powerfailure_counter" GN I!4863 T!111 ?541-49 .2 0x4 
-V "g_event_persistent_time" GN I!4864 T!4800 ?542-49 .1 0x24 
-V "g_relay_persistent_time" GN I!4865 T!4804 ?543-49 .1 0x2 
-F "R_EVENT_EntriesInUseGet" F I!4866 T!105 ?551-49 P!4867 P!4868 
+V "g_event_state" GN I!4858 T!4697 ?539-49 .1 0x40 
+V "g_event_flag" GN I!4859 T!4740 ?540-49 .2 0x8 
+V "g_event_request_flag" GN I!4860 T!4762 ?541-49 #1542-1 #1547-1 #1552-1 1539-1 1544-1 1549-1 .2 0x4 
+V "EventArgs" GN I!4861 T!4840 ?542-49 .2 0x3e 
+V "g_tamper_counter" GN I!4862 T!111 ?543-49 .2 0x4 
+V "g_powerfailure_counter" GN I!4863 T!111 ?544-49 .2 0x4 
+V "g_event_persistent_time" GN I!4864 T!4800 ?545-49 .1 0x24 
+V "g_relay_persistent_time" GN I!4865 T!4804 ?546-49 .1 0x2 
+F "R_EVENT_EntriesInUseGet" F I!4866 T!105 ?554-49 P!4867 P!4868 
 V "" N I!4867 O!4866 T!4659 .1 0x1 
 V "" N I!4868 O!4866 T!2082 .2 0x2 
-F "R_EVENT_ProfileEntriesGet" F I!4869 T!105 ?552-49 P!4870 P!4871 
+F "R_EVENT_ProfileEntriesGet" F I!4869 T!105 ?555-49 P!4870 P!4871 
 V "" N I!4870 O!4869 T!4659 .1 0x1 
 V "" N I!4871 O!4869 T!2082 .2 0x2 
-F "R_EVENT_ResetLog" F I!4872 T!105 ?553-49 P!4873 
+F "R_EVENT_ResetLog" F I!4872 T!105 ?556-49 P!4873 
 V "" N I!4873 O!4872 T!4659 .1 0x1 
-F "R_EVENT_GetEntry" F I!4874 T!4834 ?554-49 P!4875 P!4876 
+F "R_EVENT_GetEntry" F I!4874 T!4834 ?557-49 P!4875 P!4876 
 V "" N I!4875 O!4874 T!4659 .1 0x1 
 V "" N I!4876 O!4874 T!108 .2 0x2 
-F "EVENT_Init" F I!4877 T!105 ?557-49 
-F "EVENT_StorageFormat" F I!4878 T!105 ?559-49 
-F "EVENT_StorageRestore" F I!4879 T!105 ?560-49 
-F "EVENT_StorageBackup" F I!4880 T!105 ?561-49 
-F "EVENT_Detector" F I!4881 T!2 ?563-49 
-F "EVENT_Logging" F I!4882 T!2 ?564-49 
-F "EVENT_Distributor" F I!4883 T!2 ?565-49 
-F "EVENT_StorageWrite" F I!4884 T!2 ?566-49 P!4885 
+F "EVENT_Init" F I!4877 T!105 ?560-49 
+F "EVENT_StorageFormat" F I!4878 T!105 ?562-49 
+F "EVENT_StorageRestore" F I!4879 T!105 ?563-49 
+F "EVENT_StorageBackup" F I!4880 T!105 ?564-49 
+F "EVENT_Detector" F I!4881 T!2 ?566-49 
+F "EVENT_Logging" F I!4882 T!2 ?567-49 
+F "EVENT_Distributor" F I!4883 T!2 ?568-49 
+F "EVENT_StorageWrite" F I!4884 T!2 ?569-49 P!4885 
 V "" N I!4885 O!4884 T!4857 .2 0x2 
-F "EVENT_AccumulateTamperCounter" F I!4886 T!2 ?568-49 P!4887 
+F "EVENT_AccumulateTamperCounter" F I!4886 T!2 ?571-49 P!4887 
 V "" N I!4887 O!4886 T!4857 .2 0x2 
-F "EVENT_CheckAndTriggerTamperEnergyAccumulation" F I!4888 T!2 ?569-49 
-F "EVENT_PollingProcessing" F I!4889 T!2 ?572-49 
-F "EVENT_IsAllEventProcessed" F I!4890 T!105 ?575-49 
-F "EVENT_IsCurrentReverse_R" F I!4891 T!105 ?577-49 
-F "EVENT_IsCurrentReverse_Y" F I!4892 T!105 ?578-49 
-F "EVENT_IsCurrentReverse_B" F I!4893 T!105 ?579-49 
-F "EVENT_IsCaseOpen" F I!4894 T!105 ?581-49 
-F "EVENT_IsMagnetic" F I!4895 T!105 ?582-49 
-F "EVENT_IsLastGasp" F I!4896 T!105 ?583-49 
-F "EVENT_PowerFail" F I!4897 T!2 ?587-49 P!4898 
+F "EVENT_CheckAndTriggerTamperEnergyAccumulation" F I!4888 T!2 ?572-49 
+F "EVENT_PollingProcessing" F I!4889 T!2 ?575-49 
+F "EVENT_IsAllEventProcessed" F I!4890 T!105 ?578-49 
+F "EVENT_IsCurrentReverse_R" F I!4891 T!105 ?580-49 
+F "EVENT_IsCurrentReverse_Y" F I!4892 T!105 ?581-49 
+F "EVENT_IsCurrentReverse_B" F I!4893 T!105 ?582-49 
+F "EVENT_IsCaseOpen" F I!4894 T!105 ?584-49 
+F "EVENT_IsMagnetic" F I!4895 T!105 ?585-49 
+F "EVENT_IsLastGasp" F I!4896 T!105 ?586-49 
+F "EVENT_PowerFail" F I!4897 T!2 ?590-49 P!4898 
 V "" N I!4898 O!4897 T!4661 .1 0x1 
-F "EVENT_CaseOpen" F I!4899 T!2 ?588-49 P!4900 
+F "EVENT_CaseOpen" F I!4899 T!2 ?591-49 P!4900 
 V "" N I!4900 O!4899 T!4661 .1 0x1 
-F "EVENT_PowerOn" F I!4901 T!2 ?589-49 
-F "EVENT_GetOverLoadThreshold" F I!4902 T!115 ?591-49 
-F "EVENT_SetOverLoadThreshold" F I!4903 T!2 ?592-49 P!4904 
+F "EVENT_PowerOn" F I!4901 T!2 ?592-49 
+F "EVENT_GetOverLoadThreshold" F I!4902 T!115 ?594-49 
+F "EVENT_SetOverLoadThreshold" F I!4903 T!2 ?595-49 P!4904 
 V "" N I!4904 O!4903 T!115 .2 0x4 
-F "EVENT_RegisterPluginCallback" F I!4905 T!2 ?594-49 P!4906 P!4907 
+F "EVENT_RegisterPluginCallback" F I!4905 T!2 ?597-49 P!4906 P!4907 
 V "" N I!4906 O!4905 T!105 .1 0x1 
 V "" N I!4907 O!4905 T!4853 .2 0x4 
-F "EVENT_ForwardToPluginFn" F I!4908 T!2 ?595-49 P!4909 
+F "EVENT_ForwardToPluginFn" F I!4908 T!2 ?598-49 P!4909 
 V "" N I!4909 O!4908 T!4857 .2 0x2 
 T "tag_r_scheduler_flags_t" KS I!4910 !75-56 0x2 VM!4911 VM!4912 VM!4913 VM!4914 VM!4915 VM!4916 VM!4917 VM!4918 
 V "mdm" - I!4911 O!4910 T!108 !77-56 .2 0x2 BO0 BIS1 
@@ -5911,281 +5911,281 @@ V "p_rtc_profile" N I!5984 O!5524 T!5369 !1535-1 .2 0x2
 V "p_push_setup" N I!5985 O!5524 T!5514 !1537-1 #1561-1 1562-1 1564-1 1572-1 1612-1 1612-1 1613-1 1616-1 1628-1 1628-1 1631-1 1657-1 1685-1 1699-1 1701-1 1703-1 1705-1 1711-1 1711-1 1715-1 1715-1 1719-1 1730-1 1738-1 .2 0x2 
 ****%CxSystemPath%\inc\builtin.h
 v2 
-:1718021576
+:1723447486
 #2
 ****..\..\rl78i1c\driver\r_cg_macrodriver.h
 v2 
-:1718021576
+:1723447486
 #3
 ****..\..\shared\Compiler\CCRL\compiler.h
 v2 
-:1718021576
+:1723447486
 #4
 ****..\..\shared\Compiler\CCRL\iodefine.h
 v2 
-:1718021576
+:1723447486
 #5
 ****..\..\shared\Compiler\CCRL\typedef.h
 v2 
-:1718021576
+:1723447486
 #6
 ****..\..\rl78i1c\appwrapper\wrp_app_mcu.h
 v2 
-:1718021576
+:1723447486
 #7
 ****..\..\rl78i1c\appwrapper\wrp_app_ext.h
 v2 
-:1718021576
+:1723447486
 #8
 ****%CxSystemPath%\inc\math.h
 v2 
-:1718021576
+:1723447486
 #9
 ****%CxSystemPath%\inc\stddef.h
 v2 
-:1718021576
+:1723447486
 #10
 ****..\..\rl78i1c\application\dlms2\codegen\classes\r_dlms_classes.h
 v2 
-:1718021576
+:1723447486
 #11
 ****..\..\shared\dlms2\dlmslibrary\header\r_dlms_library_process.h
 v2 
-:1718021576
+:1723447486
 #12
 ****..\..\shared\dlms2\dlmslibrary\header\r_dlms_library_config.h
 v2 
-:1718021576
+:1723447486
 #13
 ****..\..\shared\dlms2\dlmslibrary\header\r_dlms_callback.h
 v2 
-:1718021576
+:1723447486
 #14
 ****..\..\shared\dlms2\dlmslibrary\header\r_dlms_physical.h
 v2 
-:1718021576
+:1723447486
 #15
 ****..\..\shared\dlms2\dlmslibrary\header\r_dlms_physical_wrapper.h
 v2 
-:1718021576
+:1723447486
 #16
 ****..\..\shared\dlms2\dlmslibrary\header\r_dlms_timeout_wrapper.h
 v2 
-:1718021576
+:1723447486
 #17
 ****..\..\shared\dlms2\dlmslibrary\header\r_dlms_udp_wrapper.h
 v2 
-:1718021576
+:1723447486
 #18
 ****..\..\shared\dlms2\dlmslibrary\header\r_dlms_ip.h
 v2 
-:1718021576
+:1723447486
 #19
 ****%CxSystemPath%\inc\string.h
 v2 
-:1718021576
+:1723447486
 #20
 ****..\..\shared\dlms2\dlmslibrary\header\r_dlms_tcp_wrapper.h
 v2 
-:1718021576
+:1723447486
 #21
 ****..\..\shared\dlms2\dlmslibrary\header\r_dlms_cosem_aes_gcm_wrapper.h
 v2 
-:1718021576
+:1723447486
 #22
 ****..\..\shared\dlms2\dlmslibrary\header\r_dlms_mac.h
 v2 
-:1718021576
+:1723447486
 #23
 ****..\..\shared\dlms2\dlmslibrary\header\r_dlms_hdlc.h
 v2 
-:1718021576
+:1723447486
 #24
 ****..\..\shared\dlms2\dlmslibrary\header\r_dlms_llc.h
 v2 
-:1718021576
+:1723447486
 #25
 ****..\..\shared\dlms2\dlmslibrary\header\r_dlms_udp.h
 v2 
-:1718021576
+:1723447486
 #26
 ****..\..\shared\dlms2\dlmslibrary\header\r_dlms_wpdu.h
 v2 
-:1718021576
+:1723447486
 #27
 ****..\..\shared\dlms2\dlmslibrary\header\r_dlms_tcp.h
 v2 
-:1718021576
+:1723447486
 #28
 ****..\..\shared\dlms2\dlmslibrary\header\r_dlms_mgmt.h
 v2 
-:1718021576
+:1723447486
 #29
 ****..\..\shared\dlms2\dlmslibrary\header\r_dlms_cosem_apdu.h
 v2 
-:1718021576
+:1723447486
 #30
 ****..\..\shared\dlms2\dlmslibrary\header\r_dlms_cosem_apdutag.h
 v2 
-:1718021576
+:1723447486
 #31
 ****..\..\shared\dlms2\dlmslibrary\header\r_dlms_cosem_apdu_security.h
 v2 
-:1718021576
+:1723447486
 #32
 ****..\..\shared\dlms2\dlmslibrary\header\r_dlms_cosem_application.h
 v2 
-:1718021576
+:1723447486
 #33
 ****..\..\rl78i1c\application\dlms2\codegen\r_dlms_config.h
 v2 
-:1718021576
+:1723447486
 #34
 ****..\..\rl78i1c\application\dlms2\codegen\objects\r_dlms_objects.h
 v2 
-:1718021576
+:1723447486
 #35
 ****..\..\rl78i1c\application\dlms2\codegen\classes\r_dlms_class40.h
 v2 
-:1718021576
+:1723447486
 #36
 ****..\..\rl78i1c\application\dlms2\usercode\apps\r_dlms_app.h
 v2 
-:1718021576
+:1723447486
 #37
 ****..\..\rl78i1c\application\storage\dlms\r_dlms_storage.h
 v2 
-:1718021576
+:1723447486
 #38
 ****..\..\rl78i1c\application\eeprom\eeprom.h
 v2 
-:1718021576
+:1723447486
 #39
 ****..\..\rl78i1c\application\storage\dlms\r_dlms_format.h
 v2 
-:1718021576
+:1723447486
 #40
 ****..\..\rl78i1c\application\dlms2\usercode\apps\r_dlms_push.h
 v2 
-:1718021576
+:1723447486
 #41
 ****..\..\rl78i1c\application\storage\meterdata\storage.h
 v2 
-:1718021576
+:1723447486
 #42
 ****..\..\rl78i1c\application\storage\meterdata\r_meter_format.h
 v2 
-:1718021576
+:1723447486
 #43
 ****..\..\shared\metrology\metrologylibrary\headers\em_type.h
 v2 
-:1718021576
+:1723447486
 #44
 ****..\..\shared\metrology\metrologylibrary\headers\em_constraint.h
 v2 
-:1718021576
+:1723447486
 #45
 ****..\..\rl78i1c\application\tariff\r_tariff.h
 v2 
-:1718021576
+:1723447486
 #46
 ****..\..\rl78i1c\application\max_demand\r_max_demand.h
 v2 
-:1718021576
+:1723447486
 #47
 ****..\..\rl78i1c\driver\r_cg_rtc.h
 v2 
-:1718021576
+:1723447486
 #48
 ****..\..\rl78i1c\application\event\event.h
 v2 
-:1718021576
+:1723447486
 #49
 ****..\..\shared\metrology\metrologylibrary\headers\em_core.h
 v2 
-:1718021576
+:1723447486
 #50
 ****..\..\shared\metrology\metrologylibrary\headers\em_errcode.h
 v2 
-:1718021576
+:1723447486
 #51
 ****..\..\shared\metrology\metrologylibrary\headers\em_operation.h
 v2 
-:1718021576
+:1723447486
 #52
 ****..\..\shared\metrology\metrologylibrary\headers\em_calibration.h
 v2 
-:1718021576
+:1723447486
 #53
 ****..\..\shared\metrology\metrologylibrary\headers\em_measurement.h
 v2 
-:1718021576
+:1723447486
 #54
 ****..\..\rl78i1c\application\relay\r_load_ctrl.h
 v2 
-:1718021576
+:1723447486
 #55
 ****..\..\rl78i1c\application\scheduler\r_scheduler.h
 v2 
-:1718021576
+:1723447486
 #56
 ****..\..\rl78i1c\application\inst_read\inst_read.h
 v2 
-:1718021576
+:1723447486
 #57
 ****..\..\rl78i1c\driver\r_cg_wdt.h
 v2 
-:1718021576
+:1723447486
 #58
 ****..\..\rl78i1c\application\tariff\r_activity_cal.h
 v2 
-:1718021576
+:1723447486
 #59
 ****..\..\rl78i1c\application\storage\metrology\config_storage.h
 v2 
-:1718021576
+:1723447486
 #60
 ****..\..\rl78i1c\driver\r_cg_dsadc.h
 v2 
-:1718021576
+:1723447486
 #61
 ****..\..\rl78i1c\driver\r_cg_crc.h
 v2 
-:1718021576
+:1723447486
 #62
 ****..\..\rl78i1c\application\storage\metrology\config_format.h
 v2 
-:1718021576
+:1723447486
 #63
 ****..\..\rl78i1c\application\dataflash\dataflash.h
 v2 
-:1718021576
+:1723447486
 #64
 ****..\..\rl78i1c\application\dlms2\usercode\apps\r_dlms_date_time.h
 v2 
-:1718021576
+:1723447486
 #65
 ****..\..\rl78i1c\application\dlms2\usercode\apps\r_dlms_scheduler.h
 v2 
-:1718021576
+:1723447486
 #66
 ****..\..\rl78i1c\application\dlms2\usercode\apps\r_dlms_event.h
 v2 
-:1718021576
+:1723447486
 #67
 ****..\..\rl78i1c\application\storage\dlms\r_dlms_factory_config.h
 v2 
-:1718021576
+:1723447486
 #68
 ****..\..\rl78i1c\libwrapper\dlms2\r_dlms_udp_wrapper_interface.h
 v2 
-:1718021576
+:1723447486
 #69
 ****..\..\rl78i1c\libwrapper\dlms2\r_dlms_tcp_wrapper_interface.h
 v2 
-:1718021576
+:1723447486
 #70
 ****..\..\rl78i1c\libwrapper\dlms2\r_dlms_wrapper_conversion_ip.h
 v2 
-:1718021576
+:1723447486
 #71

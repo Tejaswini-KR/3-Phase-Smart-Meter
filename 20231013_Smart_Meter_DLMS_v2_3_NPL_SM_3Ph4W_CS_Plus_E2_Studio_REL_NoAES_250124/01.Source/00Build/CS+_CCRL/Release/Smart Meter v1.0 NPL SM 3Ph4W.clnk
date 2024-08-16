@@ -197,6 +197,7 @@
 -Input=Release\test_setup.obj
 -Input=Release\test_util.obj
 -Input=Release\tester.obj
+-Input=Release\energy_dg.obj
 -LIBrary=..\..\rl78i1c\application\fft\libs\CCRL\lib_FFT.lib
 -LIBrary=..\..\shared\dlms2\hash\CCRL\md5_rl78_ccrl_m.lib
 -LIBrary=..\..\shared\dlms2\hash\CCRL\sha_rl78_s3_ccrl_m.lib

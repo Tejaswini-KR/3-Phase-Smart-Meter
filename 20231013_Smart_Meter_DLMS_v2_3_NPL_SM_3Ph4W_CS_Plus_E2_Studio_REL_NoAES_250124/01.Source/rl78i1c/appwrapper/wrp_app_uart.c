@@ -75,6 +75,11 @@ Macro Definitions Checking
 /******************************************************************************
 Imported global variables and functions (from other files)
 ******************************************************************************/
+#ifdef GSM_GPRS
+extern void GPRS_SendCompleteCallBack(void);
+extern void GPRS_ReceiveEndCallback(char rx_data);
+extern uint8_t GPRS_IsConnected(void);
+#endif
 
 /******************************************************************************
 Exported global variables and functions (to be accessed by other files)
@@ -111,6 +116,8 @@ void WRP_UART_Start(void)
     
     /* Start receive data byte */
     WRP_UART_ReceiveData(&g_received_byte, 1);
+	
+	WRP_UART0_Start();
 }
 
 /******************************************************************************
@@ -356,21 +363,27 @@ void WRP_UART0_SetConfig(wrp_uart_length_t length, wrp_uart_parity_t parity, wrp
 void WRP_UART0_SendEndCallback(void)
 {
     /* Put application callback here */
-    #ifdef __DEBUG
+#ifdef __DEBUG
     CMD_SendEndCallback();
-    #else
-    #ifdef _DLMS
+#else
+#ifdef _DLMS
     /* DLMS Transmit End */
-    #if defined(SUPPORT_UDP_PROFILE) && (SUPPORT_UDP_PROFILE == TRUE)
-    R_UDP_WRP_UartPhySendEnd(0);
-    #endif
-    #if defined(SUPPORT_TCP_PROFILE) && (SUPPORT_TCP_PROFILE == TRUE)
-    R_TCP_WRP_UartPhySendEnd(0);
-    #endif
-    #endif /* _DLMS */
-    #endif /* __DEBUG */
+    //#if defined(SUPPORT_UDP_PROFILE) && (SUPPORT_UDP_PROFILE == TRUE)
+    //R_UDP_WRP_UartPhySendEnd(0);
+    //#endif
+    //#if defined(SUPPORT_TCP_PROFILE) && (SUPPORT_TCP_PROFILE == TRUE)
+    //R_TCP_WRP_UartPhySendEnd(0);
+    //#endif
+	R_PHY_DeviceSendEnd(0);
+#endif /* _DLMS */
+#endif /* __DEBUG */
     
     R_METER_CMD_UART_SendEndCallback();
+	
+
+	#ifdef GSM_GPRS
+		GPRS_SendCompleteCallBack();
+	#endif
 }
 
 /******************************************************************************
@@ -383,21 +396,31 @@ void WRP_UART0_SendEndCallback(void)
 void WRP_UART0_ReceiveEndCallback(void)
 {
     /* Put application callback here */
-    #ifdef __DEBUG
+#ifdef __DEBUG
     CMD_ReceiveEndCallback(g_received_byte_1st);
-	#else
-	#ifdef _DLMS
+#else
+#ifdef _DLMS
     /* DLMS Transmit End */
-    #if defined(SUPPORT_UDP_PROFILE) && (SUPPORT_UDP_PROFILE == TRUE)
-    R_UDP_WRP_UartPhyReceiveData(0, g_received_byte_1st);
-    #endif
-    #if defined(SUPPORT_TCP_PROFILE) && (SUPPORT_TCP_PROFILE == TRUE)
-    R_TCP_WRP_UartPhyReceiveData(0, g_received_byte_1st);
-    #endif
-    #endif /* _DLMS */
-    #endif /* __DEBUG */
+	
+#ifdef GSM_GPRS
+  	if (GPRS_IsConnected() == 1) 
+  	{
+     	R_PHY_DeviceReceiveEnd(0, g_received_byte_1st);
+  	}
+  	GPRS_ReceiveEndCallback(g_received_byte_1st);
+#else
+	
+    //#if defined(SUPPORT_UDP_PROFILE) && (SUPPORT_UDP_PROFILE == TRUE)
+    //R_UDP_WRP_UartPhyReceiveData(0, g_received_byte_1st);
+    //#endif
+    //#if defined(SUPPORT_TCP_PROFILE) && (SUPPORT_TCP_PROFILE == TRUE)
+    //R_TCP_WRP_UartPhyReceiveData(0, g_received_byte_1st);
+#endif
+#endif /* _DLMS */
+#endif /* __DEBUG */
     R_METER_CMD_UART_ReceiveEndCallback(1, g_received_byte_1st);
     WRP_UART0_ReceiveData(&g_received_byte_1st, 1);
+	
 }
 
 /*****************************************************************************************

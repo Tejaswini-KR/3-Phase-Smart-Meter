@@ -184,6 +184,9 @@ Macro definitions
 
 #define EVENT_CONFIG_VRMS_AVERAGE_THRESHOLD                    (75.0f)
 
+// Calculate & store energy of DG in separate registers
+#define ENERGY_ENABLE_DG_ENERGY
+
 /******************************************************************************
 Typedef definitions
 ******************************************************************************/

@@ -86,6 +86,9 @@ Global variables and functions
 ***********************************************************************************************************************/
 /* Start user code for global. Do not edit comment generated here */
 volatile uint8_t calib_result = 0;
+extern void GSM_PollingProcess(void);
+uint8_t rx_buff[10],tx_buff[10];
+
 /* End user code. Do not edit comment generated here */
 
 static void R_MAIN_UserInit(void);
@@ -100,7 +103,7 @@ void main(void)
     R_MAIN_UserInit();
     /* Start user code. Do not edit comment generated here */
     startup();
-    
+    //tx_buff[1] = 'A';
     while (1U)
     {
         /* Power management control */
@@ -114,6 +117,9 @@ void main(void)
         
             /* LCD Polling Processing */
             EM_DisplaySequence();
+			
+			/* GSM Polling Processing */
+			//GSM_PollingProcess();
             
             #ifndef __DEBUG
             #ifdef _DLMS

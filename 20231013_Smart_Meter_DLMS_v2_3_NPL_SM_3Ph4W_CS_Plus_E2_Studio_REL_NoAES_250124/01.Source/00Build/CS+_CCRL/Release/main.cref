@@ -1,6 +1,6 @@
 ****..\..\rl78i1c\application\gsm\src\main.c
 v2 
-:1718021577
+:1723455732
 #1
 F "__DI" N I!1 T!2 ?18-2 
 T "void" KBV I!2 0x0 
@@ -127,7 +127,7 @@ T "" KE I!122 T!79 0x1 EM0:"LOG_NONE" EM1:"LOG_ERROR" EM2:"LOG_WARNING" EM3:"LOG
 T "LogLevel_t" KT I!123 T!122 !11-6 0x1 
 F "set_log_level" F I!124 T!2 ?13-6 20-1 P!125 
 V "" N I!125 O!124 T!123 .1 0x1 
-F "log_info" F I!126 T!2 ?15-6 23-1 36-1 P!127 VARARG 
+F "log_info" F I!126 T!2 ?15-6 P!127 VARARG 
 V "" N I!127 O!126 T!128 .2 0x2 
 T "" MOD"C" KP I!128 T!79 0x2 
 F "log_warning" F I!129 T!2 ?16-6 P!130 VARARG 
@@ -168,36 +168,35 @@ F "GSM_PollingProcess" F I!163 T!2 ?14-1 28-1
 F "test_process" F I!164 T!2 ?15-1 31-1 
 F "main" F I!165 T!32 #17-1 !18,39-1-1 
 V "isOk" N I!166 O!165 T!151 !19-1 #19-1 #25-1 30-1 34-1 .2 0x2 
-F "msleep" F I!167 T!32 32-1 
 ****%CxSystemPath%\inc\builtin.h
 v2 
-:1718021577
+:1723455732
 #2
 ****%CxSystemPath%\inc\stdio.h
 v2 
-:1718021577
+:1723455732
 #3
 ****%CxSystemPath%\inc\stddef.h
 v2 
-:1718021577
+:1723455732
 #4
 ****%CxSystemPath%\inc\stdarg.h
 v2 
-:1718021577
+:1723455732
 #5
 ****..\..\rl78i1c\application\gsm\src\event_log.h
 v2 
-:1718021577
+:1723455732
 #6
 ****..\..\rl78i1c\application\gsm\src\gsm_typedef.h
 v2 
-:1718021577
+:1723455732
 #7
 ****..\..\shared\Compiler\CCRL\typedef.h
 v2 
-:1718021577
+:1723455732
 #8
 ****..\..\rl78i1c\application\gsm\src\utils.h
 v2 
-:1718021577
+:1723455732
 #9
