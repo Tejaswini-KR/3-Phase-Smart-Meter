@@ -105,10 +105,10 @@ void bl_main(void)
     if (IS_ENOUGH_POWER_FOR_FLASH() == 1)
     {
         /* Check for new firmware and updating */
-        //BL_IMAGE_Processing();
+        BL_IMAGE_Processing();
         
         /* Check for recovery mode */
-        //BL_RECOVERY_Processing();
+        BL_RECOVERY_Processing();
     }
     
     /* Stop all peripherals used in bootloader */

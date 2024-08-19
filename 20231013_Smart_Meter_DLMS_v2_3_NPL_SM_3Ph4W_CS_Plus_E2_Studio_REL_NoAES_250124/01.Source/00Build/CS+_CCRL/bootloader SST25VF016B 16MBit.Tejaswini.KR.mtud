@@ -24,42 +24,58 @@
       <Bookmarks>0</Bookmarks>
     </Instance>
   </Class>
+  <Class Guid="d9e7a26a-0526-4119-b8c3-b0112e16eb03">
+    <Instance Guid="d9e7a26a-0526-4119-b8c3-b0112e16eb03">
+      <DebugConsole-COMport>COM1</DebugConsole-COMport>
+      <DebugConsole-Baudrate>0</DebugConsole-Baudrate>
+      <DebugConsole-Echoback>enable</DebugConsole-Echoback>
+      <DebugConsole-EnableDisable>enable</DebugConsole-EnableDisable>
+    </Instance>
+  </Class>
   <Class Guid="eeae2c1c-3b17-44ca-9a69-17638edf07a9">
     <Instance Guid="ffd1bb0e-b707-4d38-8165-aa8629d78fcc">
       <Name>PanelWatch1</Name>
       <WatchExpressionColumnWidth>0</WatchExpressionColumnWidth>
+      <SymbolColumnWidth>0</SymbolColumnWidth>
       <ValueColumnWindth>0</ValueColumnWindth>
       <TypeColumnWidth>0</TypeColumnWidth>
       <AddressColumnWidth>0</AddressColumnWidth>
       <MemoColumnWidth>0</MemoColumnWidth>
       <ArrayIndexNotation>None</ArrayIndexNotation>
+      <IsSymbolShow>False</IsSymbolShow>
     </Instance>
     <Instance Guid="3e85fe22-38a0-44af-bbc8-8b0507ddb643">
       <Name>PanelWatch2</Name>
       <WatchExpressionColumnWidth>0</WatchExpressionColumnWidth>
+      <SymbolColumnWidth>0</SymbolColumnWidth>
       <ValueColumnWindth>0</ValueColumnWindth>
       <TypeColumnWidth>0</TypeColumnWidth>
       <AddressColumnWidth>0</AddressColumnWidth>
       <MemoColumnWidth>0</MemoColumnWidth>
       <ArrayIndexNotation>None</ArrayIndexNotation>
+      <IsSymbolShow>False</IsSymbolShow>
     </Instance>
     <Instance Guid="355e79de-dc0b-4fa3-84bf-ee0d9c1ba57f">
       <Name>PanelWatch3</Name>
       <WatchExpressionColumnWidth>0</WatchExpressionColumnWidth>
+      <SymbolColumnWidth>0</SymbolColumnWidth>
       <ValueColumnWindth>0</ValueColumnWindth>
       <TypeColumnWidth>0</TypeColumnWidth>
       <AddressColumnWidth>0</AddressColumnWidth>
       <MemoColumnWidth>0</MemoColumnWidth>
       <ArrayIndexNotation>None</ArrayIndexNotation>
+      <IsSymbolShow>False</IsSymbolShow>
     </Instance>
     <Instance Guid="db34cb34-72b5-4527-9a2b-09189d05d858">
       <Name>PanelWatch4</Name>
       <WatchExpressionColumnWidth>0</WatchExpressionColumnWidth>
+      <SymbolColumnWidth>0</SymbolColumnWidth>
       <ValueColumnWindth>0</ValueColumnWindth>
       <TypeColumnWidth>0</TypeColumnWidth>
       <AddressColumnWidth>0</AddressColumnWidth>
       <MemoColumnWidth>0</MemoColumnWidth>
       <ArrayIndexNotation>None</ArrayIndexNotation>
+      <IsSymbolShow>False</IsSymbolShow>
     </Instance>
   </Class>
   <Class Guid="cd02d324-a75c-4e2b-b858-33bd0d529683">
@@ -167,12 +183,9 @@
       <ViewAddressOffset>0</ViewAddressOffset>
     </Instance>
   </Class>
-  <Class Guid="d9e7a26a-0526-4119-b8c3-b0112e16eb03">
-    <Instance Guid="d9e7a26a-0526-4119-b8c3-b0112e16eb03">
-      <DebugConsole-COMport>COM1</DebugConsole-COMport>
-      <DebugConsole-Baudrate>0</DebugConsole-Baudrate>
-      <DebugConsole-Echoback>enable</DebugConsole-Echoback>
-      <DebugConsole-EnableDisable>enable</DebugConsole-EnableDisable>
+  <Class Guid="77f4fe65-ddf4-4928-959f-23bb08938db1">
+    <Instance Guid="9c3ccd2d-10ae-4bf1-a5c9-a95f518c52cc">
+      <VirtualBoardDockingVisibleHasValue>False</VirtualBoardDockingVisibleHasValue>
     </Instance>
   </Class>
 </CubeSuiteProject.User>
