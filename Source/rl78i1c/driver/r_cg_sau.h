@@ -402,7 +402,7 @@ static void r_csi30_callback_error(uint8_t err_type);
 static void r_csi30_callback_sendend(void);
 
 static void r_uart1_callback_receiveend(void);
-static void r_uart1_callback_sendend(void);
+//static void r_uart1_callback_sendend(void);
 static void r_uart1_callback_error(uint8_t err_type);
 static void r_uart1_callback_softwareoverrun(uint16_t rx_data);
 
@@ -419,6 +419,9 @@ uint8_t R_UART2_CheckOperating(void);
 void R_UART2_SetBaudRate(sau_std_baud_rate_t new_baud_rate);
 void R_UART2_OnHocoChanged(void);
 void R_UART2_SetConfig(sau_std_length_t datalen, sau_std_parity_t parity, sau_std_stopbits_t stopbits);
+
+void r_uart1_callback_sendend(void);
+void R_UART1_RX_ON(void);
 /* End user code. Do not edit comment generated here */
 NEAR_FUNC void r_uart0_interrupt_receive(void);
 NEAR_FUNC void r_uart0_interrupt_send(void);

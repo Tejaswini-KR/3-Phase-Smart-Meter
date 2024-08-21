@@ -31,6 +31,7 @@ Includes
 ***********************************************************************************************************************/
 #include "r_cg_macrodriver.h"
 #include "r_cg_tau.h"
+#include "r_cg_sau.h"
 /* Start user code for include. Do not edit comment generated here */
 #include "em_core.h"
 #include "r_calib.h"
@@ -41,6 +42,9 @@ Includes
 #include "r_dlms_tcp_wrapper_interface.h"
 #endif
 #include "wrp_app_ext.h"
+#include "Global_Var.h"
+#include "User_Def.h"
+#include "Func_Dec.h"
 /* End user code. Do not edit comment generated here */
 #include "r_cg_userdefine.h"
 
@@ -77,6 +81,8 @@ NEAR_FUNC void r_tau0_channel0_interrupt(void)
     R_PHY_DeviceTimeOutCount();
     #endif /* _DLMS */
     WRP_EXT_HwDelayMillisecondTimerCallback();
+	
+	Modbus_Timer();
     /* End user code. Do not edit comment generated here */
 }
 
@@ -111,4 +117,29 @@ NEAR_FUNC void r_tau0_channel2_interrupt(void)
 }
 
 /* Start user code for adding. Do not edit comment generated here */
+void Modbus_Timer(void)
+ {
+    //**************************************Modbus*******************************************
+if(Silent_Interval) // avoid below in bus idle state
+ { if(!--Silent_Interval)
+   { 
+     Modbus_Bit_Fields.SI_Over=1; // mark end of Silent Interval
+     if(Modbus_State==1) // if in query rx
+	{
+	  // frame is completed and stop receiving the data , set the complete FLAG start transmitting the data
+	   Modbus_Bit_Fields.Valid_Frame_complete=1; 
+	   R_UART1_Stop();
+	} 
+   if(Modbus_Bit_Fields.Modbus_Tx_Completed)	//Change over to Reception mode if tX complete
+     { 		
+   		Modbus_Bit_Fields.Modbus_Tx_Completed=0; 
+		RS485_DIR=0;
+     	R_UART1_RX_ON();
+		Modbus_State=0;
+     }
+    Silent_Interval=Char_Frame_Delay;
+    Modbus_State=0;       //  ID is not matching ignore frame and Initialize for the next frame
+   }
+ }   
+}
 /* End user code. Do not edit comment generated here */

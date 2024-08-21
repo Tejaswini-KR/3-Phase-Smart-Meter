@@ -74,6 +74,9 @@ Includes
 #endif
 /* End user code. Do not edit comment generated here */
 #include "r_cg_userdefine.h"
+#include "Global_Var.h"
+#include "User_Def.h"
+#include "Func_Dec.h"
 
 /***********************************************************************************************************************
 Pragma directive
@@ -86,7 +89,6 @@ Global variables and functions
 ***********************************************************************************************************************/
 /* Start user code for global. Do not edit comment generated here */
 void Get_Net_Energy(void);
-//uint8_t tx_buff[10],rx_buff[10];
 /* End user code. Do not edit comment generated here */
 
 static void R_MAIN_UserInit(void);
@@ -101,11 +103,11 @@ void main(void)
     R_MAIN_UserInit();
     /* Start user code. Do not edit comment generated here */
     startup();
-    
     while (1U)
     {
         /* Power management control */
         POWERMGMT_PollingProcessing();
+			
 
         if (POWERMGMT_GetMode() == POWERMGMT_MODE1)
         {
@@ -162,6 +164,13 @@ void main(void)
 
             /* MeterCmd Polling Processing */
             R_METER_CMD_PollingProcessing();
+			
+			/* RS485 Polling Processing */
+			if(Modbus_Bit_Fields.Valid_Frame_complete )
+     		{  
+     	  		Modbus_Bit_Fields.Valid_Frame_complete=0;
+          		Query_Validation();
+     		}
         }
         R_WDT_Restart();
     }
@@ -178,6 +187,7 @@ static void R_MAIN_UserInit(void)
 {
     /* Start user code. Do not edit comment generated here */
     EI();
+	R_UART1_RX_ON(); 
     /* End user code. Do not edit comment generated here */
 }
 

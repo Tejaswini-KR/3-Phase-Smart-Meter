@@ -91,9 +91,11 @@ void R_PORT_Create(void)
     P8 =    _00_Pn5_OUTPUT_0 | _00_Pn4_OUTPUT_0 | _00_Pn3_OUTPUT_0 | _00_Pn2_OUTPUT_0 |
             _00_Pn1_OUTPUT_0 | _00_Pn0_OUTPUT_0;
             
-    P13 =   _80_Pn7_OUTPUT_1 | _01_Pn0_OUTPUT_1;
+    P13 =   _80_Pn7_OUTPUT_1 | _00_Pn0_OUTPUT_0;
 
     P15 =   _04_Pn2_OUTPUT_1 | _02_Pn1_OUTPUT_1 | _01_Pn0_OUTPUT_1;
+	
+    POM5 = _00_POMn1_NCH_OFF;
 
     /* Pull up */
     //PU7 = 0xFF;
@@ -115,7 +117,7 @@ void R_PORT_Create(void)
     
     PM5 =   _00_PMn7_MODE_OUTPUT | _00_PMn6_MODE_OUTPUT | _20_PMn5_MODE_INPUT | _00_PMn4_MODE_OUTPUT |
             _08_PMn3_MODE_INPUT  | _00_PMn2_MODE_OUTPUT | _00_PMn1_MODE_OUTPUT | _00_PMn0_MODE_OUTPUT;
-    
+
     PM6 =   _00_PMn2_MODE_OUTPUT | _00_PMn1_MODE_OUTPUT | _00_PMn0_MODE_OUTPUT;
     
     PM7 =   _00_PMn7_MODE_OUTPUT | _00_PMn6_MODE_OUTPUT | _00_PMn5_MODE_OUTPUT | _00_PMn4_MODE_OUTPUT |

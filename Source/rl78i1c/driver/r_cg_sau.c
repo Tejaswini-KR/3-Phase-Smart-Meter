@@ -32,6 +32,10 @@ Includes
 #include "r_cg_macrodriver.h"
 #include "r_cg_sau.h"
 /* Start user code for include. Do not edit comment generated here */
+#include "Global_Var.h"
+#include "User_Def.h"
+#include "Func_Dec.h"
+#include "relay.h"
 /* End user code. Do not edit comment generated here */
 #include "r_cg_userdefine.h"
 
@@ -945,4 +949,27 @@ void R_UART1_SetConfig(sau_std_length_t datalen, sau_std_parity_t parity, sau_st
     SCR00 = _8000_SAU_TRANSMISSION | _0000_SAU_INTSRE_MASK | _0080_SAU_LSB | (datalen | parity | stopbits);
     SCR01 = _4000_SAU_RECEPTION | _0000_SAU_INTSRE_MASK | _0080_SAU_LSB | (datalen | parity | stopbits);
 }
+
+/***********************************************************************************************************************
+* Function Name: r_uart2_callback_sendend
+* Description  : This function is a callback function when UART2 finishes transmission.
+* Arguments    : None
+* Return Value : None
+***********************************************************************************************************************/
+void r_uart1_callback_sendend(void)
+{
+	Modbus_Bit_Fields.Modbus_Tx_Completed = 1;
+	Silent_Interval = Char_Frame_Delay;
+  
+}
+
+void R_UART1_RX_ON(void)
+{
+    RS485_DIR = 0;
+    Char_Frame_Delay = 0x04;
+    Silent_Interval = 4;   
+    Modbus_State = 0; //  ID is not matching ignore frame and Initialize for the next frame 
+    R_UART1_Start();
+}
+
 /* End user code. Do not edit comment generated here */
